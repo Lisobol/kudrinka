@@ -1,0 +1,40 @@
+{#{% extends "show.html" %}#}
+{#{% block title %}Расписание{% endblock %}#}
+
+
+
+
+{% block name %}<h4>Расписание</h4>{% endblock %}
+{% block elements %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            {% for day in weekdays %}
+                <th scope="col">{{ day }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for day in weekdays %}
+                <td>
+                    {% for g in gr_ch_sh %}
+                        {% if day.day_of_the_week == g.day_of_the_week.day_of_the_week and g.group == participant.group %}
+                            <p>{{ g.group.name }}</p>
+                            {{ g.dance_style }}
+                            {{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}
+                            <a href="{% url 'update_schedule_part' slug=g.slug %}"
+                               class="btn btn-light">Upd</a>
+                            <a href="{% url 'delete_schedule_part' slug=g.slug %}"
+                               class="btn btn-light">Del</a>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+    <form action="/new_schedule/">
+        <button type="submit">new_schedule</button>
+    </form>
+{% endblock %}

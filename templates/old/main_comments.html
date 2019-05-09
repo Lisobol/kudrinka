@@ -1,0 +1,730 @@
+
+
+
+{#    <script src="{% static "static/js/scripts.js" %}"></script>#}
+{##}
+{#    <div class="main_block_elem">#}
+{#        <div class="container">#}
+{#<div>  {% include "show_news.html" %}</div>#}
+{##}
+{##}
+{#<div>  {% include "show_schedule_main.html" %}</div>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
+
+
+
+
+{#НАВБАР#}
+
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="/">Кудринка</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Главная <span class="sr-only">(current)</span></a>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Мы танцуем
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="">Русский фольклор</a>
+                        <a class="dropdown-item" href="">Танцы народов мира</a>
+
+                        <a class="dropdown-item" href="">Модерн</a>
+
+                        <a class="dropdown-item" href="">Степ</a>
+
+
+                                                <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/concerts/">Наши выступления</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/choreographers/">Хореографы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us/">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts/">Контакты</a>
+                </li>
+                {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/">Вход</a>
+                    </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Вы вошли как: {{ user.username }}​</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout/">Выйти</a>
+                    </li>
+                    {% if user.is_superuser %}
+                     <li class="nav-item">
+                        <a class="nav-link" href="/admin/">Админка</a>
+                    </li>
+                    {% endif %}
+
+                    {% if participant.user == user %}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/my_page_participant/">Моя страница <span class="sr-only">(current)</span></a>
+                        </li>
+
+                    {% endif %}
+                    {% if choreographer.user == user %}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/my_page_choreographer/">Моя страница <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+
+                    {% endif %}
+
+
+                {% endif %}
+            </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+        </div>
+    </nav>
+
+
+        <span class="top-bar-menu">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="advertisement.html">Advertisement</a>
+            <a href="contact.html">Contact</a>
+        </span>
+
+
+                <!-- Main (left side) -->
+                <div>
+                    {#                    <section>#}
+                    {##}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-sm-12">#}
+                    {#                                <div class="blog-post">#}
+                    {#                                    <div class="blog-post-container">#}
+                    {#                                        <a href="post.html"><img class="ph1200_600"#}
+                    {#                                                src="{% static "static/media/media/default/photo/НОМЕР24_1.jpg" %}"#}
+                    {#                                                alt=""></a>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="blog-post-body">#}
+                    {##}
+                    {#                                        <div class="post-meta"><span class="post-category"><a#}
+                    {#                                                href="#">Fashion</a></span></div>#}
+                    {#                                        <div class="divider"></div>#}
+                    {#                                        <h2 class="title"><a href="post.html">Wonderful Pencil Drawings by Stefan#}
+                    {#                                            Zsaitsits</a></h2>#}
+                    {#                                        <div class="post-meta">Posted on <span#}
+                    {#                                                class="post-time">February 23, 2015</span> by <span#}
+                    {#                                                class="post-author"><a href="post.html">Different Themes</a></span>#}
+                    {#                                        </div>#}
+                    {#                                        <p>#}
+                    {#                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache#}
+                    {#                                            fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard#}
+                    {#                                            Helvetica. Salvia#}
+                    {#                                            esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan#}
+                    {#                                            High Life#}
+                    {#                                            reprehenderit consectetur cupidatat kogi. Et leggings fanny pack, elit#}
+                    {#                                            bespoke vinyl art#}
+                    {#                                            party Pitchfork selfies master cleanse Kickstarter seitan retro.#}
+                    {#                                        </p>#}
+                    {#                                        <p>#}
+                    {#                                        <div class="more-button"><a href="post.html"><span#}
+                    {#                                                class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="wcircle-menu-button">#}
+                    {#                                            <div class="wcircle-icon">#}
+                    {#                                                <div class="wcircle-menu-icon"><i class="fa fa-share-alt"></i></div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="wcircle-menu" style="display:none;">#}
+                    {#                                                <div class="wcircle-menu-item share-facebook"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-facebook"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-youtube"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-youtube"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-twitter"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-twitter"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-google"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-google"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-linkedin"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-linkedin"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-pinterest"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-pinterest"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-tumblr"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-tumblr"></i></a></div>#}
+                    {#                                            </div>#}
+                    {#                                        </div>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {##}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-sm-12">#}
+                    {#                                <div class="blog-post">#}
+                    {#                                    <div class="blog-post-container">#}
+                    {#                                        <a href="post.html"><img class="ph1200_00"#}
+                    {#                                                src="{% static "static/media/media/default/photo/НОМЕР16.jpg" %}"#}
+                    {#                                                alt=""></a>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="blog-post-body">#}
+                    {#                                        <div class="post-meta"><span class="post-category"><a#}
+                    {#                                                href="#">Computers</a></span></div>#}
+                    {#                                        <div class="divider"></div>#}
+                    {#                                        <h2 class="title"><a href="post.html">Creative Packaging: Excellent Designs of#}
+                    {#                                            Paper Bags and Boxes</a></h2>#}
+                    {#                                        <div class="post-meta">Posted on <span#}
+                    {#                                                class="post-time">February 23, 2015</span> by <span class="post-author"><a#}
+                    {#                                                href="post.html">Different Themes</a></span></div>#}
+                    {#                                        <p>#}
+                    {#                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art#}
+                    {#                                            party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat#}
+                    {#                                            kogi. Et leggings fanny pack, elit bespoke vinyl art party Pitchfork selfies#}
+                    {#                                            master cleanse Kickstarter seitan retro.#}
+                    {#                                        </p>#}
+                    {#                                        <p>#}
+                    {#                                        <div class="more-button"><a href="post.html"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="wcircle-menu-button">#}
+                    {#                                            <div class="wcircle-icon">#}
+                    {#                                                <div class="wcircle-menu-icon"><i class="fa fa-share-alt"></i></div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="wcircle-menu" style="display:none;">#}
+                    {#                                                <div class="wcircle-menu-item share-facebook"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-facebook"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-youtube"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-youtube"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-twitter"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-twitter"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-google"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-google"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-linkedin"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-linkedin"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-pinterest"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-pinterest"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-tumblr"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-tumblr"></i></a></div>#}
+                    {#                                            </div>#}
+                    {#                                        </div>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-sm-12">#}
+                    {#                                <div class="blog-post">#}
+                    {#                                    <div class="blog-post-container">#}
+                    {#                                        <a href="post.html"><img class="ph1200_600"#}
+                    {#                                                src="{% static "static/media/media/default/photo/НОМЕР17.jpg" %}"#}
+                    {#                                                alt=""></a>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="blog-post-body">#}
+                    {##}
+                    {#                                        <div class="post-meta"><span class="post-category"><a#}
+                    {#                                                href="#">Traveling</a></span></div>#}
+                    {#                                        <div class="divider"></div>#}
+                    {#                                        <h2 class="title"><a href="post.html">Whimsical Sculptures Created Out of#}
+                    {#                                            Every-day Objects by Gilbert Legrand</a></h2>#}
+                    {#                                        <div class="post-meta">Posted on <span#}
+                    {#                                                class="post-time">February 23, 2015</span> by <span class="post-author"><a#}
+                    {#                                                href="post.html">Different Themes</a></span></div>#}
+                    {#                                        <p>#}
+                    {#                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art#}
+                    {#                                            party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat#}
+                    {#                                            kogi. Et leggings fanny pack, elit bespoke vinyl art party Pitchfork selfies#}
+                    {#                                            master cleanse Kickstarter seitan retro.#}
+                    {#                                        </p>#}
+                    {#                                        <p>#}
+                    {#                                        <div class="more-button"><a href="post.html"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="wcircle-menu-button">#}
+                    {#                                            <div class="wcircle-icon">#}
+                    {#                                                <div class="wcircle-menu-icon"><i class="fa fa-share-alt"></i></div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="wcircle-menu" style="display:none;">#}
+                    {#                                                <div class="wcircle-menu-item share-facebook"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-facebook"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-youtube"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-youtube"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-twitter"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-twitter"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-google"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-google"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-linkedin"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-linkedin"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-pinterest"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-pinterest"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-tumblr"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-tumblr"></i></a></div>#}
+                    {#                                            </div>#}
+                    {#                                        </div>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                        <!-- video post -->#}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-sm-12">#}
+                    {#                                <div class="blog-post">#}
+                    {##}
+                    {#                                    <div class="blog-post-container">#}
+                    {#                                        <div class="embed-responsive embed-responsive-16by9">#}
+                    {#                                            <iframe class="embed-responsive-item"#}
+                    {#                                                    src="//www.youtube.com/embed/8hP9D6kZseM?rel=0"#}
+                    {#                                                    allowfullscreen></iframe>#}
+                    {#                                        </div>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="blog-post-body">#}
+                    {##}
+                    {#                                        <div class="post-meta"><span class="post-category"><a href="#">Video</a></span>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="divider"></div>#}
+                    {#                                        <h2 class="title"><a href="post.html">Youtube Video Embed</a></h2>#}
+                    {#                                        <div class="post-meta">Posted on <span#}
+                    {#                                                class="post-time">February 23, 2015</span> by <span class="post-author"><a#}
+                    {#                                                href="post.html">Different Themes</a></span></div>#}
+                    {#                                        <p>#}
+                    {#                                            Maecenas euismod magna augue, et imperdiet nisl efficitur nec. Nunc non#}
+                    {#                                            risus a diam tempor ornare. Suspendisse molestie nisi a euismod egestas.#}
+                    {#                                            Integer tristique mauris in laoreet iaculis. Vestibulum ante ipsum primis in#}
+                    {#                                            faucibus orci luctus et ultrices posuere cubilia Curae;#}
+                    {#                                        </p>#}
+                    {#                                        <p>#}
+                    {#                                        <div class="more-button"><a href="post.html"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="wcircle-menu-button">#}
+                    {#                                            <div class="wcircle-icon">#}
+                    {#                                                <div class="wcircle-menu-icon"><i class="fa fa-share-alt"></i></div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="wcircle-menu" style="display:none;">#}
+                    {#                                                <div class="wcircle-menu-item share-facebook"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-facebook"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-youtube"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-youtube"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-twitter"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-twitter"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-google"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-google"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-linkedin"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-linkedin"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-pinterest"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-pinterest"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-tumblr"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-tumblr"></i></a></div>#}
+                    {#                                            </div>#}
+                    {#                                        </div>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {##}
+                    {##}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                        <!-- soundcloud post -->#}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-sm-12">#}
+                    {#                                <div class="blog-post">#}
+                    {#                                    <div class="blog-post-container">#}
+                    {#                                        <iframe width="100%" height="450" scrolling="no" frameborder="no"#}
+                    {#                                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/160960615&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="blog-post-body">#}
+                    {#                                        <div class="post-meta"><span class="post-category"><a href="#">Music</a></span>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="divider"></div>#}
+                    {#                                        <h2 class="title"><a href="post.html">SoundCloud Music Embed</a></h2>#}
+                    {#                                        <div class="post-meta">Posted on <span#}
+                    {#                                                class="post-time">February 23, 2015</span> by <span class="post-author"><a#}
+                    {#                                                href="post.html">Different Themes</a></span></div>#}
+                    {#                                        <p>#}
+                    {#                                            Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica.#}
+                    {#                                        </p>#}
+                    {#                                        <p>#}
+                    {#                                        <div class="more-button"><a href="post.html"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="wcircle-menu-button">#}
+                    {#                                            <div class="wcircle-icon">#}
+                    {#                                                <div class="wcircle-menu-icon"><i class="fa fa-share-alt"></i></div>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="wcircle-menu" style="display:none;">#}
+                    {#                                                <div class="wcircle-menu-item share-facebook"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-facebook"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-youtube"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-youtube"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-twitter"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-twitter"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-google"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-google"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-linkedin"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-linkedin"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-pinterest"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-pinterest"></i></a></div>#}
+                    {#                                                <div class="wcircle-menu-item share-tumblr"><a href="post.html"><i#}
+                    {#                                                        class="fa fa-tumblr"></i></a></div>#}
+                    {#                                            </div>#}
+                    {#                                        </div>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                    </section>#}
+                </div>
+                <!-- Grid Post style -->
+                <div>
+                    {#                    <section>#}
+                    {#                        <h4 class="main-heading"><span>Grid style</span></h4>#}
+                    {##}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-md-6">#}
+                    {##}
+                    {#                                <!-- grid list item -->#}
+                    {#                                <div class="grid-post">#}
+                    {#                                    <div class="grid-post-container">#}
+                    {#                                        <a href="post.html"><img#}
+                    {#                                                src="{% static "static/media/media/default/demo/1200x800-17.jpg" %}"#}
+                    {#                                                alt=""></a>#}
+                    {#                                        <div class="post-cats"><a href="#">Beauty</a></div>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="post-meta">#}
+                    {#                                        <span class="post-meta-publ-date">February 23, 2015</span>#}
+                    {#                                        <span><i class="fa fa-comments"></i> <a href="#"#}
+                    {#                                                                                rel="category tag">32</a></span>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="grid-post-body">#}
+                    {#                                        <h3 class="title"><a href="portfolio-item.html">The Jaw-Droppingly Gorgeous#}
+                    {#                                            Illustrations of Phil Noto</a></h3>#}
+                    {#                                        <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica.</p>#}
+                    {#                                        <p><a href="post.html" class="more-button"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <!-- end grid list item -->#}
+                    {##}
+                    {#                            </div>#}
+                    {#                            <div class="col-md-6">#}
+                    {##}
+                    {#                                <!-- grid list item -->#}
+                    {#                                <div class="grid-post">#}
+                    {#                                    <div class="grid-post-container">#}
+                    {#                                        <a href="post.html"><img src="images/demo/1200x800-11.jpg" alt=""></a>#}
+                    {#                                        <div class="post-cats"><a href="#">Fashion</a></div>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="post-meta">#}
+                    {#                                        <span class="post-meta-publ-date">February 23, 2015</span>#}
+                    {#                                        <span><i class="fa fa-comments"></i> <a href="#"#}
+                    {#                                                                                rel="category tag">32</a></span>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="grid-post-body">#}
+                    {#                                        <h3 class="title"><a href="portfolio-item.html">Featured Artist: Interview with#}
+                    {#                                            Diorama Artist Clemens Wirth</a></h3>#}
+                    {#                                        <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica.</p>#}
+                    {#                                        <p><a href="post.html" class="more-button"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <!-- end grid list item -->#}
+                    {##}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                        <div class="row">#}
+                    {#                            <div class="col-md-6">#}
+                    {##}
+                    {#                                <!-- grid list item -->#}
+                    {#                                <div class="grid-post">#}
+                    {#                                    <div class="grid-post-container">#}
+                    {#                                        <a href="post.html"><img#}
+                    {#                                                src="{% static "static/media/media/default/demo/1200x800-9.jpg" %}"#}
+                    {#                                                alt=""></a>#}
+                    {#                                        <div class="post-cats"><a href="#">Computers</a></div>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="post-meta">#}
+                    {#                                        <span class="post-meta-publ-date">February 23, 2015</span>#}
+                    {#                                        <span><i class="fa fa-comments"></i> <a href="#"#}
+                    {#                                                                                rel="category tag">32</a></span>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="grid-post-body">#}
+                    {#                                        <h3 class="title"><a href="portfolio-item.html">5 Infographics You Should#}
+                    {#                                            Definitely Check Out</a></h3>#}
+                    {#                                        <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica.</p>#}
+                    {#                                        <p><a href="post.html" class="more-button"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <!-- end grid list item -->#}
+                    {##}
+                    {#                            </div>#}
+                    {#                            <div class="col-md-6">#}
+                    {##}
+                    {#                                <!-- grid list item -->#}
+                    {#                                <div class="grid-post">#}
+                    {#                                    <div class="grid-post-container">#}
+                    {#                                        <a href="post.html"><img#}
+                    {#                                                src="{% static "static/media/media/default/demo/1200x800-19.jpg" %}"#}
+                    {#                                                alt=""></a>#}
+                    {#                                        <div class="post-cats"><a href="#">Transport</a></div>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="post-meta">#}
+                    {#                                        <span class="post-meta-publ-date">February 23, 2015</span>#}
+                    {#                                        <span><i class="fa fa-comments"></i> <a href="#"#}
+                    {#                                                                                rel="category tag">32</a></span>#}
+                    {#                                    </div>#}
+                    {##}
+                    {#                                    <div class="grid-post-body">#}
+                    {#                                        <h3 class="title"><a href="portfolio-item.html">Unbelievable Anamorphic#}
+                    {#                                            Sculptures by Jonty Hurwitz</a></h3>#}
+                    {#                                        <p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic#}
+                    {#                                            fingerstache fanny pack nostrud. Photo booth anim 8-bit hella, PBR 3 wolf#}
+                    {#                                            moon beard Helvetica.</p>#}
+                    {#                                        <p><a href="post.html" class="more-button"><span class="read-more-button">READ MORE</span></a>#}
+                    {#                                        </p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <!-- end grid list item -->#}
+                    {##}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                    </section>#}
+                </div>
+                <!-- end Grid Post style -->
+
+                <!-- List Post style -->
+                <section>
+
+                    <!-- end list post item -->
+                    <div>
+                        {#                        <div class="list-post">#}
+                        {#                            <div class="list-post-container">#}
+                        {#                                <a href="post.html"><img src="{% static "static/media/media/default/demo/article-298x298-2.jpg" %}" alt=""></a>#}
+                        {#                                <div class="post-cats"><a href="#">Design</a></div>#}
+                        {#                            </div>#}
+                        {#                            <div class="list-post-body">#}
+                        {#                                <h2><a href="post.html">Minimalist Monday: Classic Children's Stories Posters</a></h2>#}
+                        {##}
+                        {#                                <div class="post-meta">#}
+                        {#                                    <span class="post-meta-publ-date">March 6, 2015</span>#}
+                        {#                                    <span class="post-meta-author">by <a href="#">John Doe</a></span>#}
+                        {#                                    <span><i class="fa fa-comments"></i> <a href="#" rel="category tag">132</a></span>#}
+                        {#                                </div>#}
+                        {##}
+                        {#                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci accusamus#}
+                        {#                                    accusantium. Adipisci accusamus accusantium. Adipisci accusamus accusantium.</p>#}
+                        {#                                <p><a href="post.html" class="more-button"><span#}
+                        {#                                        class="read-more-button">READ MORE</span></a></p>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        <!-- end list post item -->
+                    </div>
+                </section>
+                <!-- end List Post style -->
+
+
+    <!-- instagram widget in main page -->
+    <div>
+        {#        <h4 class="main-heading"><span>Instagram</span></h4>#}
+        {#        <div class="widget-insta">#}
+        {#            <div id="insta-owl" class="owl-carousel owl-theme">#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-2.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-1.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-3.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-6.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-4.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-5.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/article-298x298-3.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/300x300-6.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/article-298x298-5.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/article-298x298-3.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/article-298x298-2.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#                <div class="item"><a href="#"><img#}
+        {#                        src="{% static "static/media/media/default/demo/article-298x298-1.jpg" %}"#}
+        {#                        alt=""></a></div>#}
+        {#            </div>#}
+        {#        </div>#}
+    </div>
+    <!-- end instagram widget in main page -->
+
+
+
+
+    <!-- sidebar-module latest posts -->
+                    <div class="sidebar-module">
+
+
+                        <div class="sidebar-content">
+
+                            <h4 class="sidebar-heading"><span>Новости</span></h4>
+                            {% for n in news %}
+                                <div class="widget-post" id="latest_posts">
+                                    <div class="widget-post-circle">
+                                        1
+                                    </div>
+                                    <div class="widget-post-entry">
+                                        <h3 class="widget-post-title"><a href="post.html">Watch Top Brands and
+                                            Agencies
+                                            Live-Tweet</a></h3>
+                                        <div class="widget-post-meta"><i class="fa fa-clock-o"></i>15. MARCH 2015
+
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="widget-post" id="latest_posts">
+                                <div class="widget-post-circle">
+                                    2
+                                </div>
+                                <div class="widget-post-entry">
+                                    <h3 class="widget-post-title"><a href="post.html">The Influences of Modern
+                                        Minimalism</a></h3>
+                                    <div class="widget-post-meta"><i class="fa fa-clock-o"></i> 15. JANUARY 2015
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget-post" id="latest_posts">
+                                <div class="widget-post-circle">
+                                    3
+                                </div>
+                                <div class="widget-post-entry">
+                                    <h3 class="widget-post-title"><a href="post.html">Coors Light Gets New Look,
+                                        Miller Lite Targets Biculturals</a></h3>
+                                    <div class="widget-post-meta"><i class="fa fa-clock-o"></i> 15. JANUARY 2015
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget-post" id="latest_posts">
+                                <div class="widget-post-circle">
+                                    4
+                                </div>
+                                <div class="widget-post-entry">
+                                    <h3 class="widget-post-title"><a href="post.html">Facebook to Start Telling
+                                        Brands Who's Talking About What Topics</a></h3>
+                                    <div class="widget-post-meta"><i class="fa fa-clock-o"></i> 15. JANUARY 2015
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget-post" id="latest_posts">
+                                <div class="widget-post-circle">
+                                    5
+                                </div>
+                                <div class="widget-post-entry">
+                                    <h3 class="widget-post-title"><a href="post.html">Notegraphy, Graphic Design
+                                        Meet Note-Taking</a></h3>
+                                    <div class="widget-post-meta"><i class="fa fa-clock-o"></i> 15. JANUARY 2015
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- end sidebar-module -->
+
+
+{#INDEX#}
+  <div class="footer-dark">
+        {#        <div class="footer-socials">#}
+        {#            <a href="https://www.twitter.com/d" class="social"><i class="fa fa-twitter"></i>#}
+        {#                Twitter</a>#}
+        {#            <a href="http://www.bloglovin.com//d" class="social"><i class="fa fa-plus"></i>#}
+        {#                Bloglovin</a>#}
+        {#            <a href="https://www.facebook.com/d" class="social"><i#}
+        {#                    class="fa fa-facebook-square"></i> Facebook</a>#}
+        {#            <a href="https://dribbble.com/d" class="social dribbble" rel="publisher"><i#}
+        {#                    class="fa fa-dribbble"></i> Dribbble</a>#}
+        {#            <a href="https://plus.google.com/+d" class="social google"><i#}
+        {#                    class="fa fa-google-plus-square"></i> Google+</a>#}
+        {#        </div>#}
+
+        <div class="footer-menu">
+            {#            <a href="#" class="social">About Us</a>#}
+            {#            <a href="#" class="social">Archives</a>#}
+            {#            <a href="#" class="social">Advertise</a>#}
+            {#            <a href="#" class="social">Contact Us</a>#}
+            Copyright <i class="fa fa-copyright"></i> 2019-... Kudrinka.ru
+        </div>
+    </div>
+    {##}
+    {#    <div class="footer-bottom">#}
+    {#        <i class="fa fa-copyright"></i> Copyright 2015. All rights reserved.<br/>#}
+    {#        Theme made by <a#}
+    {#            href="http://themeforest.net/user/different-themes/portfolio?ref=different-themes">Different#}
+    {#        Themes</a>#}
+    {#    </div>#}

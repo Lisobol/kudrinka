@@ -1,0 +1,25 @@
+{% extends 'delete.html' %}
+{% block action %}action="{% url 'delete_concert' slug=obj.slug %}"{% endblock %}
+{% block areyousure %}
+концерт {{ obj.name|title }}
+{% endblock %}
+
+
+{#{% extends "index.html" %}#}
+{#{% block title %}Удалить концерт  "{{ obj.name|title }}" - {{ block.super }}{% endblock %}#}
+{#{% block content %}#}
+{#    <div class="jumbotron">#}
+{#        <div class="container">#}
+{#            <div class="page-header">#}
+{#                <h3>Удаление новости "{{ obj.name|title }}" </h3>#}
+{#            </div>#}
+{#            <form action="{% url 'delete_concert' slug=obj.slug %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <h3> Вы уверены, что хотите удалить новость <b>"{{ obj.name|title }}"</b>?</h3>#}
+{#                <a href="{% url 'my_page_choreographer' %}">Отменить</a>#}
+{#                <button type="submit" class="btn btn-default btn-lg btn-block">Удалить</button>#}
+{##}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

@@ -1,0 +1,11 @@
+{% load static %}
+<div class="photo_in_gallery" data-id="{{ photo_in_gallery.id }}">
+    <div class="photo_in_gallery_title">
+        <span class="photo_in_gallery_name">{{ photo_in_gallery.name }}</span>
+        <span class="photo_in_gallery_date">{{ photo_in_gallery.date }}</span>
+        <span class="photo_in_gallery_description">{{ photo_in_gallery.description }}</span>
+    </div>
+    {% if photo_in_gallery.picture %}
+        <img class="photo_in_gallery_picture" src="{{ photo_in_gallery.picture.url }}">
+    {% endif %}
+</div>

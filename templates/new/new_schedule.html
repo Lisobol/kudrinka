@@ -1,0 +1,44 @@
+{% extends "new.html" %}
+{% block name %} занятие{% endblock %}
+{% block form %}
+    <div class="row">
+        <div class="col form-group">
+            <h5>Группа</h5>
+            {{ form.group }}
+            <a href="{% url 'new_group' %}"
+               class="button colored">Добавить новую группу</a><p></p>
+{#            <a href="{% url 'groups' %}" class="btn btn-secondary btn-sm">Посмотреть/редактировать группы</a>#}
+
+        </div>
+        <div class=" col form-group">
+            <h5>Хореограф</h5>
+            {{ form.choreographer }}
+            <a href="{% url 'new_choreographer' %}"
+               class="button colored">Добавить нового хореографа</a><p></p>
+{#        <a href="{% url 'choreographers' %}" class="btn btn-secondary btn-sm">Посмотреть/редактировать хореографов</a>#}
+
+        </div>
+        <div class="col form-group">
+            <h5>Время</h5>
+            {{ form.class_schedule }}
+            <a href="{% url 'new_class_schedule' %}"
+               class="button colored">Добавить новое время занятия</a><p></p>
+{#        <a href="{% url 'class_schedules' %}" class="btn btn-secondary btn-sm">Посмотреть/редактировать время занятий</a>#}
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col form-group">
+            <h5>Направление</h5>
+            {{ form.dance_style }}
+            <a href="{% url 'new_dance_style' %}"
+               class="button colored">Добавить новое направление</a><p></p>
+{#       <a href="{% url 'dance_styles' %}" class="btn btn-secondary btn-sm">Посмотреть/редактировать направления</a>#}
+
+        </div>
+        <div class="col form-group">
+            <h5>День недели</h5>
+            {{ form.day_of_the_week }}
+        </div>
+    </div>
+{% endblock %}

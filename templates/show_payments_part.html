@@ -1,0 +1,26 @@
+{% block name %}<h4>Платежи</h4>{% endblock %}
+{% block elements %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            {% for m in months %}
+                <th >{{ m }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+               {% for m in months %}
+                    <td>
+                        {% for pay in payments %}
+                            {% if pay.month == m %}
+                                <img class="ok" src="https://img.icons8.com/color/48/000000/checkmark.png">
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

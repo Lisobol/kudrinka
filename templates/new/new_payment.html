@@ -1,0 +1,15 @@
+{% extends "new.html" %}
+{% block name %} платеж{% endblock %}
+{% block form %}
+    <div class="form-row">
+        <div class="col">
+            <h5>Участник</h5>
+            {{ form.participant }}
+        </div>
+        <div class="col">
+            <h5>Месяц</h5>
+            {{ form.month }}
+        </div>
+    </div>
+
+{% endblock %}

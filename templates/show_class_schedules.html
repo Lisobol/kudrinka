@@ -1,0 +1,13 @@
+{% extends "show.html" %}
+{% block title %}Время и место занятий{% endblock %}
+{% block name %}Время и место занятий{% endblock %}
+{% block elements %}
+    {% for c in class_schedules %}
+        {% include "show_class_schedule.html" with class_schedule=c %}
+        <a href="{{ c.get_absolute_url }}" class="btn btn-light">Read</a>
+    {% endfor %}
+
+    <form action="/new_class_schedule/">
+        <button type="submit">new_class_schedule</button>
+    </form>
+{% endblock %}

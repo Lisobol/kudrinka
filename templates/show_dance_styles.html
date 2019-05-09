@@ -1,0 +1,14 @@
+{#{% extends "show.html" %}#}
+{#{% block title %}Танцевальные направления{% endblock %}#}
+{#{% block name %}Направления{% endblock %}#}
+{% block elements %}
+    {% for ds in dance_styles %}
+    <div>
+        {% include "show_dance_style.html" with dance_style=ds %}
+    </div>
+       {% endfor %}
+
+     <a href="{% url 'new_dance_style' %}"
+       class="btn btn-dark">Добавить направление</a>
+
+{% endblock %}

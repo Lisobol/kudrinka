@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% block title %}Редактирование{% endblock %}
+{% block content %}
+{#    <script src="{% static "static/js/scripts.js" %}"></script>#}
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+
+                 <div class="page-header">
+                <h1>Редактировать {% block name %}{% endblock %}</h1>
+            </div>
+            <form method="POST" enctype="multipart/form-data" action="{{ obj.get_update_url }}">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        {% if field.errors %}
+                            <div class="alert alert-danger">
+                                {{ field.errors }}
+                            </div>
+                        {% endif %}</div>
+                {% endfor %}
+                {% block form %}
+                {% endblock %}
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                <button style="text-align:center;" class="button colored control-label"
+                        type="submit">Сохранить
+                </button>
+                </div>
+            </div>
+
+            </form>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div><!-- end content -->
+{% endblock %}

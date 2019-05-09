@@ -1,0 +1,45 @@
+{% extends "new.html" %}
+{% block name %} концерт{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Название</h5>
+        {{ form.name }}
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <h5>Дата начала</h5>
+            {{ form.begin_date }}
+        </div>
+        <div class="col">
+            <h5>Дата окончания</h5>
+            {{ form.end_date }}
+        </div>
+    </div>
+    <p></p>
+    <div class="form-row">
+        <div class="col">
+            <h5>Время начала</h5>
+            {{ form.begin_time }}
+        </div>
+        <div class="col">
+            <h5>Время окончания</h5>
+            {{ form.end_time }}
+        </div>
+    </div>
+    <p></p>
+    <div class="form-row">
+        <div class="col">
+            <h5>Место проведения</h5>
+            {{ form.place }}
+        </div>
+        <div class="col">
+            <h5>Адрес</h5>
+            {{ form.address }}
+        </div>
+    </div>
+    <p></p>
+    <div class="form-group">
+        <h5>Описание</h5>
+        {{ form.description }}
+    </div>
+{% endblock %}

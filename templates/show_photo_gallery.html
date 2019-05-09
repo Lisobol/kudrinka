@@ -1,0 +1,11 @@
+{% load static %}
+<div class="photo_gallery" data-id="{{ photo_gallery.id }}">
+    <div class="photo_gallery_title">
+        <h3 class="photo_gallery_name">{{ photo_gallery.name }}</h3>
+        <span class="photo_gallery_description">{{ photo_gallery.description }}</span>
+
+        <a href="{% url 'update_photo_gallery' slug=photo_gallery.slug %}" class="btn btn-light">Upd</a>
+     <a href="{% url 'delete_photo_gallery' slug=photo_gallery.slug %}" class="btn btn-light">Del</a>
+
+    </div>
+</div>

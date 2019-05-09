@@ -1,0 +1,42 @@
+{#{% extends "show.html" %}#}
+{#{% block title %}Платежи{% endblock %}#}
+{% block name %}<h4>Платежи</h4>{% endblock %}
+{% block elements %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+
+        <tr>
+            <th>&nbsp;</th>
+            {% for m in months %}
+                 <th scope="col" class="table_col" style="width: 50px">{{ m }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for p in participants %}
+            <tr>
+                <th>{{ p.last_name }} {{ p.initials }}</th>
+                {% for m in months %}
+                    <td>
+                        {% for pay in payments %}
+                            {% if pay.month == m and pay.participant == p %}
+                                <img class="ok" src="https://img.icons8.com/color/48/000000/checkmark.png">
+                                <a class="butred"
+                                   href="{% url 'update_payment' slug=pay.slug %}"
+                                   target="_blank"><i
+                                        class="butred fa fa-pencil"></i></a>
+                                <a href="{% url 'delete_payment' slug=pay.slug %}"
+                                   target="_blank"><i
+                                        class="butred fa fa-trash"></i></a>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        <a href="{% url 'new_payment' %}"
+       class="btn btn-lg btn-dark">Добавить платеж</a>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'delete.html' %}
+{% block action %}action="{% url 'delete_dance_style' slug=obj.slug %}"{% endblock %}
+{% block areyousure %} направление {{ obj.dance_style|title }}
+{% endblock %}
+
+
+
+{##}
+{#{% extends "index.html" %}#}
+{#{% block title %}Удалить направление  "{{ obj.dance_style|title }}" - {{ block.super }}{% endblock %}#}
+{#{% block content %}#}
+{#    <div class="jumbotron">#}
+{#        <div class="container">#}
+{#            <div class="page-header">#}
+{#                <h3>Удаление новости "{{ obj.dance_style|title }}" </h3>#}
+{#            </div>#}
+{#            <form action="{% url 'delete_dance_style' slug=obj.slug %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <h3> Вы уверены, что хотите удалить направление <b>"{{ obj.dance_style|title }}"</b>?</h3>#}
+{#                <a href="{% url 'my_page_choreographer' %}">Отменить</a>#}
+{#                <button type="submit" class="btn btn-default btn-lg btn-block">Удалить</button>#}
+{##}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

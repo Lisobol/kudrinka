@@ -1,0 +1,81 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{#{% block title %}О нас{% endblock %}#}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+                        <h1>НАШИ ХОРЕОГРАФЫ</h1>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <img src="{% static "static/media/media/default/photo/ИМ_1.jpg" %}"
+                                     class="size-full"
+                                     alt=""/>
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Сальникова Ирина Михайловна</h2>
+                                <ul class="fa-ul">
+                                    <li>· Художественный руководитель коллектива.</li>
+                                    <li>· Хореограф, постановщик, репетитор.</li>
+                                    <li>· Преподаёт классический и народный классы.</li>
+                                    <li>· Душа и сердце коллектива.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-6">
+                                <h2>Борден Марина Игоревна</h2>
+                                <ul class="fa-ul">
+                                    <li>· Хореограф-постановщик, педагог.</li>
+                                    <li>· Преподаёт степ-класс и джаз-модерн.</li>
+                                    <li>· Мисс Грациозность коллектива.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="{% static "static/media/media/default/photo/МИ_1.jpg" %}"
+                                     class="size-full"
+                                     alt=""/>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <img src="{% static "static/media/media/default/photo/АлВлаСал.jpg" %}"
+                                     class="size-full"
+                                     alt=""/>
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Сальников Алексей Владимирович</h2>
+                                <ul class="fa-ul">
+                                    <li> · Художественный руководитель "Кудринки".</li>
+                                    <li> · Солист, мастер на все руки, ну и хореограф-постановщик за компанию.</li>
+                                    <li>· Многократный и общепризнанный абсолютный победитель в конкурсе "Улыбка
+                                        коллектива".
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div><!-- end content -->
+{% endblock %}
+

@@ -1,0 +1,146 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{#{% block title %}Регистрация{% endblock %}#}
+{% block content %}
+
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+                        <div class="row">
+                            <h4 class="main-heading"><span>Регистрация</span></h4>
+                            <!-- list post item -->
+                            <div class="col-md-3"></div>
+                            <div class="form_padding col-md-6 form_style">
+
+
+                                {% if form.errors %}
+                                    {% for field in form %}
+                                        {% for error in field.errors %}
+                                            <div class="alert alert-danger">
+                                                <strong>{{ error|escape }}</strong>
+                                            </div>
+                                        {% endfor %}
+                                    {% endfor %}
+                                    {% for error in form.non_field_errors %}
+                                        <div class="alert alert-danger">
+                                            <strong>{{ error|escape }}</strong>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+
+
+
+                                <form method="POST" class="form-horizontal" action="" enctype="multipart/form-data">
+                                    {#                                <h1>Регистрация </h1>#}
+                                    {% csrf_token %}
+                                    {#                                {% for field in form %}#}
+                                    {#                                    {% for error in field.errors %}#}
+                                    {#                                        <div class="alert alert-danger" role="alert">{{ field.errors }}</div>#}
+                                    {#                                    {% endfor %}#}
+                                    {#                                {% endfor %}#}
+
+                                    {% for field in form %}
+                                        <div class="form-group">
+                                            <label for="{{ field.id_for_label }}"
+                                                   class="control-label">{{ field.label }}:</label>
+                                            {{ field.as_widget }}
+                                            {#                                        <div class="col-sm-9">#}
+                                            {#                                            {{ field }}#}
+                                            {#                                        </div>#}
+                                        </div>
+                                    {% endfor %}
+
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button style="height:36px;text-align:center;" class="center-block button colored control-label"
+                                                type="submit">Зарегистрироваться
+                                        </button>
+                                         <input style="text-align:center"
+                                           class="button colored" type="button"
+                                           value="Назад" onClick='location.href="/login"'>
+
+                                    </div>
+                                </form>
+
+
+                                {#                                {% if form.errors %}#}
+                                {#                                    {% for field in form %}#}
+                                {#                                        {% for error in field.errors %}#}
+                                {#                                            <div class="alert alert-danger">#}
+                                {#                                                <strong>{{ error|escape }}</strong>#}
+                                {#                                            </div>#}
+                                {#                                        {% endfor %}#}
+                                {#                                    {% endfor %}#}
+                                {#                                    {% for error in form.non_field_errors %}#}
+                                {#                                        <div class="alert alert-danger">#}
+                                {#                                            <strong>{{ error|escape }}</strong>#}
+                                {#                                        </div>#}
+                                {#                                    {% endfor %}#}
+                                {#                                {% endif %}#}
+                                {#                                <form action="{{ form_action }}" method="post" class="form-horizontal">#}
+                                {#                                    {% csrf_token %}#}
+                                {#                                    {% for field in form %}#}
+                                {#                                        <div class="form-group">#}
+                                {#                                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>#}
+                                {#                                            {{ field.as_widget }}#}
+                                {#                                        </div>#}
+                                {#                                    {% endfor %}#}
+                                {#                                    <div class="col-sm-offset-2 col-sm-10">#}
+                                {#                                        <button style="text-align:center;" class="button colored control-label"#}
+                                {#                                                type="submit">Войти​#}
+                                {#                                        </button>#}
+                                {#                                        <input style="text-align:center"#}
+                                {#                                               class="button colored" type="button"#}
+                                {#                                               value="Зарегистрироваться" onClick='location.href="/registration"'>#}
+                                {#                                    </div>#}
+                                {#                                </form>#}
+
+
+                            </div>
+
+
+                            <div class="col-md-3"></div>
+                        </div>
+                    </div>
+                    <p></p>
+                </article>
+            </div>
+        </div>
+    </div><!-- end content -->
+
+
+
+{#    <div class="main_block_elem">#}
+{#        <div class="jumbotron">#}
+{#            <div class="container">#}
+{#                <form method="POST" class="form-horizontal" action="" enctype="multipart/form-data">#}
+{#                    <h1>Регистрация </h1>#}
+{#                    {% csrf_token %}#}
+{#                    {% for field in form %}#}
+{#                        {% for error in field.errors %}#}
+{#                            <div class="alert alert-danger" role="alert">{{ field.errors }}</div>#}
+{#                        {% endfor %}#}
+{#                    {% endfor %}#}
+{#                    {% for field in form %}#}
+{#                        <div class="form-group">#}
+{#                            <label for="{{ field.id_for_label }}"#}
+{#                                   class="col-sm-3 control-label">{{ field.label }}:</label>#}
+{#                            <div class="col-sm-9">#}
+{#                                {{ field }}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                    <div class="form-group">#}
+{#                        <div class="col-sm-offset-3 col-sm-9">#}
+{#                            <button type="submit" class="btn btn-secondary">Зарегистрировать</button>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{% endblock %}

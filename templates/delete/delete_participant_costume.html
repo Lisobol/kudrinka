@@ -1,0 +1,26 @@
+{% extends 'delete.html' %}
+{% block action %}action="{% url 'delete_participant_costume' slug=obj.slug %}"{% endblock %}
+{% block areyousure %} участник-элемент костюма {{ obj.participant|title }} : {{ obj.costume|title }}
+{% endblock %}
+
+{##}
+{##}
+{#{% extends "index.html" %}#}
+{#{% block title %}Удалить участник-элемент костюма  "{{ obj.participant|title }}" : "{{ obj.costume|title }}"-#}
+{#    {{ block.super }}{% endblock %}#}
+{#{% block content %}#}
+{#    <div class="jumbotron">#}
+{#        <div class="container">#}
+{#            <div class="page-header">#}
+{#                <h3>Удаление "{{ obj.participant|title }}" : "{{ obj.costume|title }}" </h3>#}
+{#            </div>#}
+{#            <form action="{% url 'delete_participant_costume' slug=obj.slug %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <h3> Вы уверены, что хотите удалить  <b>"{{ obj.participant|title }}" : "{{ obj.costume|title }}"</b>?</h3>#}
+{#                <a href="{% url 'my_page_choreographer' %}">Отменить</a>#}
+{#                <button type="submit" class="btn btn-default btn-lg btn-block">Удалить</button>#}
+{##}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

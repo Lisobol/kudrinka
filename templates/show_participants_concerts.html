@@ -1,0 +1,21 @@
+{% extends "show.html" %}
+{% block title %}Концерты{% endblock %}
+{% block name %}Концерты и участники{% endblock %}
+{% block elements %}
+    {% for c in concerts %}
+        {% include "show_concert.html" with concert=c %}
+        <h4>Участники:</h4>
+        {% for pc in p_c %}
+            {% for p in participants %}
+                {% if p.id == pc.participant.id and pc.concert.id == c.id %}
+                    {% include "show_participant.html" with participant=p %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        <a href="{{ c.get_absolute_url }}" class="btn btn-light">Read</a>
+    {% endfor %}
+    <form action="/new_participant_concert/">
+        <button type="submit">new_participant_concert</button>
+    </form>
+
+{% endblock %}

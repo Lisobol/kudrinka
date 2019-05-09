@@ -1,0 +1,58 @@
+{% block name %}Выступления{% endblock %}
+{% block elements %}
+    {% for pc in p_c %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <style type="text/css">
+                TABLE {
+                    width: 300px; /* Ширина таблицы */
+                    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+                }
+
+                TD, TH {
+                {#width: 30px;#} padding: 3px; /* Поля вокруг содержимого таблицы */
+                    border: 1px solid black; /* Параметры рамки */
+                }
+
+                .ok {
+                    width: 25px;
+                    height: 25px;
+                }
+            </style>
+
+            <tr>
+                <th></th>
+                {% for dc in d_c %}
+                    {% for d in dances %}
+                        {% if d == dc.dance and dc.concert == pc.concert %}
+                            <th>{{ dc.num }}.{{ d.name }}</th>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>{{ pc.concert.name }}: {{ pc.concert.begin_date }}</th>
+                {% for dc in d_c %}
+                    {% for d in dances %}
+                        {% if d == dc.dance and dc.concert == pc.concert %}
+                            <td>{% for pdc in p_d_c %}
+                                {% if pdc.participant_concert.participant == participant and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pc == pdc.participant_concert and pdc.under_question == False %}
+                                    <img  class="ok" src="https://img.icons8.com/color/48/000000/checkmark.png">
+                                {% elif pdc.participant_concert.participant == participant and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pc == pdc.participant_concert and pdc.under_question == True %}
+                                    <img class="ok" src="https://img.icons8.com/ios/50/000000/question-mark-filled.png">
+                                {% else %}
+                                {% endif %}
+                            {% endfor %}</td>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+    {% endfor %}
+     <form action="/participants_dances_concerts/">
+                <button type="submit">participants_dances_concerts</button>
+     </form>
+{% endblock %}

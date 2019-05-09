@@ -1,0 +1,25 @@
+{% extends 'delete.html' %}
+{% block action %}action="{% url 'delete_schedule_part' slug=obj.slug %}"{% endblock %}
+{% block areyousure %} занятие из расписания {{ obj.group|title }} {{ obj.class_schedule|title }} {{ obj.day_of_the_week|title }}
+{% endblock %}
+{##}
+{#{% extends "index.html" %}#}
+{#{% block title %}Удалить занятие из расписания  "{{ obj.group|title }} {{ obj.class_schedule|title }} {{ obj.day_of_the_week|title }}" - {{ block.super }}{% endblock %}#}
+{#{% block content %}#}
+{#    <div class="jumbotron">#}
+{#        <div class="container">#}
+{#            <div class="page-header">#}
+{#                <h3>Удаление занятия из расписания"{{ obj.group|title }} {{ obj.class_schedule|title }} {{ obj.day_of_the_week|title }}" </h3>#}
+{#            </div>#}
+{#            <form action="{% url 'delete_schedule_part' slug=obj.slug %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <h3> Вы уверены, что хотите удалить занятие из расписания <b>"{{ obj.group|title }} {{ obj.class_schedule|title }} {{ obj.day_of_the_week|title }}"</b>?</h3>#}
+{##}
+{#                <a href="{% url 'schedule' %}"   class="btn btn-dark btn-lg">Отменить</a>#}
+{# <a href="{% url 'schedule_part' slug=obj.slug %}">Отменить</a>#}
+{#                <button type="submit" class="btn btn-danger btn-lg btn-block">Удалить</button>#}
+{##}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

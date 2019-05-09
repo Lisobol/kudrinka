@@ -1,0 +1,15 @@
+{% load static %}
+<div class="costume" data-id="{{ costume.id }}">
+    <div class="costume_title">
+        <h4 class="costume_name">{{ costume.name }}</h4>
+        {% if costume.dance %}
+            <span class="costume_dance">{{ costume.dance }}</span>
+        {% endif %}
+        <span class="costume_description">{{ costume.description }}</span>
+        <a href="{% url 'update_costume' slug=costume.slug %}" class="btn btn-light">Upd</a>
+
+        <a href="{% url 'delete_costume' slug=costume.slug %}" class="btn btn-light">Del</a>
+
+    </div>
+</div>
+

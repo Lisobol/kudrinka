@@ -1,0 +1,18 @@
+{% extends "new.html" %}
+{% block name %} участника танца в концерт{% endblock %}
+{% block form %}
+    <div class="form-row">
+        <div class="col">
+            <h5>Участник-концерт</h5>
+            {{ form.participant_concert }}
+        </div>
+        <div class="col">
+            <h5>Танец</h5>
+            {{ form.dance }}
+        </div>
+    </div>
+    <div class="form-group">
+        <h5>Под вопросом</h5>
+        {{ form.under_question }}
+    </div>
+{% endblock %}

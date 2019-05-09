@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block content %}
+    {#    <script src="{% static "static/js/scripts.js" %}"></script>#}
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+                        <h3 class="text-center">Добавить {% block name %}{% endblock %}</h3>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="form-group">
+                                {% if field.errors %}
+                                    <div class="alert alert-danger">
+                                        {{ field.errors }}
+                                    </div>
+                                {% endif %}</div>
+                        {% endfor %}
+                        {% block form %}
+
+                        {% endblock %}
+                        <div class="row justify-content-end">
+                            <button type="submit" class="button colored ">Сохранить</button>
+                        </div>
+                    </form>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+{% endblock %}

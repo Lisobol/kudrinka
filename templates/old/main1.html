@@ -1,0 +1,159 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block title %}registration
+{% endblock %}
+{% block content %}
+
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="main_block_elem">
+        <div class="container">
+            hiiiiiii
+            <button onClick="alert('You clicked the button using Javascript.');">
+                Click Me - I run Javascript
+            </button>
+            <button id="about-btn"> Click Me - I'm Javascript on Speed</button>
+            <p>This is a example</p>
+            <p>This is another example</p>
+            <form action="/admin/">
+                <button type="submit">admin</button>
+            </form>
+            <form action="/registration/">
+                <button type="submit">registration</button>
+            </form>
+            <form action="/logout/">
+                <button type="submit">logout</button>
+            </form>
+            <form action="/login/">
+                <button type="submit">login</button>
+            </form>
+            <p>
+
+            </p>
+
+            <p>
+
+            </p>
+            <form action="/schedule/">
+                <button type="submit">schedule</button>
+            </form>
+            <p>
+
+            </p>
+
+            <form action="/participants/">
+                <button type="submit">participants</button>
+            </form>
+            <p>
+
+            </p>
+                <form action="/participants_concert/">
+                <button type="submit">participants_concert</button>
+                </form>
+            <p>
+
+            </p>
+            <form action="/participants_dances_concerts/">
+                <button type="submit">participants_dances_concerts</button>
+            </form>
+            <p>
+
+            </p>
+            <form action="/choreographers/">
+                <button type="submit">choreographers</button>
+            </form>
+            <p>
+
+            </p>
+
+            <form action="/concerts/">
+                <button type="submit">concerts</button>
+            </form>
+            <p>
+
+            </p>
+
+            <form action="/class_schedules/">
+                <button type="submit">class_schedules</button>
+            </form>
+
+            <p>
+
+            </p>
+
+            <form action="/dances/">
+                <button type="submit">dances</button>
+            </form>
+            <p>
+
+            </p>
+
+            <form action="/dance_styles/">
+                <button type="submit">dance_styles</button>
+            </form>
+
+            <p>
+
+            </p>
+
+            <form action="/groups/">
+                <button type="submit">groups</button>
+            </form>
+            <p>
+
+            </p>
+
+            <form action="/news/">
+                <button type="submit">news</button>
+            </form>
+            <p>
+
+            </p>
+
+            <form action="/photo_gallery/">
+                <button type="submit">photo_gallery</button>
+            </form>
+            <p>
+
+            </p>
+            <form action="/new_photo_in_gallery/">
+                <button type="submit">new_photo_in_gallery</button>
+            </form>
+            <p>
+
+            </p>
+            <form action="/fonds/">
+                <button type="submit">fonds</button>
+            </form>
+            <p>
+
+            </p>
+            <form action="/payments/">
+                <button type="submit">payments</button>
+            </form>
+            <form action="/costumes/">
+                <button type="submit">costumes</button>
+            </form>
+
+            {% if logged_user %}
+                {% for c in choreographer %}
+                    {% if c.user == logged_user %}
+                        <form action="/my_page_choreographer/">
+                            <button type="submit">my_page_choreographer</button>
+                        </form>
+                    {% endif %}
+                {% endfor %}
+
+                {% for p in participant %}
+                    {% if p.user == logged_user %}
+                        <form action="/my_page_participant/">
+                            <button type="submit">my_page_participant</button>
+                        </form>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+        </div>
+
+    </div>
+{% endblock %}

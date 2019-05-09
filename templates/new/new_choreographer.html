@@ -1,0 +1,36 @@
+{% extends "new.html" %}
+{% block name %}преподавателя{% endblock %}
+{% block form %}
+      <div class="form-row">
+        <div class="col">
+            <h5>Фамилия</h5>
+            {{ form.last_name }}
+        </div>
+        <div class="col">
+            <h5>Имя</h5>
+            {{ form.first_name }}
+        </div>
+        <div class="col">
+            <h5>Отчество</h5>
+            {{ form.patronymic }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            <h5>Телефон</h5>
+            {{ form.phone }}
+        </div>
+        <div class="col">
+            <h5>Email</h5>
+            {{ form.email }}
+        </div>
+    </div>
+    <div class="form-group">
+        <h5>Фото</h5>
+        {{ form.picture }}
+    </div>
+    <div class="form-group">
+        <h5>Описание</h5>
+        {{ form.description }}
+    </div>
+{% endblock %}

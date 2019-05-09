@@ -1,0 +1,18 @@
+{% load static %}
+<div class="fond" data-id="{{ fond.id }}">
+    <div>
+        <h5>{{ fond.participant }}</h5>
+{#        <span>- {{ fond.sum }}</span>#}
+{#        <p>Сдано:</p>#}
+        <div class="progress">
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
+                 aria-valuenow={{ fond.strpercent }} aria-valuemin="0" aria-valuemax="100"
+                 style="width: {{ fond.percent }}%">{{ fond.sum }}
+                из 7000
+            </div>
+        </div>
+        {#        <a href="{% url 'update_fond' slug=fond.slug %}" class="btn btn-light">Upd</a>#}
+        {#        <a href="{% url 'delete_fond' slug=fond.slug %}" class="btn btn-light">Del</a>#}
+
+    </div>
+</div>

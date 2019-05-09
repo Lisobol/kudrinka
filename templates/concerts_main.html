@@ -1,0 +1,170 @@
+{% extends "index.html" %}
+{% load static %}
+{% load staticfiles %}
+{% block title %}Выступления
+{% endblock %}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-8 main-content">
+                <!-- Main (left side) -->
+                <section>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- post -->
+                            <article class="blog-post">
+                                <div class="post-entry">
+                                    <h3>Предстоящие</h3>
+                                    {% for c in concerts %}
+                                        {% if c.begin_date >= today %}
+                                            <div class="diff-spacer spacer-1"
+                                                 style="background-color:#B35652;color:#B35652;"></div>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>{{ c.begin_date }} {% if c.end_date %}-
+                                                        {{ c.end_date }}{% endif %}</p>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <p>{{ c.name }}</p>
+                                                    <p>{{ c.begin_time }}{% if c.end_time %} -
+                                                        {{ c.end_time }}{% endif %}</p>
+                                                    <p>{{ c.place }}</p>
+                                                    {% if c.address %}
+                                                        <p>Адрес: {{ c.address }}</p>
+                                                    {% endif %}
+                                                    {% if c.description %}
+                                                        <p>{{ c.description }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+
+                                        {% endif %}
+                                    {% endfor %}
+
+                                    <div class="diff-spacer spacer-2"
+                                         style="background-color:#B35652;color:#B35652;"></div>
+
+                                    <h3>Прошедшие</h3>
+                                    {% for c in concerts %}
+                                        {% if c.begin_date < today %}
+                                            <div class="diff-spacer spacer-1"
+                                                 style="background-color:#B35652;color:#B35652;"></div>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>{{ c.begin_date }} {% if c.end_date %}-
+                                                        {{ c.end_date }}{% endif %}</p>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <p>{{ c.name }}</p>
+                                                    <p>{{ c.begin_time }}{% if c.end_time %} -
+                                                        {{ c.end_time }}{% endif %}</p>
+                                                    <p>{{ c.place }}</p>
+                                                    {% if c.address %}
+                                                        <p>Адрес: {{ c.address }}</p>
+                                                    {% endif %}
+                                                    {% if c.description %}
+                                                        <p>{{ c.description }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+{#                                            <div class="diff-spacer spacer-1"#}
+{#                                                 style="background-color:#B35652;color:#B35652;"></div>#}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </article>
+                            <!-- contact end -->
+                        </div><!-- end col-md-12 -->
+                    </div><!-- end row -->
+                </section>
+                <!-- END Main (left side) -->
+            </div>
+            <div class="col-md-4">
+                <!-- SIDE BAR -->
+                <div id="sidebar">
+                    <!-- sidebar-module-author -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>О нас</span></h4>
+                            <a href="/about_us/">
+                                <img src="{% static "static/media/media/default/photo/НОМЕР24_1.jpg" %}"
+                                     alt=""></a>
+                            <p><span class="font-weight-bold">Лауреат и обладатель Гран-При</span> Всероссийских и
+                                Международных фестивалей и конкурсов <span class="font-weight-bold">Ансамбль танца "Кудринка"</span>
+                                <span class="font-weight-bold">приглашает танцевать:</span>
+                                русские народные танцы, степ, различные направления современного танца, детские танцы,
+                                белорусские, украинские, молдавские танцы, мексиканские и испанские танцы...
+                            </p>
+                            <a href="/about_us/" class="more-button"><span
+                                    class="read-more-button">Читать далее</span></a>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module -->
+                    <!-- sidebar-module -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading">Мы в соцсетях</h4>
+                            <div class="widget-social">
+                                <a href="http://facebook.com/kudrinkadance" target="_blank"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="http://vk.com/kudrinka" target="_blank"><i class="fa fa-vk"></i></a>
+                                <a href=https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_blank"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="http://youtube.com/user/TheKudrinka" target="_blank"><i
+                                        class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module -->
+                    <!-- sidebar-module-instagram -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>Instagram</span></h4>
+                            <ul class="widget-instagram">
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст9.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст3.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст12.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст6.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст1.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст4.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст7.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст11.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст8.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module-instagram  -->
+                    <!-- end SIDE BAR -->
+                </div>
+            </div>
+        </div><!-- end row -->
+    </div><!-- end content -->
+{% endblock %}

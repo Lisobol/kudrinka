@@ -1,0 +1,12 @@
+{% extends "update.html" %}
+{% block name %} оплату фонда{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Участник</h5>
+        {{ form.participant }}
+    </div>
+    <div class="form-group">
+        <h5>Сумма</h5>
+        {{ form.sum }}
+    </div>
+{% endblock %}

@@ -1,0 +1,72 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /*font-weight: 300;*/
+    /*font-size: 20px;*/
+
+}
+
+.ok {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+TABLE {
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+TD, TH {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+
+}
+
+.ok {
+    width: 25px;
+    height: 25px;
+}
+
+.main_block_elem {
+    font-size: 15px;
+    margin: 100px;
+    padding: 30px;
+}
+/*progress {*/
+    /*background-color: #ffffff;*/
+    /*border: 0;*/
+    /*width: 80%;*/
+    /*height: 18px;*/
+/*border-radius: 9px;*/
+/*}*/
+/*.update {*/
+    /*margin-left: 10px;*/
+    /*!*display: inline-block;*!*/
+    /*background: url('/static_kudr/static/media/media/default/upd.png') no-repeat center;*/
+    /*background-size: contain;*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*vertical-align: middle;*/
+    /*background-color: transparent;*/
+    /*border: none;*/
+/*}*/
+
+
+.progress {
+    margin: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tit {
+    white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    padding: 5px; /* Поля */
+    text-overflow: ellipsis; /* Многоточие */
+}

@@ -1,0 +1,10 @@
+{% load static %}
+        <span class="dance_name">{{ dance.name }}</span>
+        <span class="dance_duration">{{ dance.duration }}</span>
+        <span class="dance_description">{{ dance.description }}</span>
+       {% if dance.picture %}
+            <img class="dance_picture" src="{{ dance.picture.url }}" width="50%" height="50%">
+        {% endif %}
+
+        <a href="{% url 'update_dance' slug=dance.slug %}" class="btn btn-sm btn-secondary">Редактировать</a>
+        <a href="{% url 'delete_dance' slug=dance.slug %}" class="btn btn-sm btn-danger">Удалить</a>

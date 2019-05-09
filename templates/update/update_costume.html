@@ -1,0 +1,16 @@
+{% extends "update.html" %}
+{% block name %} элемент костюма{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Название</h5>
+        {{ form.name }}
+    </div>
+    <div class="form-group">
+        <h5>Танец</h5>
+        {{ form.dance }}
+    </div>
+    <div class="form-group">
+        <h5>Для заметок</h5>
+        {{ form.description }}
+    </div>
+{% endblock %}

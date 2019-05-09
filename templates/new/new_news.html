@@ -1,0 +1,20 @@
+{% extends "new.html" %}
+{% block name %} новость{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Заголовок</h5>
+        {{ form.title }}
+    </div>
+    <div class="form-group">
+        <h5>Текст</h5>
+        {{ form.text }}
+    </div>
+    <div class="form-group">
+        <h5>Фото</h5>
+        {{ form.picture }}
+    </div>
+    <div class="form-group">
+        <h5>Дата</h5>
+        {{ form.date }}
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "new.html" %}
+{% block name %} фотографию{% endblock %}
+{% block form %}
+    <div class="col-md-8">
+        {{ form.name }}
+    </div>
+    <div class="col-md-8">
+        {{ form.picture }}
+    </div>
+    <div class="col-md-8">
+        {{ form.date }}
+    </div>
+    <div class="col-md-8">
+        {{ form.gallery }}
+    </div>
+    <div class="col-md-8">
+        {{ form.description }}
+    </div>
+{% endblock %}

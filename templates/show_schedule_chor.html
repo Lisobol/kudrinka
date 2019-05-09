@@ -1,0 +1,31 @@
+{#{% extends "show.html" %}#}
+{#{% block title %}Расписание{% endblock %}#}
+{#{% block name %}<h4>Расписание</h4>{% endblock %}#}
+{% block elements %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            {% for day in weekdays %}
+                <th scope="col" class="table_col">{{ day }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for day in weekdays %}
+                <td scope="row" class="table_row">
+                    {% for g in gr_ch_sh %}
+                        {% if day.day_of_the_week == g.day_of_the_week.day_of_the_week and g.choreographer == choreographer %}
+                            <div class="line">
+                            <h5>{{ g.group.name }}</h5>
+                                <p>{{ g.dance_style }}</p>
+                                <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

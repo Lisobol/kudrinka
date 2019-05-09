@@ -1,0 +1,16 @@
+{% extends "new.html" %}
+{% block name %} танец в концерте{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Танец</h5>
+        {{ form.dance }}
+    </div>
+    <div class="form-group">
+        <h5>Концерт</h5>
+        {{ form.concert }}
+    </div>
+    <div class="form-group">
+        <h5>Номер по порядку в концерте</h5>
+        {{ form.num }}
+    </div>
+{% endblock %}

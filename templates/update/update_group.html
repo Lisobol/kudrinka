@@ -1,0 +1,20 @@
+{% extends "update.html" %}
+{% block name %} группу{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Название</h5>
+        {{ form.name }}
+    </div>
+    <div class="form-group">
+        <h5>Возрастная категория</h5>
+        {{ form.ages }}
+    </div>
+    <div class="form-group">
+        <h5>Порядковый номер в списке</h5>
+        {{ form.num }}
+    </div>
+    <div class="form-group">
+        <h5>Для заметок</h5>
+        {{ form.description }}
+    </div>
+{% endblock %}

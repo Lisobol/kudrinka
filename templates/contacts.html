@@ -1,0 +1,161 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block title %}Контакты
+{% endblock %}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-8 main-content">
+                <!-- Main (left side) -->
+                <section>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- post -->
+                            <article class="blog-post">
+                                <div class="post-entry">
+                                    <h2>КАК НАС НАЙТИ:</h2>
+                                    <h3>Центральный Дом Культуры Железнодорожников</h3>
+                                    <p>
+                                        Выход из метро <span class="font-weight-bold">"Комсомольская"</span> по
+                                        указателям к Казанскому вокзалу и к
+                                        ЦДКЖ.
+                                        На улице повернуть направо и идти прямо до Центрального входа и касс ЦДКЖ. Далее
+                                        поверните направо - вход в здание через Служебный вход с высоким крыльцом. <span
+                                            class="font-weight-bold">3
+                                        этаж, 313 класс</span>.
+                                    </p>
+                                </div>
+                                <div class="iframe-rwd embed-container  maps">
+                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af48fa30a04cb789a2c09ebfe1acff46a8f30ba58a7586fc5f31b03091c9b60bb&amp;source=constructor"
+                                            width="602" height="423" frameborder="0"></iframe>
+                                    <br/>
+                                    <small><a
+                                            href="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d92181.05523497719!2d11.242563650000001!3d43.77995815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slv!2slv!4v1425640800802"
+                                            style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                                </div>
+                                <div class="post-entry">
+                                    <P><span class="font-weight-bold">Наш Адрес</span>: Москва, Комсомольская пл., д.4
+                                    </P>
+                                    <p><span class="font-weight-bold">Центральный ДК Железнодорожников</span></p>
+                                    <p><span class="font-weight-bold">Контактные телефоны</span>:</p>
+                                    <p><span class="col-md-2"></span><span
+                                            class="fa fa-phone">  +7 916-670-2243 Ирина</span></p>
+                                    <p><span class="col-md-2"></span><span
+                                            class="fa fa-phone">  +7 915-176-1118 Алексей</span></p>
+                                    <p><span class="font-weight-bold">Видеоканал на Youtube</span>: TheKudrinka
+                                        <a href="http://youtube.com/user/TheKudrinka" target="_blank"><i
+                                                class="fa fa-youtube-play"></i></a></p>
+                                    <p><span class="font-weight-bold">Англоязычный сайт</span>: kudrinka.com
+                                        <a href="http://kudrinka.com"
+                                           target="_blank"><i class="fa fa-link"></i></a>
+                                    </p>
+                                    <p><span class="font-weight-bold">E-Mail</span>: info@kudrinka.ru</p>
+                                    <p><span class="font-weight-bold">Общение</span>: Вконтакте
+                                        <a href="http://vk.com/kudrinka"
+                                           target="_blank"><i class="fa fa-vk"></i></a>
+                                        , Facebook
+                                        <a href="http://facebook.com/kudrinkadance" target="_blank"><i
+                                                class="fa fa-facebook"></i></a>
+                                        , Инстаграм
+                                        <a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.."
+                                           target="_blank"><i
+                                                class="fa fa-instagram"></i></a>
+                                    </p>
+                                </div>
+                            </article>
+                            <!-- contact end -->
+                        </div><!-- end col-md-12 -->
+                    </div><!-- end row -->
+                </section>
+                <!-- END Main (left side) -->
+            </div>
+            <div class="col-md-4">
+                <!-- SIDE BAR -->
+                <div id="sidebar">
+                    <!-- sidebar-module-author -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>О нас</span></h4>
+                            <a href="/about_us/">
+                                <img src="{% static "static/media/media/default/photo/НОМЕР24_1.jpg" %}"
+                                     alt=""></a>
+                            <p><span class="font-weight-bold">Лауреат и обладатель Гран-При</span> Всероссийских и
+                                Международных фестивалей и конкурсов <span class="font-weight-bold">Ансамбль танца "Кудринка"</span>
+                                <span class="font-weight-bold">приглашает танцевать:</span>
+                                русские народные танцы, степ, различные направления современного танца, детские танцы,
+                                белорусские, украинские, молдавские танцы, мексиканские и испанские танцы...
+                            </p>
+                            <a href="/about_us/" class="more-button"><span
+                                    class="read-more-button">Читать далее</span></a>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module -->
+                    <!-- sidebar-module -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading">Мы в соцсетях</h4>
+                            <div class="widget-social">
+                                <a href="http://facebook.com/kudrinkadance" target="_blank"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="http://vk.com/kudrinka" target="_blank"><i class="fa fa-vk"></i></a>
+                                <a href=https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_blank"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="http://youtube.com/user/TheKudrinka" target="_blank"><i
+                                        class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module -->
+                    <!-- sidebar-module-instagram -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>Instagram</span></h4>
+                            <ul class="widget-instagram">
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст9.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст3.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст12.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст6.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст1.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст4.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст7.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст11.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="#" target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст8.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module-instagram  -->
+                    <!-- end SIDE BAR -->
+                </div>
+            </div>
+        </div><!-- end row -->
+    </div><!-- end content -->
+{% endblock %}

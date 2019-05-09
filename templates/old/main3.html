@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block title %}Кудринка
+{% endblock %}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+
+    <div class="main_block_elem">
+        <div class="container">
+<div>  {% include "show_news.html" %}</div>
+
+
+<div>  {% include "show_schedule_main.html" %}</div>
+
+        </div>
+
+    </div>
+{% endblock %}

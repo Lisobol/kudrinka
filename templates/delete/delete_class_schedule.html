@@ -1,0 +1,34 @@
+{% extends 'delete.html' %}
+{% block action %}action="{% url 'delete_class_schedule' slug=obj.slug %}"{% endblock %}
+{% block areyousure %}время занятий <b>"{{ obj.begin_time|title }}-{{ obj.end_time|title }}"
+{% endblock %}
+{% block buttons %}<input style="text-align:center"
+                                           class="button colored" type="button"
+                                           value="Назад" onClick='location.href="/schedule"'>
+                                    <button style="height:36px;text-align:center;"
+                                            class="center-block button colored control-label"
+                                            type="submit">Удалить
+                                    </button>{% endblock %}
+
+
+{##}
+{#{% extends "index.html" %}#}
+{#{% block title %}Удалить время занятий  "{{ obj.begin_time|title }}-{{ obj.end_time|title }}" - {{ block.super }}{% endblock %}#}
+{#{% block content %}#}
+{#    <div class="jumbotron">#}
+{#        <div class="container">#}
+{#            <div class="page-header">#}
+{#                <h3>Удаление времени занятий "{{ obj.begin_time|title }}-{{ obj.end_time|title }}" </h3>#}
+{#            </div>#}
+{#            <form action="{% url 'delete_class_schedule' slug=obj.slug %}" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <h3> Вы уверены, что хотите удалить время занятий <b>"{{ obj.begin_time|title }}-{{ obj.end_time|title }}"</b>?</h3>#}
+{#                  <a href="{% url 'schedule' %}"   class="btn btn-dark btn-lg">Отменить</a>#}
+{##}
+{#                <a href="{% url 'schedule'  %}">Отменить</a>#}
+{#                <button type="submit" class="btn btn-danger btn-lg btn-block">Удалить</button>#}
+{##}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

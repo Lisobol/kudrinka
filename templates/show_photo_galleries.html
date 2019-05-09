@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+{% load static %}
+{% load staticfiles %}
+{% block head %}
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <script src="{% static "static/js/unitegallery-master/dist/js/unitegallery.min.js" %}"
+            type='text/javascript'></script>
+    <link href="{% static "static/js/unitegallery-master/dist/css/unite-gallery.css" %}" rel='stylesheet'
+          type='text/css'/>
+    <!-- include Unite Gallery Theme Files -->
+
+    <script src="{% static "static/js/unitegallery-master/dist/themes/default/ug-theme-default.js" %}"
+            type='text/javascript'></script>
+    <link href="{% static "static/js/unitegallery-master/dist/themes/default/ug-theme-default.css" %}" rel='stylesheet'
+          type='text/css'/>
+
+{% endblock %}
+{% block content %}
+    {#    <script src="{% static "static/js/scripts.js" %}"></script>#}
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="row">
+
+                        <div class="post-entry">
+
+
+                            <div id="gallery" style="display:block;">
+
+                                <img alt="Image 1 Title" src="{% static "static/media/media/default/photo/ЗАЛ.jpg" %}"
+                                     data-image="{% static "static/media/media/default/photo/ЗАЛ.jpg" %}"
+                                     data-description="Image 1 Description">
+
+
+                            </div>
+                            <script type="text/javascript">
+                                var api;
+                                jQuery(document).ready(function () {
+                                    api = jQuery("#gallery").unitegallery();
+                                });
+
+                            </script>
+
+
+
+
+
+                            {% for pg in photo_galleries %}
+                                <div class="col-md-6">
+                                    <h1><a href="{{ pg.get_absolute_url }}">{{ pg.name }}</a>
+                                    </h1>
+                                    <img class='ph_galleries' src="{{ pg.main_picture.url }}">
+                                    <a href="{{ pg.get_absolute_url }}" class="btn btn-light">Read</a>
+
+                                </div>
+                            {% endfor %}
+                            {#                                <form action="/new_photo_gallery/">#}
+                            {#                                    <button type="submit">new_photo_gallery</button>#}
+                            {#                                </form>#}
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+{% endblock %}

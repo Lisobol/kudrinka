@@ -1,0 +1,226 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{#{% block title %}Кудринка#}
+{#{% endblock %}#}
+{% block content %}
+    <div class="content">
+        <div class="row">
+            <div class="col-md-8 main-content">
+                <section>
+                    <h4 class="main-heading"><span>Новости</span></h4>
+                    <!-- list post item -->
+                    {% for n in news %}
+                        {% if n.picture %}
+                            <div>
+                                <div class="list-post">
+                                    <div class="list-post-container">
+                                        <img src="{{ n.picture.url }}">
+                                    </div>
+                                    <div class="list-post-body">
+                                        <h2><a href="{% url 'one_news' slug=n.slug %}">{{ n.title }}</a></h2>
+                                        <div class="post-meta">
+                                            <span class="post-meta-publ-date">{{ n.date }}</span>
+                                        </div>
+                                        <p class="tit">{{ n.text|linebreaksbr }}</p>
+                                        <script type="text/javascript">
+
+                                            function title() {
+                                                var elem, size, text;
+                                                var elem = document.getElementsByClassName('tit');
+                                                var text = elem.innerHTML;
+                                                var size = 150;
+                                                var n =150;
+                                                for (var i = 0; i < elem.length; i++) { /* необходимо вставить цикл, чтоб получить все блоки с классом tit */
+                                                    if (elem[i].innerHTML.length > size) {
+                                                        text = elem[i].innerHTML.substr(0, n);
+                                                    }
+                                                    else {
+                                                        text = elem[i].innerHTML;
+                                                    }
+                                                    elem[i].innerHTML = text + '...';
+                                                }
+                                            }
+
+                                            title();
+                                        </script>
+                                        {% if user.is_superuser %}
+                                            <p>
+                                            <a class="but" href="{% url 'update_news' slug=n.slug %}"
+                                                   target="_blank"><i
+                                                        class="fa fa-pencil"></i></a>
+                                                <a class="but" href="{% url 'delete_news' slug=n.slug %}"
+                                                   target="_blank"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </p>
+                                        {% endif %}
+                                        <p><a href="{% url 'one_news' slug=n.slug %}" class="more-button"><span
+                                                class="read-more-button">Читать далее</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div>
+                                <div class="list-post">
+                                    <div class="list-post-body body2">
+                                        <h2><a href="{% url 'one_news' slug=n.slug %}">{{ n.title }}</a></h2>
+                                        <div class="post-meta">
+                                            <span class="post-meta-publ-date">{{ n.date }}</span>
+                                        </div>
+                                        <p class="tit">{{ n.text|linebreaksbr }}</p>
+                                        <script type="text/javascript">
+
+                                            function title() {
+                                                var elem, size, text;
+                                                var elem = document.getElementsByClassName('tit');
+                                                var text = elem.innerHTML;
+                                                var size = 200;
+                                                var n = 200;
+                                                for (var i = 0; i < elem.length; i++) { /* необходимо вставить цикл, чтоб получить все блоки с классом tit */
+                                                    if (elem[i].innerHTML.length > size) {
+                                                        text = elem[i].innerHTML.substr(0, n);
+                                                    }
+                                                    else {
+                                                        text = elem[i].innerHTML;
+                                                    }
+                                                    elem[i].innerHTML = text + '...';
+                                                }
+                                            }
+
+                                            title();
+                                        </script>
+                                        {% if user.is_superuser %}
+                                            <p>
+                                                <a class="but" href="{% url 'update_news' slug=n.slug %}"
+                                                   target="_blank"><i
+                                                        class="fa fa-pencil"></i></a>
+                                                <a class="but" href="{% url 'delete_news' slug=n.slug %}"
+                                                   target="_blank"><i
+                                                        class="fa fa-trash"></i></a>
+                                            </p>
+                                        {% endif %}
+                                        <p><a href="{% url 'one_news' slug=n.slug %}" class="more-button"><span
+                                                class="read-more-button">Читать далее</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if news.has_previous %}
+                                <a class="but" href="?page={{ news.previous_page_number }}"><i
+                                        class="butred fa fa-angle-double-left"></i> {{ news.previous_page_number }}</a>
+                            {% endif %}</span>
+                        <span class="current">
+                            {{ news.number }}
+                        </span>
+                        <span>
+                            {% if news.has_next %}
+                                <a class="but" href="?page={{ news.next_page_number }}">{{ news.next_page_number }} <i
+                                        class="butred fa fa-angle-double-right"></i></a>
+                            {% endif %}
+                        </span>
+                    </div>
+
+                    {% if user.is_staff %}
+                        <div CLASS="col-md-9"></div>
+                        <div class="col-md-3"><a class="but_plus" href="{% url 'new_news' %}"
+                                                 target="_blank"><i
+                                class="fa fa-plus-circle"></i></a>
+
+                        </div>
+                    {% endif %}
+                    <!-- end list post item -->
+                </section>
+                <!-- end List Post style -->
+
+
+            </div>
+            <div class="col-md-4">
+                <!-- SIDE BAR -->
+                <div id="sidebar">
+                    <!-- sidebar-module-author -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>О нас</span></h4>
+                            <a href="/about_us/">
+                                <img src="{% static "static/media/media/default/photo/НОМЕР24_1.jpg" %}"
+                                     alt=""></a>
+                            <p><span class="font-weight-bold">Лауреат и обладатель Гран-При</span> Всероссийских и
+                                Международных фестивалей и конкурсов <span class="font-weight-bold">Ансамбль танца "Кудринка"</span>
+                                <span class="font-weight-bold">приглашает танцевать:</span>
+                                русские народные танцы, степ, различные направления современного танца, детские танцы,
+                                белорусские, украинские, молдавские танцы, мексиканские и испанские танцы...
+                            </p>
+                            <a href="/about_us/" class="more-button"><span
+                                    class="read-more-button">Читать далее</span></a>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module -->
+                    <!-- sidebar-module -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>Мы в соцсетях</span></h4>
+                            <div class="widget-social">
+                                <a href="http://facebook.com/kudrinkadance" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="http://vk.com/kudrinka" target="_blank"><i class="fa fa-vk"></i></a>
+                                <a href=https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="http://youtube.com/user/TheKudrinka" target="_blank"><i
+                                        class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end sidebar-module -->
+                    <!-- sidebar-module-instagram -->
+                    <div class="sidebar-module">
+                        <div class="sidebar-content">
+                            <h4 class="sidebar-heading"><span>Instagram</span></h4>
+                            <ul class="widget-instagram">
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст9.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст3.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст12.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст6.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст1.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст4.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст7.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст11.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                                <li><a href="https://instagram.com/kudrinka_dance_ensemble?utm_sou.." target="_self"><img class="ph300_300"
+                                                                    src="{% static "static/media/media/default/photo/instagram/инст8.PNG" %}"
+                                                                    alt="Instagram Title" title="Instagram Title"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end sidebar-module-instagram  -->
+                    <!-- end SIDE BAR -->
+                </div>
+            </div>
+        </div><!-- end row -->
+    </div><!-- end content -->
+{% endblock %}

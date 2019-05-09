@@ -1,0 +1,16 @@
+{% extends "update.html" %}
+{% block name %} танцевальное направление{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Название</h5>
+        {{ form.dance_style }}
+    </div>
+    <div class="form-group">
+        <h5>Фото</h5>
+        {{ form.picture }}
+    </div>
+    <div class="form-group">
+        <h5>Для заметок</h5>
+        {{ form.description }}
+    </div>
+{% endblock %}
