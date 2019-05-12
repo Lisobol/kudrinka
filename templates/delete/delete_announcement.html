@@ -1,0 +1,4 @@
+{% extends 'delete.html' %}
+{% block action %}action="{% url 'delete_announcement' slug=obj.slug %}"{% endblock %}
+{% block areyousure %} объявление {{ obj.title|title }}
+{% endblock %}

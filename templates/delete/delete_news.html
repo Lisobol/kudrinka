@@ -2,7 +2,15 @@
 {% block action %}action="{% url 'delete_news' slug=obj.slug %}"{% endblock %}
 {% block areyousure %} новость {{ obj.title|title }}
 {% endblock %}
-
+{% block buttons %}
+                                    <input style="text-align:center"
+                                           class="button colored" type="button"
+                                           value="Назад" onClick='location.href="/"'>
+                                    <button style="height:36px;text-align:center;"
+                                            class="center-block button colored control-label"
+                                            type="submit">Удалить
+                                    </button>
+    {% endblock %}
 
 {##}
 {#{% extends "index.html" %}#}

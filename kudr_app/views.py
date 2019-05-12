@@ -6,9 +6,18 @@ from kudr_app.forms import *
 from django.http import HttpResponseRedirect
 from django.core.files.base import ContentFile
 from django.forms import modelformset_factory
-from datetime import date
+from datetime import date, time, timedelta
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import plotly
+import matplotlib.dates as mdates
+import datetime as dt
+import csv
+from io import BytesIO
+import base64
+import MySQLdb
 
 
 # ГЛАВНАЯ СТРАНИЦА
@@ -55,6 +64,265 @@ class MainPageView(TemplateView):
         return context
 
 
+# МОЯ СТРАНИЦА ХОРЕОГРАФА
+class MyPageChoreographer(TemplateView):
+    template_name = 'my_page_choreographer.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        logged_user = self.request.user
+        choreographer = Choreographer.objects.get(user=logged_user)
+        context['logged_user'] = logged_user
+        context['choreographer'] = choreographer
+
+        # Объявления
+        announcements = Announcement.objects.all()
+        context['announcements'] = announcements
+
+        # Расписание для хореографа
+        gr_ch_sh = GroupChoreographerSchedule.objects.filter(choreographer=choreographer)
+        group = Group.objects.all().order_by('num')
+        dance_style = DanceStyle.objects.all()
+        weekdays = WeekDay.objects.all()
+        class_schedule = ClassSchedule.objects.all().order_by('begin_time')
+        context['gr_ch_sh'] = gr_ch_sh
+        context['group'] = group
+        context['dance_style'] = dance_style
+        context['weekdays'] = weekdays
+        context['class_schedule'] = class_schedule
+
+        # Костюмы
+        costumes = Costume.objects.all().order_by('dance')
+        dances = Dance.objects.all().order_by('name')
+        participant_costumes = ParticipantCostume.objects.all().order_by('participant')
+        participants = Participant.objects.all().order_by('group', 'last_name')
+        context['costumes'] = costumes
+        context['dances'] = dances
+        context['participants'] = participants
+        context['participant_costumes'] = participant_costumes
+
+        # Платежи
+        payments = Payment.objects.all().order_by('participant')
+        months = Month.objects.all()
+        context['payments'] = payments
+        context['months'] = months
+
+        # Фонд
+        fonds = Fond.objects.all().order_by('sum', 'participant')
+        context['fonds'] = fonds
+        fond = 0
+        for f in fonds:
+            fond += f.sum
+        context['fond'] = fond
+
+        total = 0
+        for f in fonds:
+            total += 7000
+        context['total'] = total
+
+        # Другие источники финансов
+        other_sources = OtherSourceOfFinances.objects.all()
+        context['other_sources'] = other_sources
+        final_other_sources = 0
+        for o in other_sources:
+            final_other_sources += o.sum
+        context['final_other_sources'] = final_other_sources
+        fond_and_other = fond + final_other_sources
+        context['fond_and_other'] = fond_and_other
+
+        # Затраты
+        expences = Expence.objects.all()
+        context['expences'] = expences
+        final_expences = 0
+        fond_final = fond_and_other
+        for e in expences:
+            if e.bought == False:
+                final_expences += e.final_cost()
+            else:
+                fond_final -= e.final_cost()
+        context['fond_final'] = fond_final
+        context['final_expences'] = final_expences
+
+        # Участник-танец-концерт
+        d_c = DanceInConcert.objects.all().order_by('concert')
+        p_d_c = ParticipantDanceConcert.objects.all()
+        dances = Dance.objects.all().order_by('name')
+        concerts = Concert.objects.all().order_by('-begin_date')
+        p_c = ParticipantConcert.objects.all()
+        today = date.today()
+        context['today'] = today
+        context['d_c'] = d_c
+        context['dances'] = dances
+        context['concerts'] = concerts
+        context['p_c'] = p_c
+        context['p_d_c'] = p_d_c
+
+        groups = Group.objects.all()
+        p_g = ParticipantGroup.objects.all()
+        context['groups'] = groups
+        context['participant_group'] = p_g
+
+        # Направления
+        dance_styles = DanceStyle.objects.all()
+        context['dance_styles'] = dance_styles
+
+        return context
+
+
+# МОЯ СТРАНИЦА УЧАСТНИКА
+class MyPageParticipant(TemplateView):
+    template_name = 'my_page_participant.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        logged_user = self.request.user
+        participant = Participant.objects.get(user=logged_user)
+        context['logged_user'] = logged_user
+        context['participant'] = participant
+
+        # Объявления
+        announcements = Announcement.objects.all()
+        context['announcements'] = announcements
+        now = timezone.now()
+        context['now'] = now
+
+        # Расписание для участника
+        gr_ch_sh = GroupChoreographerSchedule.objects.filter(group=participant.group)
+        group = Group.objects.filter(id=participant.group.id)
+        dance_style = DanceStyle.objects.all()
+        weekdays = WeekDay.objects.all()
+        class_schedule = ClassSchedule.objects.all()
+        context['gr_ch_sh'] = gr_ch_sh
+        context['group'] = group
+        context['dance_style'] = dance_style
+        context['weekdays'] = weekdays
+        context['class_schedule'] = class_schedule
+
+        #  Список танцев концертов для участника
+        concerts = Concert.objects.all()
+        p_c = ParticipantConcert.objects.all().filter(participant=participant)
+        d_c = DanceInConcert.objects.all().order_by('num')
+        p_d_c = ParticipantDanceConcert.objects.all()
+        dances = Dance.objects.all().order_by('name')
+        today = date.today()
+        context['today'] = today
+        context['d_c'] = d_c
+        context['dances'] = dances
+        context['concerts'] = concerts
+        context['p_c'] = p_c
+        context['p_d_c'] = p_d_c
+
+        # Контакты преподавателей
+        choreographers = Choreographer.objects.all()
+        context['choreographers'] = choreographers
+
+        # Костюмы к сдаче
+        costumes = Costume.objects.all().order_by('dance')
+        participant_costumes = ParticipantCostume.objects.filter(participant=participant)
+        context['costumes'] = costumes
+        context['participant_costumes'] = participant_costumes
+
+        # Платежи
+        payments = Payment.objects.filter(participant=participant)
+        months = Month.objects.all()
+        context['payments'] = payments
+        context['months'] = months
+
+        # Фонд
+        fond = Fond.objects.get(participant=participant)
+        context['fond'] = fond
+
+        return context
+
+
+# ГРАФИКИ
+class Plots(TemplateView):
+    template_name = 'plot.html'
+
+    def get_context_data(self, slug, **kwargs):
+        context = super().get_context_data(**kwargs)
+        c = Concert.objects.get(slug__iexact=slug)
+
+        logged_user = self.request.user
+        choreographer = Choreographer.objects.get(user=logged_user)
+        context['logged_user'] = logged_user
+        context['choreographer'] = choreographer
+
+        participants = Participant.objects.all().order_by('group', 'last_name')
+        context['participants'] = participants
+        d_c = DanceInConcert.objects.all().order_by('concert')
+        p_d_c = ParticipantDanceConcert.objects.all()
+        dances = Dance.objects.all().order_by('name')
+        concerts = Concert.objects.all().order_by('-begin_date')
+        p_c = ParticipantConcert.objects.all()
+        context['d_c'] = d_c
+        context['dances'] = dances
+        context['concerts'] = concerts
+        context['p_c'] = p_c
+        context['p_d_c'] = p_d_c
+        context['c'] = c
+
+        pdc_count = []
+        parts = []
+        zero = 0
+        for p in participants:
+            for pc in p_c:
+                if pc.participant == p and pc.concert == c and p not in parts:
+                    parts.append(p)
+                    pdc_count.append([c, p, 0])
+
+            for dc in d_c:
+                for d in dances:
+                    if d == dc.dance and dc.concert == c:
+                        for pdc in p_d_c:
+                            if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False:
+                                for i in pdc_count:
+                                    if i[0] == c and i[1] == p:
+                                        i[2] += 1
+
+        # times = []
+        # d_times = []
+        # for p in parts:
+        #     for dc in d_c:
+        #         if dc.concert == c:
+        #             d_times.append(dc)
+        #     for d_time in d_times:
+        #         for pdc in p_d_c:
+        #             if d_time.dance == pdc.dance.dance and p == pdc.participant_concert.participant:
+        #                 times.append(0)
+        #             elif d_time.dance == pdc.dance.dance:
+        #                 times.append(d_time.dance.duration)
+        # context['times']=times
+
+        context['pdc_count'] = pdc_count
+
+        data_names = []
+        data_values = []
+        for i in pdc_count:
+            data_names.append('{} {}'.format(i[1].last_name, i[1].initials()))
+            data_values.append(i[2])
+        dpi = 80
+        fig = plt.figure(dpi=dpi, figsize=(512 / dpi, 384 / dpi))
+        mpl.rcParams.update({'font.size': 10})
+        plt.title('Кол-во номеров у человека (без учета ?)', color='darkred')
+        ax = plt.axes()
+        ax.yaxis.grid(True, zorder=1, color='darkred')
+        xs = range(len(data_names))
+        plt.bar([x for x in xs], [d for d in data_values],
+                width=0.2, color='indianred', alpha=1,
+                zorder=2)
+        plt.xticks(xs, data_names, color='darkred')
+        fig.autofmt_xdate(rotation=25)
+        fig.savefig('bars.png')
+        buf = BytesIO()
+        plt.savefig(buf, format='png', dpi=300)
+        image_base64 = base64.b64encode(buf.getvalue()).decode('utf-8').replace('\n', '')
+        buf.close()
+        context['image_base64'] = image_base64
+
+        return context
+
+
 # КОНТАКТЫ
 class ContactsView(TemplateView):
     template_name = "contacts.html"
@@ -78,6 +346,11 @@ class ContactsView(TemplateView):
         context['participant'] = participant
 
         return context
+
+
+# УСПЕШНАЯ РЕГИСТРАЦИЯ
+class SuccessfulRegistrationView(TemplateView):
+    template_name = "successfully_registered.html"
 
 
 # КОНТАКТЫ
@@ -124,6 +397,7 @@ class WorldDanceView(ContactsView):
 
 class ModernDanceView(ContactsView):
     template_name = "modern_dance.html"
+
 
 # КОНЦЕРТЫ
 class ConcertsPage(TemplateView):
@@ -196,7 +470,7 @@ def registration(request):
         if is_val:
             user = User.objects.create_user(data['username'], data['email'], data['password'])
             user.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/success')
     else:
         form = RegistrationForm()
 
@@ -204,8 +478,6 @@ def registration(request):
 
 
 # МИКСИНЫ
-
-
 
 
 class NewObjectMixin:
@@ -219,10 +491,18 @@ class NewObjectMixin:
 
     def post(self, request):
         bound_form = self.form(request.POST, request.FILES)
+
+        errors = []
         if bound_form.is_valid():
-            new = bound_form.save()
-            return redirect(self.redirect_url)
-        return render(request, self.template, context={'form': bound_form})
+            try:
+                new = bound_form.save()
+            except Exception:
+                errors.append('Такой элемент уже существует')
+            if not errors:
+                return redirect(self.redirect_url)
+
+
+        return render(request, self.template, context={'form': bound_form, 'errors':errors})
 
 
 class UpdateMixin:
@@ -236,8 +516,8 @@ class UpdateMixin:
         bound_form = self.model_form(instance=obj)
         return render(request, self.template, context={'form': bound_form, 'obj': obj})
 
-
     def post(self, request, slug):
+
         if self.model == Participant:
             logged_user = request.user
             try:
@@ -249,21 +529,24 @@ class UpdateMixin:
             except Exception:
                 self.redirect_url = 'my_page_choreographer'
 
-
         obj = self.model.objects.get(slug__iexact=slug)
         bound_form = self.model_form(request.POST, request.FILES, instance=obj)
+        errors = []
         if bound_form.is_valid():
-            upd_obj = bound_form.save()
-            return redirect(self.redirect_url)
+            try:
+                upd_obj = bound_form.save()
+            except Exception:
+                errors.append('Такой элемент уже существует')
+            if not errors:
+                return redirect(self.redirect_url)
 
-        return render(request, self.template, context={'form': bound_form, 'obj': obj})
+        return render(request, self.template, context={'form': bound_form, 'obj': obj, 'errors':errors})
 
 
 class DeleteMixin:
     model = None
     template = None
     redirect_url = None
-
 
     def get(self, request, slug):
         obj = self.model.objects.get(slug__iexact=slug)
@@ -298,7 +581,6 @@ class NewsPage(View):
         except Exception:
             participant = None
 
-
         news = News.objects.all().order_by('-date')
         paginator = Paginator(news, 10)
         page = request.GET.get('page')
@@ -308,7 +590,9 @@ class NewsPage(View):
             news = paginator.page(1)
         except EmptyPage:
             news = paginator.page(paginator.num_pages)
-        return render(request, 'show_news.html', context={'news': news, 'logged_user': logged_user, 'participant': participant, 'choreographer':choreographer})
+        return render(request, 'show_news.html',
+                      context={'news': news, 'logged_user': logged_user, 'participant': participant,
+                               'choreographer': choreographer})
 
     # def get_context_data(self, **kwargs):
     #     context = super().get_context_data(**kwargs)
@@ -347,7 +631,6 @@ class AddConcert(NewObjectMixin, View):
     redirect_url = 'my_page_choreographer'
 
 
-
 #
 #
 # class ConcertPage(TemplateView):
@@ -375,7 +658,6 @@ class DeleteConcert(DeleteMixin, View):
     model = Concert
     template = 'delete/delete_concert.html'
     redirect_url = 'my_page_choreographer'
-
 
 
 # ГРУППА
@@ -424,7 +706,6 @@ class DeleteGroup(DeleteMixin, View):
     model = Group
     template = 'delete/delete_group.html'
     redirect_url = 'my_page_choreographer'
-
 
 
 # ФОТОГАЛЕРЕЯ
@@ -493,7 +774,6 @@ class DeletePhotoGallery(DeleteMixin, View):
     redirect_url = 'photo_galleries'
 
 
-
 # ФОТО
 class AddPhotoInGallery(NewObjectMixin, View):
     form = PhotoInGalleryForm
@@ -506,6 +786,7 @@ class AddDanceStyle(NewObjectMixin, View):
     form = DanceStyleForm
     template = 'new/new_dance_style.html'
     redirect_url = 'my_page_choreographer'
+
 
 #
 # class DanceStylesPage(TemplateView):
@@ -539,7 +820,6 @@ class DeleteDanceStyle(DeleteMixin, View):
     model = DanceStyle
     template = 'delete/delete_dance_style.html'
     redirect_url = 'my_page_choreographer'
-
 
 
 # ВРЕМЯ ЗАНЯТИЙ
@@ -648,6 +928,7 @@ class AddChoreographer(NewObjectMixin, View):
     template = 'new/new_choreographer.html'
     redirect_url = 'schedule'
 
+
 #
 # class ChoreographersPage(TemplateView):
 #     template_name = 'show_choreographers.html'
@@ -724,10 +1005,6 @@ class UpdateParticipant(UpdateMixin, View):
     # redirect_url = 'my_page_choreographer'
 
 
-
-
-
-
 class DeleteParticipant(DeleteMixin, View):
     model = Participant
     template = 'delete/delete_participant.html'
@@ -739,6 +1016,7 @@ class AddDance(NewObjectMixin, View):
     form = DanceForm
     template = 'new/new_dance.html'
     redirect_url = 'my_page_choreographer'
+
 
 #
 # class DancesPage(TemplateView):
@@ -800,32 +1078,32 @@ class AddParticipantDanceConcert(NewObjectMixin, View):
     template = 'new/new_participant_dance_concert.html'
     redirect_url = 'my_page_choreographer'
 
-
-class ParticipantDanceConcertPage(TemplateView):
-    template_name = 'show_participant_dance_concert.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        d_c = DanceInConcert.objects.all().order_by('num')
-        p_d_c = ParticipantDanceConcert.objects.all()
-        dances = Dance.objects.all()
-        concerts = Concert.objects.all()
-        participants = Participant.objects.all()
-        p_c = ParticipantConcert.objects.all()
-        context['d_c'] = d_c
-        context['dances'] = dances
-        context['concerts'] = concerts
-        context['participants'] = participants
-        context['p_c'] = p_c
-        context['p_d_c'] = p_d_c
-        return context
+#
+# class ParticipantDanceConcertPage(TemplateView):
+#     template_name = 'show_participant_dance_concert.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         d_c = DanceInConcert.objects.all().order_by('num')
+#         p_d_c = ParticipantDanceConcert.objects.all()
+#         dances = Dance.objects.all()
+#         concerts = Concert.objects.all()
+#         participants = Participant.objects.all()
+#         p_c = ParticipantConcert.objects.all()
+#         context['d_c'] = d_c
+#         context['dances'] = dances
+#         context['concerts'] = concerts
+#         context['participants'] = participants
+#         context['p_c'] = p_c
+#         context['p_d_c'] = p_d_c
+#         return context
 
 
 class UpdateParticipantDanceConcert(UpdateMixin, View):
     model = ParticipantDanceConcert
     template = 'update/update_participant_dance_concert.html'
     model_form = ParticipantDanceConcertForm
-    redirect_url = 'participant_dance_concert'
+    redirect_url = 'my_page_choreographer'
 
 
 class DeleteParticipantDanceConcert(DeleteMixin, View):
@@ -960,31 +1238,32 @@ class AddCostume(NewObjectMixin, View):
     redirect_url = 'my_page_choreographer'
 
 
-class CostumesPage(TemplateView):
-    template_name = 'show_costumes.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        costumes = Costume.objects.all().order_by('dance')
-        dances = Dance.objects.all()
-        participant_costumes = ParticipantCostume.objects.all().order_by('participant')
-        participants = Participant.objects.all()
-        context['costumes'] = costumes
-        context['dances'] = dances
-        context['participants'] = participants
-        context['participant_costumes'] = participant_costumes
-        return context
-
-
-class CostumePage(TemplateView):
-    template_name = 'show_costume.html'
-
-    def get_context_data(self, slug, **kwargs):
-        context = super().get_context_data(**kwargs)
-        costume = Costume.objects.get(slug__iexact=slug)
-        context['costume'] = costume
-
-        return context
+#
+# class CostumesPage(TemplateView):
+#     template_name = 'show_costumes.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         costumes = Costume.objects.all().order_by('dance')
+#         dances = Dance.objects.all()
+#         participant_costumes = ParticipantCostume.objects.all().order_by('participant')
+#         participants = Participant.objects.all()
+#         context['costumes'] = costumes
+#         context['dances'] = dances
+#         context['participants'] = participants
+#         context['participant_costumes'] = participant_costumes
+#         return context
+#
+#
+# class CostumePage(TemplateView):
+#     template_name = 'show_costume.html'
+#
+#     def get_context_data(self, slug, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         costume = Costume.objects.get(slug__iexact=slug)
+#         context['costume'] = costume
+#
+#         return context
 
 
 class UpdateCostume(UpdateMixin, View):
@@ -1020,131 +1299,62 @@ class DeleteParticipantCostume(DeleteMixin, View):
     redirect_url = 'my_page_choreographer'
 
 
-# МОЯ СТРАНИЦА ХОРЕОГРАФА
-class MyPageChoreographer(TemplateView):
-    template_name = 'my_page_choreographer.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        logged_user = self.request.user
-        choreographer = Choreographer.objects.get(user=logged_user)
-        context['logged_user'] = logged_user
-        context['choreographer'] = choreographer
-
-        # Расписание для хореографа
-        gr_ch_sh = GroupChoreographerSchedule.objects.filter(choreographer=choreographer)
-        group = Group.objects.all().order_by('num')
-        dance_style = DanceStyle.objects.all()
-        weekdays = WeekDay.objects.all()
-        class_schedule = ClassSchedule.objects.all().order_by('begin_time')
-        context['gr_ch_sh'] = gr_ch_sh
-        context['group'] = group
-        context['dance_style'] = dance_style
-        context['weekdays'] = weekdays
-        context['class_schedule'] = class_schedule
-
-        # Костюмы
-        costumes = Costume.objects.all().order_by('dance')
-        dances = Dance.objects.all().order_by('name')
-        participant_costumes = ParticipantCostume.objects.all().order_by('participant')
-        participants = Participant.objects.all().order_by('group', 'last_name')
-        context['costumes'] = costumes
-        context['dances'] = dances
-        context['participants'] = participants
-        context['participant_costumes'] = participant_costumes
-
-        # Платежи
-        payments = Payment.objects.all().order_by('participant')
-        months = Month.objects.all()
-        context['payments'] = payments
-        context['months'] = months
-
-        # Фонд
-        fonds = Fond.objects.all().order_by('sum', 'participant')
-        context['fonds'] = fonds
-
-        # Участник-танец-концерт
-        d_c = DanceInConcert.objects.all().order_by('concert')
-        p_d_c = ParticipantDanceConcert.objects.all()
-        dances = Dance.objects.all().order_by('name')
-        concerts = Concert.objects.all().order_by('-begin_date')
-        p_c = ParticipantConcert.objects.all()
-        today = date.today()
-        context['today'] = today
-        context['d_c'] = d_c
-        context['dances'] = dances
-        context['concerts'] = concerts
-        context['p_c'] = p_c
-        context['p_d_c'] = p_d_c
-
-        # Группы
-        groups = Group.objects.all()
-        p_g = ParticipantGroup.objects.all()
-        context['groups'] = groups
-        context['participant_group'] = p_g
-
-        # Направления
-        dance_styles = DanceStyle.objects.all()
-        context['dance_styles'] = dance_styles
-
-        return context
+# ЗАТРАТЫ
+class AddExpence(NewObjectMixin, View):
+    form = ExpenceForm
+    template = 'new/new_expence.html'
+    redirect_url = 'my_page_choreographer'
 
 
-# МОЯ СТРАНИЦА УЧАСТНИКА
-class MyPageParticipant(TemplateView):
-    template_name = 'my_page_participant.html'
+class UpdateExpence(UpdateMixin, View):
+    model = Expence
+    template = 'update/update_expence.html'
+    model_form = ExpenceForm
+    redirect_url = 'my_page_choreographer'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        logged_user = self.request.user
-        participant = Participant.objects.get(user=logged_user)
-        context['logged_user'] = logged_user
-        context['participant'] = participant
 
-        # Расписание для участника
-        gr_ch_sh = GroupChoreographerSchedule.objects.filter(group=participant.group)
-        group = Group.objects.filter(id=participant.group.id)
-        dance_style = DanceStyle.objects.all()
-        weekdays = WeekDay.objects.all()
-        class_schedule = ClassSchedule.objects.all()
-        context['gr_ch_sh'] = gr_ch_sh
-        context['group'] = group
-        context['dance_style'] = dance_style
-        context['weekdays'] = weekdays
-        context['class_schedule'] = class_schedule
+class DeleteExpence(DeleteMixin, View):
+    model = Expence
+    template = 'delete/delete_expence.html'
+    redirect_url = 'my_page_choreographer'
 
-        #  Список танцев концертов для участника
-        concerts = Concert.objects.all()
-        p_c = ParticipantConcert.objects.all().filter(participant=participant)
-        d_c = DanceInConcert.objects.all().order_by('num')
-        p_d_c = ParticipantDanceConcert.objects.all()
-        dances = Dance.objects.all().order_by('name')
-        today = date.today()
-        context['today'] = today
-        context['d_c'] = d_c
-        context['dances'] = dances
-        context['concerts'] = concerts
-        context['p_c'] = p_c
-        context['p_d_c'] = p_d_c
 
-        # Контакты преподавателей
-        choreographers = Choreographer.objects.all()
-        context['choreographers'] = choreographers
+# ИСТОЧНИКИ ФИНАНСОВ
+class AddOtherSourceOfFinance(NewObjectMixin, View):
+    form = OtherSourceOfFinanceForm
+    template = 'new/new_other_source.html'
+    redirect_url = 'my_page_choreographer'
 
-        # Костюмы к сдаче
-        costumes = Costume.objects.all().order_by('dance')
-        participant_costumes = ParticipantCostume.objects.filter(participant=participant)
-        context['costumes'] = costumes
-        context['participant_costumes'] = participant_costumes
 
-        # Платежи
-        payments = Payment.objects.filter(participant=participant)
-        months = Month.objects.all()
-        context['payments'] = payments
-        context['months'] = months
+class UpdateOtherSourceOfFinance(UpdateMixin, View):
+    model = OtherSourceOfFinances
+    template = 'update/update_other_source.html'
+    model_form = OtherSourceOfFinanceForm
+    redirect_url = 'my_page_choreographer'
 
-        # Фонд
-        fond = Fond.objects.get(participant=participant)
-        context['fond'] = fond
 
-        return context
+class DeleteOtherSourceOfFinance(DeleteMixin, View):
+    model = OtherSourceOfFinances
+    template = 'delete/delete_other_source.html'
+    redirect_url = 'my_page_choreographer'
+
+
+
+# ОБЪЯВЛЕНИЯ
+class AddAnnouncement(NewObjectMixin, View):
+    form = AnnouncementForm
+    template = 'new/new_announcement.html'
+    redirect_url = 'my_page_choreographer'
+
+
+class UpdateAnnouncement(UpdateMixin, View):
+    model = Announcement
+    template = 'update/update_announcement.html'
+    model_form = AnnouncementForm
+    redirect_url = 'my_page_choreographer'
+
+
+class DeleteAnnouncement(DeleteMixin, View):
+    model = Announcement
+    template = 'delete/delete_announcement.html'
+    redirect_url = 'my_page_choreographer'

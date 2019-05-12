@@ -45,7 +45,39 @@
                                 {% endif %}
                             </div>
                         </div>
+                        {# Объявления #}
+                        <div class="row">
 
+                            <h2>Объявления</h2>
+
+
+                                {% for announcement in announcements %}
+                                    {% if announcement.date_until >= now %}
+                                    {% if announcement.group == participant.group or announcement.participant == participant or not announcement.participant and not announcement.group %}
+
+                                        <div class="post-meta">
+                                                    <span class="post-meta-publ-date">{{ announcement.date }} -
+                                                        {% if announcement.date_until %}
+                                                            {{ announcement.date_until }}{% endif %}</span>
+                                        </div>
+                                        <h3>{{ announcement.title }}</h3>
+                                        <p>{{ announcement.text }}</p>
+                                        <p>{% if announcement.participant %}
+                                            {{ announcement.participant }}{% endif %}</p>
+                                        <p>{% if announcement.group %}
+                                            {{ announcement.group }}{% endif %}</p>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                    {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+
+
+
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
                         {# Расписание #}
                         <div class="row">
                             <h2>Моё расписание</h2>
@@ -96,12 +128,22 @@
                                                 <div class="accordion">
                                                     <div>
                                                         <a href="#">{{ pc.concert.name }}</a>
+                                                        <p>{{ pc.concert.begin_date }} {% if  pc.concert.end_date %}-
+                                                            {{ pc.concert.end_date }}{% endif %}
+                                                            {{ pc.concert.begin_time }} {% if  pc.concert.end_time %}-
+                                                                {{ pc.concert.end_time }}
+                                                            {% endif %}
+                                                            {% if  pc.concert.place %}{{ pc.concert.place }}{% endif %}
+                                                            {% if  pc.concert.address %}
+                                                                {{ pc.concert.address }}{% endif %}
+                                                            {% if  pc.concert.description %}
+                                                                {{ pc.concert.description }}{% endif %}
                                                         <div class="scrolling-wrapper">
                                                             <table class="table table-hover">
                                                                 <thead class="thead-dark">
 
                                                                 <tr>
-                                                                    <th></th>
+
                                                                     {% for dc in d_c %}
                                                                         {% for d in dances %}
                                                                             {% if d == dc.dance and dc.concert == pc.concert %}
@@ -114,55 +156,7 @@
 
                                                                 <tbody>
                                                                 <tr>
-                                                                    <th>{{ pc.concert.name }}: {{ pc.concert.begin_date }}</th>
-                                                                    {% for dc in d_c %}
-                                                                        {% for d in dances %}
-                                                                            {% if d == dc.dance and dc.concert == pc.concert %}
-                                                                                <td>{% for pdc in p_d_c %}
-                                                                                    {% if pdc.participant_concert.participant == participant and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pc == pdc.participant_concert and pdc.under_question == False %}
-                                                                                        <i class="butred fa fa-check"></i>
-                                                                                    {% elif pdc.participant_concert.participant == participant and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pc == pdc.participant_concert and pdc.under_question == True %}
-                                                                                        <i class="butred fa fa-question-circle"></i>
-                                                                                    {% else %}
-                                                                                    {% endif %}
-                                                                                {% endfor %}</td>
-                                                                            {% endif %}
-                                                                        {% endfor %}
-                                                                    {% endfor %}
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endif %}
-                                            <div class="accordion">
-                                            <div>
-                                            <a href="#">Прошедшие</a>
-                                            <div class="scrolling-wrapper">
-                                            {% if pc.concert.begin_date < today %}
-                                                <div class="accordion">
-                                                    <div>
-                                                        <a href="#">{{ pc.concert.name }}</a>
-                                                        <div class="scrolling-wrapper">
-                                                            <table class="table table-hover">
-                                                                <thead class="thead-dark">
-
-                                                                <tr>
-                                                                    <th></th>
-                                                                    {% for dc in d_c %}
-                                                                        {% for d in dances %}
-                                                                            {% if d == dc.dance and dc.concert == pc.concert %}
-                                                                                <th>{{ dc.num }}.{{ d.name }}</th>
-                                                                            {% endif %}
-                                                                        {% endfor %}
-                                                                    {% endfor %}
-                                                                </tr>
-                                                                </thead>
-
-                                                                <tbody>
-                                                                <tr>
-                                                                    <th>{{ pc.concert.name }}: {{ pc.concert.begin_date }}</th>
+                                                                    {#                                                                    <th>{{ pc.concert.name }}: {{ pc.concert.begin_date }}</th>#}
                                                                     {% for dc in d_c %}
                                                                         {% for d in dances %}
                                                                             {% if d == dc.dance and dc.concert == pc.concert %}
@@ -185,10 +179,71 @@
                                                 </div>
                                             {% endif %}
                                         {% endfor %}
+                                        <div class="accordion">
+                                            <div>
+                                                <a href="#">Прошедшие</a>
+                                                <div class="scrolling-wrapper">
+                                                    {% for pc in p_c %}
+                                                        {% if pc.concert.begin_date < today %}
+                                                            <div class="accordion">
+                                                                <div>
+                                                                    <a href="#">{{ pc.concert.name }}</a>
+                                                                    <p>{{ c.begin_date }} {% if  c.end_date %}-
+                                                                        {{ c.end_date }}{% endif %}
+                                                                        {{ c.begin_time }} {% if  c.end_time %}-
+                                                                            {{ c.end_time }}
+                                                                        {% endif %}
+                                                                        {% if  c.place %}{{ c.place }}{% endif %}
+                                                                        {% if  c.address %}
+                                                                            {{ c.address }}{% endif %}
+                                                                        {% if  c.description %}
+                                                                            {{ c.description }}{% endif %}
+                                                                    <div class="scrolling-wrapper">
+                                                                        <table class="table table-hover">
+                                                                            <thead class="thead-dark">
 
+                                                                            <tr>
+                                                                                {#                                                                    <th></th>#}
+                                                                                {% for dc in d_c %}
+                                                                                    {% for d in dances %}
+                                                                                        {% if d == dc.dance and dc.concert == pc.concert %}
+                                                                                            <th>{{ dc.num }}.{{ d.name }}</th>
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+                                                                                {% endfor %}
+                                                                            </tr>
+                                                                            </thead>
+
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                {#                                                                    <th>{{ pc.concert.name }}: {{ pc.concert.begin_date }}</th>#}
+                                                                                {% for dc in d_c %}
+                                                                                    {% for d in dances %}
+                                                                                        {% if d == dc.dance and dc.concert == pc.concert %}
+                                                                                            <td>{% for pdc in p_d_c %}
+                                                                                                {% if pdc.participant_concert.participant == participant and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pc == pdc.participant_concert and pdc.under_question == False %}
+                                                                                                    <i class="butred fa fa-check"></i>
+                                                                                                {% elif pdc.participant_concert.participant == participant and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pc == pdc.participant_concert and pdc.under_question == True %}
+                                                                                                    <i class="butred fa fa-question-circle"></i>
+                                                                                                {% else %}
+                                                                                                {% endif %}
+                                                                                            {% endfor %}</td>
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+                                                                                {% endfor %}
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {% endif %}
+                                                    {% endfor %}
+
+                                                </div>
+                                            </div>
                                         </div>
-                                        </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +254,7 @@
 
                         {# Костюмы #}
                         <div class="row">
-                            <h3>Сдать костюмы:</h3>
+                            <h2>Сдать костюмы:</h2>
                             {% for c in costumes %}
                                 {% for pc in participant_costumes %}
                                     {% if c == pc.costume and pc.participant == participant %}
@@ -215,10 +270,10 @@
 
                         {# Платежи #}
                         <div class="row">
-                            <h3>Платежи</h3>
-                            <div class="scrolling-wrapper">
+                            <h2>Платежи</h2>
 
-                                <table class="table table-hover">
+
+                                <table class="table table-hover center-block">
                                     <thead class="thead-dark">
                                     <tr>
 
@@ -242,12 +297,14 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+
                         <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
 
                         {# Фонд #}
                         <div class="row">
-                            <h3>Фонд</h3>
+
+                            <h2>Фонд</h2>
+
                             Сдано:
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped progress-bar-animated"
@@ -259,10 +316,13 @@
                             </div>
                         </div>
 
+
                         <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
 
                         <div class="row">
-                            <h3>Контакты преподавателей:</h3>
+
+                            <h2>Контакты преподавателей:</h2>
+                          <div class="col-md-offset-1">
                             {% for c in choreographers %}
                                 <h4>{{ c }}</h4>
                                 <p><span
@@ -274,6 +334,7 @@
                                 </p>
                                 <p></p>
                             {% endfor %}
+                        </div>
                         </div>
                     </div>
                 </article>

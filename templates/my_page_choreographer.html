@@ -27,9 +27,9 @@
                                     <a class="but" href="{% url 'update_choreographer' slug=choreographer.slug %}"
                                        target="_self"><i
                                             class="fa fa-pencil"></i></a>
-{#                                    <a class="but" href="{% url 'delete_choreographer' slug=choreographer.slug %}"#}
-{#                                       target="_self"><i#}
-{#                                            class="fa fa-trash"></i></a>#}
+                                    {#                                    <a class="but" href="{% url 'delete_choreographer' slug=choreographer.slug %}"#}
+                                    {#                                       target="_self"><i#}
+                                    {#                                            class="fa fa-trash"></i></a>#}
                                 </p>
 
                             </div>
@@ -39,6 +39,50 @@
                                 {% endif %}
                             </div>
                             {#                            {% include "show_choreographer.html" with choreographer=choreographer %}#}
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Объявления #}
+                        <div class="row">
+                            <div>
+                                <h2>Объявления</h2>
+                                <div class="accordion">
+                                    <div>
+                                        <a href="#">Развернуть</a>
+                                        <div class="scrolling-wrapper">
+                                            {% for announcement in announcements %}
+                                                <div class="post-meta">
+                                        <span class="post-meta-publ-date">{{ announcement.date }} -
+                                            {% if announcement.date_until %}
+                                                {{ announcement.date_until }}{% endif %}</span>
+                                                </div>
+                                                <h3>{{ announcement.title }}</h3>
+                                                <p>{{ announcement.text }}</p>
+                                                <p>{% if announcement.participant %}
+                                                    {{ announcement.participant }}{% endif %}</p>
+                                                <p>{% if announcement.group %}{{ announcement.group }}{% endif %}</p>
+
+                                                <p>
+                                                    <a class="but"
+                                                       href="{% url 'update_announcement' slug=announcement.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-pencil"></i></a>
+                                                    <a class="but"
+                                                       href="{% url 'delete_announcement' slug=announcement.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-trash"></i></a>
+                                                </p>
+                                                <div class="diff-spacer spacer-1"
+                                                     style="background-color:#B35652;color:#B35652;"></div>
+                                                <div class="diff-spacer spacer-1"
+                                                     style="background-color:#B35652;color:#B35652;"></div>
+                                            {% endfor %}
+                                            <p><a href="{% url 'new_announcement' %}"
+                                                  class="button colored">Добавить объявление</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                         <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
                         {# Расписание #}
@@ -129,7 +173,8 @@
                                                                                 {% if pc1.costume and pc1.returned == False %}
                                                                                     Не возвращен (
                                                                                     {{ pc1.date_return_before }})
-                                                                                {% else %} <i class="butred fa fa-check"></i>
+                                                                                {% else %}
+                                                                                    <i class="butred fa fa-check"></i>
                                                                                 {% endif %}
                                                                                 <a class="butred"
                                                                                    href="{% url 'update_participant_costume' slug=pc1.slug %}"
@@ -175,13 +220,13 @@
                                             <thead class="thead-dark">
 
                                             <tr>
-                                            <th></th>
-                                            {% for m in months %}
-                                                <th>{{ m }}</th>
-                                            {% endfor %}
+                                                <th></th>
+                                                {% for m in months %}
+                                                    <th>{{ m }}</th>
+                                                {% endfor %}
 
-{#                                                {% for c in costumes %}#}
-{#                                                    <th scope="col" class="table_col">#}
+                                                {#                                                {% for c in costumes %}#}
+                                                {#                                                    <th scope="col" class="table_col">#}
                                                 {#                                                        {{ c.name }}-{{ c.dance.name }}#}
                                                 {#                                                        <a class="but" href="{% url 'update_costume' slug=c.slug %}"#}
                                                 {#                                                           target="_self"><i#}
@@ -218,56 +263,45 @@
                                                 </tr>
 
                                             {% endfor %}
-{#                                            {% for pc in participant_costumes %}#}
-{#                                                {% for p in participants %}#}
-{#                                                    <tr>#}
-{#                                                        {% if pc.participant == p %}#}
-{#                                                            <th>{{ p.last_name }} {{ p.initials }}</th>#}
-{#                                                            {% for pc1 in participant_costumes %}#}
-{#                                                                {% if pc == pc1 and pc1.participant == p %}#}
-{#                                                                    {% for c in costumes %}#}
-{#                                                                        <td>#}
-{#                                                                            {% if pc1.costume == c %}#}
-{#                                                                                <a class="butred"#}
-{#                                                                                   href="{% url 'update_participant_costume' slug=pc1.slug %}"#}
-{#                                                                                   target="_self"><i#}
-{#                                                                                        class="butred fa fa-pencil"></i></a>#}
-{#                                                                                <a href="{% url 'delete_participant_costume' slug=pc1.slug %}"#}
-{#                                                                                   target="_self"><i#}
-{#                                                                                        class="butred fa fa-trash"></i></a>#}
-{#                                                                                {% if pc1.costume and pc1.returned == False %}#}
-{#                                                                                    {{ pc1.date_return_before }}#}
-{##}
-{#                                                                                {% endif %}#}
-{#                                                                            {% endif %}#}
-{#                                                                        </td>#}
-{#                                                                    {% endfor %}#}
-{#                                                                {% endif %}#}
-{#                                                            {% endfor %}#}
-{#                                                        {% endif %}#}
-{#                                                    </tr>#}
-{#                                                {% endfor %}#}
-{#                                            {% endfor %}#}
+                                            {#                                            {% for pc in participant_costumes %}#}
+                                            {#                                                {% for p in participants %}#}
+                                            {#                                                    <tr>#}
+                                            {#                                                        {% if pc.participant == p %}#}
+                                            {#                                                            <th>{{ p.last_name }} {{ p.initials }}</th>#}
+                                            {#                                                            {% for pc1 in participant_costumes %}#}
+                                            {#                                                                {% if pc == pc1 and pc1.participant == p %}#}
+                                            {#                                                                    {% for c in costumes %}#}
+                                            {#                                                                        <td>#}
+                                            {#                                                                            {% if pc1.costume == c %}#}
+                                            {#                                                                                <a class="butred"#}
+                                            {#                                                                                   href="{% url 'update_participant_costume' slug=pc1.slug %}"#}
+                                            {#                                                                                   target="_self"><i#}
+                                            {#                                                                                        class="butred fa fa-pencil"></i></a>#}
+                                            {#                                                                                <a href="{% url 'delete_participant_costume' slug=pc1.slug %}"#}
+                                            {#                                                                                   target="_self"><i#}
+                                            {#                                                                                        class="butred fa fa-trash"></i></a>#}
+                                            {#                                                                                {% if pc1.costume and pc1.returned == False %}#}
+                                            {#                                                                                    {{ pc1.date_return_before }}#}
+                                            {##}
+                                            {#                                                                                {% endif %}#}
+                                            {#                                                                            {% endif %}#}
+                                            {#                                                                        </td>#}
+                                            {#                                                                    {% endfor %}#}
+                                            {#                                                                {% endif %}#}
+                                            {#                                                            {% endfor %}#}
+                                            {#                                                        {% endif %}#}
+                                            {#                                                    </tr>#}
+                                            {#                                                {% endfor %}#}
+                                            {#                                            {% endfor %}#}
                                             <p></p>
                                             </tbody>
                                         </table>
-                                        <p><a href="{% url 'new_costume' %}"
-                                              class="button colored">Добавить элемент костюма</a>
-                                            <a href="{% url 'new_participant_costume' %}"
-                                               class="button colored">Добавить участник-элемент костюма</a>
-
+                                        <p><a href="{% url 'new_payment' %}"
+                                              class="button colored">Добавить платеж</a>
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
-                            {##}
-                            {#                            <button type="button" class="btn btn-lg btn-dark" data-toggle="collapse"#}
-                            {#                                    data-target="#demo1">Посмотреть платежи#}
-                            {#                            </button>#}
-                            {#                            <div id="demo1" class="collapse">#}
-                            {#                                {% include "show_payments.html" %}#}
-                            {#                            </div>#}
                         </div>
                         <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
                         {# Фонд #}
@@ -291,7 +325,50 @@
                                             {#                                            <a href="{% url 'new_participant_costume' %}"#}
                                             {#                                               class="button colored">Добавить участник-элемент костюма</a>#}
                                         </p>
+                                        <h3>ИТОГО: {{ fond }} из {{ total }}</h3>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <h2>Другие источники финансов</h2>
+                                        {% for o in other_sources %}
+                                            <p>{{ o.name }} - <span class="font-weight-bold">{{ o.sum }}</span></p>
+                                            <a class="but" href="{% url 'update_other_source' slug=o.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-pencil"></i></a>
+                                            <a class="but" href="{% url 'delete_other_source' slug=o.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-trash"></i></a>
+                                        {% endfor %}
+                                        <p><a href="{% url 'new_other_source' %}"
+                                              class="button colored">Добавить источник финансов</a>
+                                        </p>
+                                        <h3>ИТОГО из других источников: {{ final_other_sources }}</h3>
+                                        <h3>ИТОГО Фонд+другие источники: {{ fond_and_other }}</h3>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <h2>Затраты</h2>
+                                        {% for e in expences %}
+                                            {% if e.bought %}<s>{{ e.name }} - {{ e.num }} штук по {{ e.cost }}: <span
+                                                    class="font-weight-bold">{{ e.final_cost }}</span></s>
+                                            {% else %}
+                                                <p>{{ e.name }} - {{ e.num }} штук по {{ e.cost }}: <span
+                                                        class="font-weight-bold">{{ e.final_cost }}</span></p>
+                                            {% endif %}
+                                            <a class="but" href="{% url 'update_expence' slug=e.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-pencil"></i></a>
+                                            <a class="but" href="{% url 'delete_expence' slug=e.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-trash"></i></a>
+                                        {% endfor %}
+                                        <p><a href="{% url 'new_expence' %}"
+                                              class="button colored">Добавить затраты</a>
+                                        </p>
+                                        <h3>С учетом потраченного: {{ fond_final }}</h3>
+                                        <h3>Планируется потратить: {{ final_expences }}</h3>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -335,7 +412,7 @@
                                                                         {% for d in dances %}
                                                                             {% if d == dc.dance and dc.concert == c %}
                                                                                 <th scope="col" class="table_col">
-                                                                                    {{ dc.num }}.{{ d.name }}
+                                                                                    {{ dc.num }}.{{ d.name }}-{{ d.duration }}
                                                                                     <a class="but"
                                                                                        href="{% url 'update_dance_in_concert' slug=dc.slug %}"
                                                                                        target="_self"><i
@@ -353,42 +430,50 @@
                                                                 <tbody>
 
                                                                 {% for p in participants %}
-                                                                    <tr>
-                                                                        <th>{{ p.last_name }} {{ p.initials }}</th>
-                                                                        {% for dc in d_c %}
-                                                                            {% for d in dances %}
-                                                                                {% if d == dc.dance and dc.concert == c %}
-                                                                                    <td>{% for pdc in p_d_c %}
-                                                                                        {% if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False %}
-                                                                                            <i class="butred fa fa-check"></i>
-                                                                                            <a class="butred"
-                                                                                               href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
-                                                                                               target="_self"><i
-                                                                                                    class="butred fa fa-pencil"></i></a>
-                                                                                            <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
-                                                                                               target="_self"><i
-                                                                                                    class="butred fa fa-trash"></i></a>
-                                                                                        {% elif pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == True %}
-                                                                                            <i class="butred fa fa-question-circle"></i>
-                                                                                            <a class="butred"
-                                                                                               href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
-                                                                                               target="_self"><i
-                                                                                                    class="butred fa fa-pencil"></i></a>
-                                                                                            <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
-                                                                                               target="_self"><i
-                                                                                                    class="butred fa fa-trash"></i></a>
-                                                                                        {% else %}
+                                                                    {% for pc in p_c %}
+                                                                        {% if pc.concert == c and pc.participant == p %}
+                                                                            <tr>
+
+                                                                                <th>{{ p.last_name }} {{ p.initials }}</th>
+
+                                                                                {% for dc in d_c %}
+                                                                                    {% for d in dances %}
+                                                                                        {% if d == dc.dance and dc.concert == c %}
+                                                                                            <td>{% for pdc in p_d_c %}
+                                                                                                {% if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False %}
+                                                                                                    <i class="butred fa fa-check"></i>
+                                                                                                    <a class="butred"
+                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                {% elif pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == True %}
+                                                                                                    <i class="butred fa fa-question-circle"></i>
+                                                                                                    <a class="butred"
+                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                {% else %}
+                                                                                                {% endif %}
+                                                                                            {% endfor %}</td>
                                                                                         {% endif %}
-                                                                                    {% endfor %}</td>
-                                                                                {% endif %}
-                                                                            {% endfor %}
-                                                                        {% endfor %}
-                                                                    </tr>
+                                                                                    {% endfor %}
+                                                                                {% endfor %}
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                    {% endfor %}
                                                                     <p></p>
                                                                 {% endfor %}
                                                                 <p></p>
                                                                 </tbody>
                                                             </table>
+                                                            <a href="{% url 'plot' slug=c.slug %}"
+                                                               class="button colored">Graph</a></p>
 
                                                         </div>
 
@@ -419,7 +504,7 @@
                                                                                         {% if d == dc.dance and dc.concert == c %}
                                                                                             <th scope="col"
                                                                                                 class="table_col">
-                                                                                                {{ dc.num }}.{{ d.name }}
+                                                                                                {{ dc.num }}.{{ d.name }}-{{ d.dur }}
                                                                                                 <a class="but"
                                                                                                    href="{% url 'update_dance_in_concert' slug=dc.slug %}"
                                                                                                    target="_self"><i
@@ -437,48 +522,61 @@
                                                                             <tbody>
 
                                                                             {% for p in participants %}
-                                                                                <tr>
-                                                                                    <th>{{ p.last_name }} {{ p.initials }}</th>
-                                                                                    {% for dc in d_c %}
-                                                                                        {% for d in dances %}
-                                                                                            {% if d == dc.dance and dc.concert == c %}
-                                                                                                <td>
-                                                                                                    {% for pdc in p_d_c %}
-                                                                                                        {% if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False %}
-                                                                                                            <i class="butred fa fa-check"></i>
-                                                                                                            <a class="butred"
-                                                                                                               href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
-                                                                                                               target="_self"><i
-                                                                                                                    class="butred fa fa-pencil"></i></a>
-                                                                                                            <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
-                                                                                                               target="_self"><i
-                                                                                                                    class="butred fa fa-trash"></i></a>
-                                                                                                        {% elif pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == True %}
-                                                                                                            <i class="butred fa fa-question-circle"></i>
-                                                                                                            <a class="butred"
-                                                                                                               href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
-                                                                                                               target="_self"><i
-                                                                                                                    class="butred fa fa-pencil"></i></a>
-                                                                                                            <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
-                                                                                                               target="_self"><i
-                                                                                                                    class="butred fa fa-trash"></i></a>
-                                                                                                        {% else %}
-                                                                                                        {% endif %}
-                                                                                                    {% endfor %}</td>
-                                                                                            {% endif %}
-                                                                                        {% endfor %}
-                                                                                    {% endfor %}
-                                                                                </tr>
+                                                                                {% for pc in p_c %}
+                                                                                    {% if pc.concert == c and pc.participant == p %}
+                                                                                        <tr>
+
+                                                                                            <th>{{ p.last_name }} {{ p.initials }}</th>
+
+                                                                                            {% for dc in d_c %}
+                                                                                                {% for d in dances %}
+                                                                                                    {% if d == dc.dance and dc.concert == c %}
+                                                                                                        <td>
+                                                                                                            {% for pdc in p_d_c %}
+                                                                                                                {% if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False %}
+                                                                                                                    <i class="butred fa fa-check"></i>
+                                                                                                                    <a class="butred"
+                                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                                {% elif pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == True %}
+                                                                                                                    <i class="butred fa fa-question-circle"></i>
+                                                                                                                    <a class="butred"
+                                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                                {% else %}
+                                                                                                                {% endif %}
+                                                                                                            {% endfor %}
+                                                                                                        </td>
+                                                                                                    {% endif %}
+                                                                                                {% endfor %}
+                                                                                            {% endfor %}
+                                                                                        </tr>
+                                                                                    {% endif %}
+                                                                                {% endfor %}
                                                                                 <p></p>
                                                                             {% endfor %}
                                                                             <p></p>
                                                                             </tbody>
                                                                         </table>
 
+                                                                        <p>
+                                                                            <a href="{% url 'plot' slug=c.slug %}"
+                                                                               class="button colored">Graph</a></p>
+
                                                                     </div>
 
                                                                 </div>
                                                             </div>
+
+
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
@@ -491,7 +589,16 @@
                                                   class="button colored">Добавить участника в концерт</a></p>
                                             <p><a href="{% url 'new_dance_in_concert' %}"
                                                   class="button colored">Добавить танец в концерт</a></p>
+                                            <p><a href="{% url 'new_concert' %}"
+                                                  class="button colored">Добавить концерт</a></p>
 
+
+                                            {#                                            <h1>{{ pdc_count }}</h1>#}
+                                            {#                                        {% for image_base64 in images_base64 %}#}
+                                            {#                                            <img src="data:image/png;base64,{{ image_base64 }}"#}
+                                            {#                             alt="some text to display to your users when the image does not show correctly"#}
+                                            {#                             width=500 height=auto/>#}
+                                            {#{% endfor %}#}
                                         </div>
                                     </div>
                                 </div>
@@ -553,7 +660,7 @@
                                                                     <div class="col-md-4">
                                                                         {% if participant.picture %}
                                                                             <img src="{{ participant.picture.url }}"
-                                                                                 >
+                                                                            >
                                                                         {% endif %}
                                                                     </div>
                                                                 </div>
@@ -654,8 +761,8 @@
                         </div>
                         <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
                     </div>
-            </article>
+                </article>
+            </div>
         </div>
-    </div>
     </div><!-- end content -->
 {% endblock %}

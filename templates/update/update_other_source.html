@@ -1,0 +1,15 @@
+{% extends "update.html" %}
+{% block name %} источник финансов{% endblock %}
+{% block form %}
+    <div class="row">
+        <div class="col form-group">
+            <h5>Название *</h5>
+            {{ form.name }}
+        </div>
+        <div class=" col form-group">
+            <h5>Сумма *</h5>
+            {{ form.sum }}
+        </div>
+
+    </div>
+{% endblock %}

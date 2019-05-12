@@ -242,3 +242,27 @@ class CostumeAdmin(admin.ModelAdmin):
     def particicpant_costume(self, request):
         participant_costume = ParticipantCostume.objects.filter(Costume=request.name)
         return participant_costume
+
+
+@admin.register(Expence)
+class ExpencesAdmin(admin.ModelAdmin):
+    empty_value_display = 'null'
+    list_display = ('name', 'num', 'cost', 'date', 'bought')
+    list_filter = ('name', 'cost')
+    search_fields = ['name']
+
+
+@admin.register(OtherSourceOfFinances)
+class OtherSourceOfFinancesAdmin(admin.ModelAdmin):
+    empty_value_display = 'null'
+    list_display = ('name', 'sum')
+    list_filter = ('name', 'sum')
+    search_fields = ['name']
+
+
+@admin.register(Announcement)
+class AnnouncementAdmin(admin.ModelAdmin):
+    empty_value_display = 'null'
+    list_display = ('title', 'text', 'participant', 'date', 'date_until','group')
+    list_filter = ('group', 'participant')
+    search_fields = ['title', 'text', 'date_until']

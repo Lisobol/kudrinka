@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^$', MainPageView.as_view(), name='main_page'),
     path('admin/', admin.site.urls),
     url(r'^registration/$', registration, name='registration'),
+    url(r'^success/$', SuccessfulRegistrationView.as_view(), name='success'),
     url(r'^logout/$', logout_view, name='logout'),
     url(r'^login/$', LoginPageView.as_view(), name='login'),
     url(r'^contacts/$', ContactsView.as_view(), name='contacts'),
@@ -124,7 +125,7 @@ urlpatterns = [
     #      name='participant_dance_concert'),
     url(r'^new_participant_dance_concert/$', AddParticipantDanceConcert.as_view(), name='new_participant_dance_concert'),
 
-    url(r'^participants_dances_concerts/$', ParticipantDanceConcertPage.as_view(), name='participant_dance_concert'),
+    # url(r'^participants_dances_concerts/$', ParticipantDanceConcertPage.as_view(), name='participant_dance_concert'),
     path('participants_dances_concerts/<str:slug>/update', UpdateParticipantDanceConcert.as_view(),
          name='update_participant_dance_concert'),
     path('participants_dances_concerts/<str:slug>/delete', DeleteParticipantDanceConcert.as_view(),
@@ -143,14 +144,28 @@ urlpatterns = [
     path('payments/<str:slug>/delete', DeletePayment.as_view(), name='delete_payment'),
 
     url(r'^new_costume/$', AddCostume.as_view(), name='new_costume'),
-    url(r'^costumes/$', CostumesPage.as_view(), name='costumes'),
-    path('costumes/<str:slug>/', CostumePage.as_view(), name='costume'),
+    # url(r'^costumes/$', CostumesPage.as_view(), name='costumes'),
+    # path('costumes/<str:slug>/', CostumePage.as_view(), name='costume'),
     path('costumes/<str:slug>/update', UpdateCostume.as_view(), name='update_costume'),
     path('costumes/<str:slug>/delete', DeleteCostume.as_view(), name='delete_costume'),
+
+    url(r'^new_expence/$', AddExpence.as_view(), name='new_expence'),
+    path('expences/<str:slug>/update', UpdateExpence.as_view(), name='update_expence'),
+    path('expences/<str:slug>/delete', DeleteExpence.as_view(), name='delete_expence'),
+
+    url(r'^new_other_source/$', AddOtherSourceOfFinance.as_view(), name='new_other_source'),
+    path('other_sources/<str:slug>/update', UpdateOtherSourceOfFinance.as_view(), name='update_other_source'),
+    path('other_sources/<str:slug>/delete', DeleteOtherSourceOfFinance.as_view(), name='delete_other_source'),
+
+    url(r'^new_announcement/$', AddAnnouncement.as_view(), name='new_announcement'),
+    path('announcements/<str:slug>/update', UpdateAnnouncement.as_view(), name='update_announcement'),
+    path('announcements/<str:slug>/delete', DeleteAnnouncement.as_view(), name='delete_announcement'),
 
     url(r'^new_participant_costume/$', AddParticipantCostume.as_view(), name='new_participant_costume'),
     path('participant_costume/<str:slug>/update', UpdateParticipantCostume.as_view(), name='update_participant_costume'),
     path('participant_costume/<str:slug>/delete', DeleteParticipantCostume.as_view(), name='delete_participant_costume'),
+
+    path('plot/<str:slug>', Plots.as_view(),name='plot'),
 
     url(r'^my_page_choreographer/$', MyPageChoreographer.as_view(), name='my_page_choreographer'),
     url(r'^my_page_participant/$', MyPageParticipant.as_view(), name='my_page_participant'),

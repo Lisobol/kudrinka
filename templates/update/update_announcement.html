@@ -1,0 +1,28 @@
+{% extends "update.html" %}
+{% block name %} объявление{% endblock %}
+{% block form %}
+    <div class="form-group">
+        <h5>Заголовок</h5>
+        {{ form.title }}
+    </div>
+    <div class="form-group">
+        <h5>Текст</h5>
+        {{ form.text }}
+    </div>
+    <div class="form-group">
+        <h5>Дата</h5>
+        {{ form.date }}
+    </div>
+    <div class="form-group">
+        <h5>Дата, до которой объявление актуально(после нее перестанет отображаться)</h5>
+        {{ form.date_until }}
+    </div>
+    <div class="form-group">
+        <h5>Участник (если не заполнять поле, отобразится у всех)</h5>
+        {{ form.participant }}
+    </div>
+     <div class="form-group">
+        <h5>Группа (если не заполнять поле, отобразится у всех)</h5>
+        {{ form.group }}
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "new.html" %}
+{% block name %} предполагаемые затраты{% endblock %}
+{% block form %}
+    <div class="row">
+        <div class="col form-group">
+            <h5>Название *</h5>
+            {{ form.name }}
+        </div>
+        <div class=" col form-group">
+            <h5>Количество *</h5>
+            {{ form.num }}
+        </div>
+        <div class="col form-group">
+            <h5>Цена единицы *</h5>
+            {{ form.cost }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col form-group">
+            <h5>Дата</h5>
+            {{ form.date }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col form-group">
+            <h5>Куплено</h5>
+            {{ form.bought }}
+        </div>
+    </div>
+{% endblock %}

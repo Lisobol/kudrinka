@@ -4,8 +4,11 @@ from django.contrib.auth.models import AbstractUser
 from django.shortcuts import reverse
 from django.utils.text import slugify
 from transliterate import translit, detect_language
+from datetime import time, datetime
+from django.utils import timezone
 
 User._meta.get_field('email')._unique = True
+
 
 class Choreographer(models.Model):
     last_name = models.TextField(verbose_name="Фамилия", max_length=50)
@@ -37,10 +40,11 @@ class Choreographer(models.Model):
     def save(self, *args, **kwargs):
         # if not self.id:
         a = '{} {} {}'.format(self.last_name, self.first_name, self.patronymic)
-        if detect_language(self.last_name) is not None or detect_language(self.first_name) is not None or detect_language(self.patronymic) is not None:
+        if detect_language(self.last_name) is not None or detect_language(
+                self.first_name) is not None or detect_language(self.patronymic) is not None:
             self.slug = slugify(translit(a, reversed=True), allow_unicode=True)
         else:
-            self.slug = slugify(a,allow_unicode=True)
+            self.slug = slugify(a, allow_unicode=True)
         super(Choreographer, self).save(*args, **kwargs)
 
 
@@ -54,7 +58,6 @@ class DanceStyle(models.Model):
     class Meta:
         verbose_name = 'Танцевальное направление'
         verbose_name_plural = 'Танцевальные направления'
-
 
     def __str__(self):
         return self.dance_style
@@ -171,7 +174,6 @@ class WeekDay(models.Model):
         verbose_name_plural = 'Дни недели'
 
 
-
 class ClassSchedule(models.Model):
     begin_time = models.TimeField(verbose_name="Время начала", null=True, max_length=50)
     end_time = models.TimeField(verbose_name="Время окончания", null=True, max_length=50)
@@ -275,6 +277,9 @@ class Dance(models.Model):
     def __str__(self):
         return self.name
 
+    def dur(self):
+        return time.strftime(self.duration, "%H:%M:%S")
+
     class Meta:
         verbose_name = 'Танец'
         verbose_name_plural = 'Танцы'
@@ -300,16 +305,6 @@ class DanceInConcert(models.Model):
     num = models.PositiveIntegerField(verbose_name="Порядковый номер танца в концерте", blank=True, null=True)
     slug = models.SlugField(verbose_name="URL", max_length=250, unique=True)
 
-    # num_persons = models.PositiveIntegerField(verbose_name="Количество человек", blank=True)
-    # description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
-
-    # def __str__(self):
-    #     return '{} {} {}'.format( self.dance, self.concert)
-    #
-
-    # def get_absolute_url(self):
-    #     return reverse('d', kwargs={'slug': self.slug})
-
     def get_update_url(self):
         return reverse('update_dance_in_concert', kwargs={'slug': self.slug})
 
@@ -319,10 +314,9 @@ class DanceInConcert(models.Model):
         ordering = ['concert']
 
     def __str__(self):
-        return '{} {}'.format(self.concert, self.dance)
+        return '{}      {}'.format(self.concert, self.dance)
 
     def save(self, *args, **kwargs):
-
         a = '{} {}'.format(self.concert.slug, self.dance.slug)
         self.slug = slugify(a)
         super(DanceInConcert, self).save(*args, **kwargs)
@@ -348,11 +342,9 @@ class ParticipantConcert(models.Model):
         return '{} {}'.format(self.concert, self.participant)
 
     def save(self, *args, **kwargs):
-
         a = '{} {}'.format(self.concert.slug, self.participant.slug)
         self.slug = slugify(a)
         super(ParticipantConcert, self).save(*args, **kwargs)
-
 
 
 class ParticipantDanceConcert(models.Model):
@@ -381,7 +373,6 @@ class ParticipantDanceConcert(models.Model):
     def __str__(self):
         return '{} {}'.format(self.participant_concert, self.dance)
 
-
     def save(self, *args, **kwargs):
         a = '{} {}'.format(self.participant_concert.slug, self.dance.slug)
         self.slug = slugify(a)
@@ -394,7 +385,7 @@ class News(models.Model):
 
     text = models.TextField(verbose_name="Текст", blank=True, max_length=10000)
     picture = models.ImageField(upload_to='media/news', null=True, blank=True)
-    date = models.DateTimeField(verbose_name="Дата", blank=True)
+    date = models.DateTimeField(verbose_name="Дата",default=timezone.now())
 
     # video = models.TextField(verbose_name="", blank=True)
 
@@ -425,7 +416,7 @@ class News(models.Model):
 class PhotoGallery(models.Model):
     name = models.TextField(verbose_name="Название", max_length=50)
     slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
-    main_picture = models.ImageField(upload_to='media/photo_gallery',default='media/default/photo/НОМЕР4.jpg')
+    main_picture = models.ImageField(upload_to='media/photo_gallery', default='media/default/photo/НОМЕР4.jpg')
 
     description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
 
@@ -481,10 +472,10 @@ class Fond(models.Model):
     participant = models.OneToOneField(Participant, on_delete=models.CASCADE)
 
     def percent(self):
-        return int(self.sum*100/7000)
+        return int(self.sum * 100 / 7000)
 
     def strpercent(self):
-        return str(int(self.sum*100/7000))
+        return str(int(self.sum * 100 / 7000))
 
     def __str__(self):
         return '{} {}'.format(self.participant, self.sum)
@@ -492,7 +483,7 @@ class Fond(models.Model):
     class Meta:
         verbose_name = 'Фонд'
         verbose_name_plural = 'Фонд'
-        ordering = ['sum','participant']
+        ordering = ['sum', 'participant']
 
     def get_absolute_url(self):
         return reverse('fond', kwargs={'slug': self.slug})
@@ -606,3 +597,104 @@ class ParticipantCostume(models.Model):
         self.slug = slugify(a)
 
         super(ParticipantCostume, self).save(*args, **kwargs)
+
+
+class Expence(models.Model):
+    name = models.TextField(verbose_name="Название", max_length=50)
+    num = models.PositiveIntegerField(verbose_name="Количество", default=1)
+    cost = models.PositiveIntegerField(verbose_name="Стоимость единицы", blank=True)
+    date = models.DateField(verbose_name="Дата", null=True, blank=True)
+    bought = models.BooleanField(default=False)
+    slug = models.SlugField(verbose_name="URL", max_length=250, unique=True)
+
+    class Meta:
+        verbose_name = 'Затраты'
+        verbose_name_plural = 'Затраты'
+        ordering = ['name']
+
+    def __str__(self):
+        return '{} {} {}'.format(self.name, self.cost, self.num)
+
+    def get_update_url(self):
+        return reverse('update_expences', kwargs={'slug': self.slug})
+
+    def final_cost(self):
+        return self.cost * self.num
+
+    def save(self, *args, **kwargs):
+        a = '{} {} {}'.format(self.name, self.cost, self.num)
+        if detect_language(str(self.name)) is not None:
+            self.slug = slugify(translit(a, reversed=True), allow_unicode=True)
+        else:
+            self.slug = slugify(a)
+        super(Expence, self).save(*args, **kwargs)
+
+
+class OtherSourceOfFinances(models.Model):
+    name = models.TextField(verbose_name="Название", max_length=50)
+    sum = models.PositiveIntegerField(verbose_name="Сумма", default=1)
+    slug = models.SlugField(verbose_name="URL", max_length=250, unique=True)
+
+    class Meta:
+        verbose_name = 'Другой источник финансирования'
+        verbose_name_plural = 'Другие источники финансирования'
+        ordering = ['name']
+
+    def __str__(self):
+        return '{} {}'.format(self.name, self.sum)
+
+    def get_update_url(self):
+        return reverse('update_other_source', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        a = '{} {}'.format(self.name, self.sum)
+        if detect_language(str(self.name)) is not None:
+            self.slug = slugify(translit(a, reversed=True), allow_unicode=True)
+        else:
+            self.slug = slugify(a)
+        super(OtherSourceOfFinances, self).save(*args, **kwargs)
+
+
+class Announcement(models.Model):
+    title = models.TextField(verbose_name="Текст", max_length=50)
+    text = models.TextField(verbose_name="Текст", max_length=250)
+    participant = models.ForeignKey(Participant, on_delete=models.CASCADE, null=True, blank=True)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, blank=True, null=True)
+    date = models.DateTimeField(verbose_name="Дата", default=timezone.now())
+    date_until = models.DateTimeField(verbose_name="Дата, до которой объявление актуально", null=True, blank=True,
+                                  default=timezone.now())
+
+    slug = models.SlugField(verbose_name="URL", max_length=250, unique=True)
+
+    class Meta:
+        verbose_name = 'Объявление'
+        verbose_name_plural = 'Объявления'
+        ordering = ['-date']
+
+    def __str__(self):
+        if self.date_until and self.participant:
+            return '{} {} {} {}'.format(self.date, self.date_until, self.participant, self.title)
+        elif self.date_until:
+            return '{} {} {}'.format(self.date, self.date_until, self.title)
+        elif self.participant:
+            return '{} {} {}'.format(self.date, self.participant, self.title)
+        else:
+            return '{} {}'.format(self.date, self.title)
+
+    def get_update_url(self):
+        return reverse('update_announcement', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        if self.date_until and self.participant:
+            a = '{} {} {} {}'.format(self.date, self.date_until, self.participant, self.title)
+        elif self.date_until:
+            a = '{} {} {}'.format(self.date, self.date_until, self.title)
+        elif self.participant:
+            a = '{} {} {}'.format(self.date, self.participant, self.title)
+        else:
+            a = '{} {}'.format(self.date, self.title)
+        if detect_language(str(self.title)) is not None or detect_language(str(self.participant)) is not None:
+            self.slug = slugify(translit(a, reversed=True), allow_unicode=True)
+        else:
+            self.slug = slugify(a)
+        super(Announcement, self).save(*args, **kwargs)

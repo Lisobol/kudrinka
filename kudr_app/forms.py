@@ -286,3 +286,52 @@ class ParticipantCostumeForm(forms.ModelForm):
             'participant': forms.RadioSelect(),
 
         }
+
+
+class ExpenceForm(forms.ModelForm):
+    class Meta(object):
+        model = Expence
+        fields = ['name', 'num', 'cost', 'date', 'bought']
+        widgets = {
+            'name': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите название'}),
+            'num': forms.NumberInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите количество'}),
+            'cost': forms.NumberInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите цену единицы'}),
+            'date': forms.DateTimeInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите дату покупки'}),
+            'bought': forms.CheckboxInput(),
+        }
+
+
+
+
+class OtherSourceOfFinanceForm(forms.ModelForm):
+    class Meta(object):
+        model = OtherSourceOfFinances
+        fields = ['name', 'sum']
+        widgets = {
+            'name': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите название'}),
+            'sum': forms.NumberInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите сумму'}),
+        }
+
+
+class AnnouncementForm(forms.ModelForm):
+    class Meta(object):
+        model = Announcement
+        fields = ['title', 'text', 'participant', 'date', 'date_until','group']
+        widgets = {
+            'title': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите заголовок'}),
+            'text': forms.TextInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите текст'}),
+            'date': forms.DateTimeInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите дату'}),
+            'date_until': forms.DateTimeInput(
+                attrs={'class': 'form-control', 'placeholder': 'Введите дату, до которой объявление актуально'}),
+            'participant': forms.RadioSelect(),
+            'group': forms.RadioSelect(),
+            }
