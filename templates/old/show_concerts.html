@@ -1,4 +1,4 @@
-{% extends "show.html" %}
+{% extends "old/show.html" %}
 {% block title %}Концерты{% endblock %}
 {% block name %}Концерты и номера{% endblock %}
 {% block elements %}
@@ -6,14 +6,14 @@
     {% for c in concerts %}
         {% if c.begin_date >= today %}
 
-            {% include "show_concert.html" with concert=c %}
+            {% include "old/show_concert.html" with concert=c %}
             <div class="ml-5">
                 <h3 class="text-secondary">Номера:</h3>
                 {% for d_c in dances_in_concert %}
                     {% for d in dances %}
                         {% if c.id == d_c.concert.id and d.id == d_c.dance.id %}
                             <div>
-                                {{ d_c.num }}.{% include "show_dance.html" with dance=d num=d_c.num %}
+                                {{ d_c.num }}.{% include "old/show_dance.html" with dance=d num=d_c.num %}
                             </div>
                         {% endif %}
                     {% endfor %}
@@ -27,14 +27,14 @@
     {% for c in concerts %}
         {% if c.begin_date < today %}
 
-           {% include "show_concert.html" with concert=c %}
+           {% include "old/show_concert.html" with concert=c %}
             <div class="ml-5">
                 <h3 class="text-secondary">Номера:</h3>
                 {% for d_c in dances_in_concert %}
                     {% for d in dances %}
                         {% if c.id == d_c.concert.id and d.id == d_c.dance.id %}
                             <div>
-                                {{ d_c.num }}.{% include "show_dance.html" with dance=d num=d_c.num %}
+                                {{ d_c.num }}.{% include "old/show_dance.html" with dance=d num=d_c.num %}
                             </div>
                         {% endif %}
                     {% endfor %}

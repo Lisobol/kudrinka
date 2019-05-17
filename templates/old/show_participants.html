@@ -1,9 +1,9 @@
-{% extends "show.html" %}
+{% extends "old/show.html" %}
 {% block title %}Участники{% endblock %}
 {% block name %}Участники{% endblock %}
 {% block elements %}
     {% for p in participants %}
-        {% include "show_participant.html" with participant=p %}
+        {% include "old/show_participant.html" with participant=p %}
         {% for g in groups %}
             {% if g.id == p.group.id %}
                 {{ g.name }}

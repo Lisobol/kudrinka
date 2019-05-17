@@ -99,8 +99,19 @@
                                                         <div class="line">
                                                             <h5 class="font-weight-bold">{{ g.group.name }}</h5>
                                                             <p>{{ g.dance_style }}</p>
-                                                            <p>{{ g.class_schedule.begin_time }}
-                                                                - {{ g.class_schedule.end_time }}</p>
+{#                                                           <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>#}
+{#                                        <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>#}
+
+                                                            <p>{{ g.begin_time }}
+                                                                - {{ g.end_time }}</p>
+                                                        {% if g.address %}
+                                             <p>{{ g.address }}</p>{% endif %}
+                                            {% if g.description %}
+                                             <p>{{ g.description }}</p>{% endif %}
+                                                        {% if g.address %}
+                                             <p>{{ g.address }}</p>{% endif %}
+                                            {% if g.description %}
+                                             <p>{{ g.description }}</p>{% endif %}
                                                         </div>
                                                     {% endif %}
                                                 {% endfor %}

@@ -4,7 +4,7 @@
 {% block elements %}
     {% for f in fonds %}
         <div>
-            {% include "show_fond.html" with fond=f %}
+            {% include "old/show_fond.html" with fond=f %}
             <a href="{% url 'update_fond' slug=f.slug %}"
                class="btn btn-sm btn-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

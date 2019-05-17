@@ -7,7 +7,7 @@
                 <!-- post -->
                 <article class="blog-post">
                     <div class="post-entry">
-                        <h3 class="text-center">Добавить {% block name %}{% endblock %}</h3>
+                        <h1 class="text-center">Добавить {% block name %}{% endblock %}</h1>
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% if errors %}

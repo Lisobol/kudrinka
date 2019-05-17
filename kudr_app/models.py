@@ -75,10 +75,10 @@ class DanceStyle(models.Model):
             self.slug = slugify(self.dance_style)
         super(DanceStyle, self).save(*args, **kwargs)
 
-
-class ChoreographerDanceStyle(models.Model):
-    dance_style = models.ForeignKey(DanceStyle, on_delete=models.CASCADE)
-    choreographer = models.ForeignKey(Choreographer, on_delete=models.CASCADE)
+#
+# class ChoreographerDanceStyle(models.Model):
+#     dance_style = models.ForeignKey(DanceStyle, on_delete=models.CASCADE)
+#     choreographer = models.ForeignKey(Choreographer, on_delete=models.CASCADE)
 
 
 class Group(models.Model):
@@ -177,9 +177,9 @@ class WeekDay(models.Model):
 class ClassSchedule(models.Model):
     begin_time = models.TimeField(verbose_name="Время начала", null=True, max_length=50)
     end_time = models.TimeField(verbose_name="Время окончания", null=True, max_length=50)
-    slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
     address = models.TextField(verbose_name="Адрес", blank=True, max_length=350)
     description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
+    slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
 
     def __str__(self):
         return '{} - {}'.format(self.begin_time, self.end_time)
@@ -205,10 +205,19 @@ class ClassSchedule(models.Model):
 class GroupChoreographerSchedule(models.Model):
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
     choreographer = models.ForeignKey(Choreographer, on_delete=models.CASCADE)
-    class_schedule = models.ForeignKey(ClassSchedule, on_delete=models.CASCADE)
+    # class_schedule = models.ForeignKey(ClassSchedule, on_delete=models.CASCADE)
+
+    begin_time = models.TimeField(verbose_name="Время начала", null=True, max_length=50)
+    end_time = models.TimeField(verbose_name="Время окончания", null=True, max_length=50)
+    address = models.TextField(verbose_name="Адрес", blank=True, max_length=350)
+    description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
+
     dance_style = models.ForeignKey(DanceStyle, on_delete=models.CASCADE)
     day_of_the_week = models.ForeignKey(WeekDay, on_delete=models.CASCADE)
     slug = models.SlugField(verbose_name="URL", max_length=100, unique=True)
+
+    def __str__(self):
+        return '{}: {} - {}: {} - {}'.format(str(self.group), str(self.day_of_the_week), str(self.dance_style), str(self.begin_time), str(self.end_time))
 
     def get_absolute_url(self):
         return reverse('schedule_part', kwargs={'slug': self.slug})
@@ -219,11 +228,14 @@ class GroupChoreographerSchedule(models.Model):
     class Meta:
         verbose_name = 'Расписание'
         verbose_name_plural = 'Расписание'
-        ordering = ['group']
+        ordering = ['group', 'day_of_the_week']
 
     def save(self, *args, **kwargs):
-        a = '{} {} {} {} {}'.format(str(self.group), str(self.class_schedule), str(self.day_of_the_week),
+        # a = '{} {} {} {} {}'.format(str(self.group), str(self.class_schedule), str(self.day_of_the_week),
+        #                             str(self.dance_style), str(self.choreographer))
+        a = '{} {} {} {} {} {}'.format(str(self.group), str(self.begin_time),str(self.end_time), str(self.day_of_the_week),
                                     str(self.dance_style), str(self.choreographer))
+
         if detect_language(a) is not None:
             self.slug = slugify(translit(a, reversed=True), allow_unicode=True)
         else:
@@ -267,8 +279,8 @@ class Concert(models.Model):
 
 
 class Dance(models.Model):
-    name = models.TextField(verbose_name="Название танца", max_length=50)
-    slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
+    name = models.TextField(verbose_name="Название танца", max_length=80)
+    slug = models.SlugField(verbose_name="URL", max_length=150, unique=True)
 
     duration = models.TimeField(verbose_name="Длительность", blank=True)
     picture = models.ImageField(upload_to='media/dance', null=True, blank=True)
@@ -385,7 +397,7 @@ class News(models.Model):
 
     text = models.TextField(verbose_name="Текст", blank=True, max_length=10000)
     picture = models.ImageField(upload_to='media/news', null=True, blank=True)
-    date = models.DateTimeField(verbose_name="Дата",default=timezone.now())
+    date = models.DateTimeField(verbose_name="Дата",default=timezone.now)
 
     # video = models.TextField(verbose_name="", blank=True)
 
@@ -577,7 +589,7 @@ class Costume(models.Model):
 class ParticipantCostume(models.Model):
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     costume = models.ForeignKey(Costume, on_delete=models.CASCADE)
-    date_return_before = models.DateTimeField(verbose_name="Вернуть до", blank=True)
+    date_return_before = models.DateTimeField(verbose_name="Вернуть до", blank=True, null=True)
     returned = models.BooleanField(default=False)
     slug = models.SlugField(verbose_name="URL", max_length=250, unique=True)
 
@@ -587,7 +599,7 @@ class ParticipantCostume(models.Model):
         ordering = ['costume']
 
     def __str__(self):
-        return '{} {} {}'.format(self.participant, self.costume, self.date_return_before)
+        return '{} {}'.format(self.participant, self.costume)
 
     def get_update_url(self):
         return reverse('update_participant_costume', kwargs={'slug': self.slug})
@@ -660,9 +672,9 @@ class Announcement(models.Model):
     text = models.TextField(verbose_name="Текст", max_length=250)
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE, null=True, blank=True)
     group = models.ForeignKey(Group, on_delete=models.CASCADE, blank=True, null=True)
-    date = models.DateTimeField(verbose_name="Дата", default=timezone.now())
+    date = models.DateTimeField(verbose_name="Дата", default=timezone.now)
     date_until = models.DateTimeField(verbose_name="Дата, до которой объявление актуально", null=True, blank=True,
-                                  default=timezone.now())
+                                  default=timezone.now)
 
     slug = models.SlugField(verbose_name="URL", max_length=250, unique=True)
 

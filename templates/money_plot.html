@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+                        <div class="row">
+                            <h1 class="main-heading"><span>Затраты</span></h1>
+                            <!-- list post item -->
+                            <div class="center-block">
+                                <img class="center-block" src="data:image/png;base64,{{ image_base64 }}"
+                                     alt="some text to display to your users when the image does not show correctly"
+                                     width=500 height=auto/>
+                            </div>
+                            <h1 class="main-heading"><span>Доходы</span></h1>
+                            <!-- list post item -->
+                            <div class="center-block">
+                                <img class="center-block" src="data:image/png;base64,{{ image_base64_1 }}"
+                                     alt="some text to display to your users when the image does not show correctly"
+                                     width=500 height=auto/>
+                            </div>
+                              <h1 class="main-heading"><span>Доходы vs Затраты</span></h1>
+                            <!-- list post item -->
+                            <div class="center-block">
+                                <img class="center-block" src="data:image/png;base64,{{ image_base64_2 }}"
+                                     alt="some text to display to your users when the image does not show correctly"
+                                     width=500 height=auto/>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                </article>
+            </div>
+        </div>
+    </div><!-- end content -->
+{% endblock %}

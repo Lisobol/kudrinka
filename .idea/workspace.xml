@@ -2,21 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a62523a-8e0a-440e-a15f-eec012e5a891" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kudrinka/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kudrinka/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kudrinka/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kudrinka/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bars.png" beforeDir="false" afterPath="$PROJECT_DIR$/bars.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudr_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudr_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudr_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudr_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_kudr/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete/delete_choreographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete/delete_choreographer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete/delete_concert.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete/delete_concert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete/delete_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete/delete_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/my_page_choreographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page_choreographer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/my_page_participant.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page_participant.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new/new_schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new/new_schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_choreographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_choreographer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_choreographers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_choreographers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_class_schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_class_schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_class_schedules.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_class_schedules.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_concert.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_concert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_costume.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_costume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_costumes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_costumes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_costumes_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_costumes_part.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_dance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_dance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_dance_style.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_dance_style.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_dance_style_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_dance_style_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_dance_styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_dance_styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_dances.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_dances.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_fond.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_fond.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_fonds.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_fonds.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_groups.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_groups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_participant.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_participant.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_participant_dance_concert.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_participant_dance_concert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_participant_dance_concert1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_participant_dance_concert1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_participant_dance_concert_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_participant_dance_concert_part.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_participants.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_participants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_participants_concerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_participants_concerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_payments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_payments_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/old/show_payments_part.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_schedule_chor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_schedule_chor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_schedule_main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_schedule_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_schedule_part.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/update/update_schedule_part.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/update/update_schedule_part.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +78,7 @@
     <session id="1555889562">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -60,39 +92,40 @@
           <entry key="project.open.time.30" value="4" />
           <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="2" />
-          <entry key="project.open.time.35" value="2" />
+          <entry key="project.open.time.35" value="3" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.60" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3161" />
           <entry key="dummy" value="18" />
-          <entry key="html" value="36978" />
+          <entry key="html" value="37345" />
           <entry key="js" value="28" />
-          <entry key="py" value="59156" />
+          <entry key="py" value="60250" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3161" />
-          <entry key="HTML" value="36978" />
+          <entry key="HTML" value="37345" />
           <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="59156" />
+          <entry key="Python" value="60250" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="71" />
-          <entry key="html" value="885" />
+          <entry key="html" value="917" />
           <entry key="iml" value="1" />
           <entry key="ini" value="1" />
           <entry key="jpg" value="27" />
@@ -102,21 +135,21 @@
           <entry key="php" value="1" />
           <entry key="png" value="4" />
           <entry key="pstat" value="1" />
-          <entry key="py" value="345" />
+          <entry key="py" value="358" />
           <entry key="show_fond" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="71" />
-          <entry key="HTML" value="885" />
+          <entry key="HTML" value="917" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="31" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="36" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Profiler Session" value="1" />
-          <entry key="Python" value="345" />
+          <entry key="Python" value="358" />
           <entry key="SourceMap" value="3" />
         </counts>
       </usages-collector>
@@ -125,57 +158,140 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kudr_app/models.py">
+        <entry file="file://$PROJECT_DIR$/templates/successfully_registered.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="684" column="43" selection-start-line="684" selection-start-column="43" selection-end-line="684" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1557591436977" expanded="true" signature="2680:2684" ph="..." />
-                <marker date="1557591436977" expanded="true" signature="23974:24016" ph="..." />
-              </folding>
+            <state relative-caret-position="40">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/my_page_participant.html">
+        <entry file="file://$PROJECT_DIR$/kudr_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+              <caret line="438" column="70" selection-start-line="438" selection-start-column="70" selection-end-line="438" selection-end-column="70" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#5147#5186#0#DjangoTemplate" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/new/new_announcement.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/update/update_announcement.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kudrinka/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="155" column="40" lean-forward="true" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
-              <folding>
-                <element signature="e#633#700#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#4649#4782#0" />
+                <element signature="e#5794#8040#0" />
+                <element signature="e#5888#8040#0" />
+                <element signature="e#9172#9863#0" />
+                <element signature="e#9203#9349#0" />
+                <element signature="e#9286#9349#0" />
+                <element signature="e#9394#9863#0" />
+                <element signature="e#9431#9863#0" />
+                <element signature="e#9493#9863#0" />
+                <element signature="e#9539#9863#0" />
+                <element signature="e#9730#9863#0" />
+                <element signature="e#9786#9863#0" />
+                <element signature="e#9996#10099#0" />
+                <element signature="e#10990#11604#0" />
+                <element signature="e#11073#11604#0" />
+                <element signature="e#11682#11728#0" />
+                <element signature="e#11786#12405#0" />
+                <element signature="e#11874#12405#0" />
+                <element signature="e#12452#12483#0" />
+                <element signature="e#12524#12556#0" />
+                <element signature="e#12601#12637#0" />
+                <element signature="e#12680#12714#0" />
+                <element signature="e#12758#12793#0" />
+                <element signature="e#12845#13630#0" />
+                <element signature="e#12933#13630#0" />
+                <element signature="e#13683#14014#0" />
+                <element signature="e#13829#13946#0" />
+                <element signature="e#13987#14014#0" />
+                <element signature="e#14047#14110#0" />
+                <element signature="e#14144#15105#0" />
+                <element signature="e#14181#14996#0" />
+                <element signature="e#14422#14499#0" />
+                <element signature="e#14562#14645#0" />
+                <element signature="e#14726#14806#0" />
+                <element signature="e#14838#14996#0" />
+                <element signature="e#15360#15786#0" />
+                <element signature="e#15479#15693#0" />
+                <element signature="e#15812#17092#0" />
+                <element signature="e#15934#16120#0" />
+                <element signature="e#16166#17092#0" />
+                <element signature="e#16208#16564#0" />
+                <element signature="e#16768#16986#0" />
+                <element signature="e#17118#17500#0" />
+                <element signature="e#17218#17335#0" />
+                <element signature="e#17380#17500#0" />
+                <element signature="e#17554#17635#0" />
+                <element signature="e#17665#18561#0" />
+                <element signature="e#17697#18561#0" />
+                <element signature="e#18427#18560#0" />
+                <element signature="e#18601#18844#0" />
+                <element signature="e#18695#18844#0" />
+                <element signature="e#18888#18998#0" />
+                <element signature="e#19042#19126#0" />
+                <element signature="e#19183#19282#0" />
+                <element signature="e#19330#19461#0" />
+                <element signature="e#19508#19610#0" />
+                <element signature="e#19664#19759#0" />
+                <element signature="e#19804#19929#0" />
+                <element signature="e#19974#20072#0" />
+                <element signature="e#20138#21038#0" />
+                <element signature="e#20280#20362#0" />
+                <element signature="e#20402#21038#0" />
+                <element signature="e#20485#20961#0" />
+                <element signature="e#20727#20961#0" />
+                <element signature="e#21085#21464#0" />
+                <element signature="e#21180#21464#0" />
+                <element signature="e#21509#21903#0" />
+                <element signature="e#21608#21903#0" />
+                <element signature="e#21955#22096#0" />
+                <element signature="e#22148#22250#0" />
+                <element signature="e#22311#22420#0" />
+                <element signature="e#22497#22603#0" />
+                <element signature="e#22653#22794#0" />
+                <element signature="e#22844#22953#0" />
+                <element signature="e#23014#23102#0" />
+                <element signature="e#23143#23661#0" />
+                <element signature="e#23231#23661#0" />
+                <element signature="e#23664#23703#0" />
+                <element signature="e#24407#24551#0" />
+                <element signature="e#24603#24717#0" />
+                <element signature="e#24782#24880#0" />
+                <element signature="e#24934#25083#0" />
+                <element signature="e#25136#25238#0" />
+                <element signature="e#25301#25408#0" />
+                <element signature="e#25460#25605#0" />
+                <element signature="e#25656#25766#0" />
+                <element signature="e#25819#25914#0" />
+                <element signature="e#25959#26084#0" />
+                <element signature="e#26129#26227#0" />
+                <element signature="e#26300#26415#0" />
+                <element signature="e#26469#26623#0" />
+                <element signature="e#26677#26795#0" />
+                <element signature="e#26883#27016#0" />
+                <element signature="e#27079#27260#0" />
+                <element signature="e#27323#27459#0" />
+                <element signature="e#27537#27659#0" />
+                <element signature="e#28218#28383#0" />
+                <element signature="e#28441#28566#0" />
+                <element signature="e#28617#28710#0" />
+                <element signature="e#29352#29474#0" />
+                <element signature="e#29518#29614#0" />
+                <element signature="e#29670#29769#0" />
+                <element signature="e#30626#30757#0" />
+                <element signature="e#30804#30906#0" />
+                <element signature="e#30962#31061#0" />
+                <element signature="e#31108#31239#0" />
+                <element signature="e#31286#31388#0" />
+                <element signature="e#31464#31586#0" />
+                <element signature="e#31644#31809#0" />
+                <element signature="e#31867#31992#0" />
+                <element signature="e#32049#32148#0" />
+                <element signature="e#32195#32326#0" />
+                <element signature="e#32373#32475#0" />
+                <element signature="e#32556#32673#0" />
+                <element signature="e#32733#32896#0" />
+                <element signature="e#32956#33077#0" />
+                <element signature="e#33143#33252#0" />
+                <element signature="e#33304#33450#0" />
+                <element signature="e#33502#33614#0" />
               </folding>
             </state>
           </provider>
@@ -184,37 +300,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/my_page_choreographer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="86" column="112" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="86" selection-end-column="112" />
+            <state relative-caret-position="505">
+              <caret line="324" column="44" selection-start-line="324" selection-start-column="35" selection-end-line="324" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/money_plot.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="e#650#696#0#HTML" expanded="true" />
+                <element signature="e#1149#1195#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/main.html">
+        <entry file="file://$PROJECT_DIR$/templates/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="74" column="46" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="74" selection-end-column="46" />
+            <state>
+              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kudr_app/views.py">
+        <entry file="file://$PROJECT_DIR$/Kudrinka/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
+            <state relative-caret-position="251">
+              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
               <folding>
-                <element signature="e#0#61#0" expanded="true" />
+                <element signature="e#633#700#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kudrinka/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/tap_dance.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -228,16 +365,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class_schedule</find>
+      <find>gr_ch_sh</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/concerts_main.html" />
-        <option value="$PROJECT_DIR$/templates/delete.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_class_schedule.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_costume.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_dance.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_dance_in_concert.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_dance_style.html" />
@@ -249,13 +388,7 @@
         <option value="$PROJECT_DIR$/templates/delete/delete_payment.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_participant_dance_concert.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_schedule_part.html" />
-        <option value="$PROJECT_DIR$/templates/show_schedule_part.html" />
-        <option value="$PROJECT_DIR$/templates/show_schedule_chor.html" />
-        <option value="$PROJECT_DIR$/templates/show_schedule.html" />
-        <option value="$PROJECT_DIR$/templates/new/new_schedule.html" />
-        <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/templates/show_news.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/show_photo_galleries.html" />
         <option value="$PROJECT_DIR$/templates/new/new_expence.html" />
         <option value="$PROJECT_DIR$/templates/update/update_expence.html" />
@@ -272,19 +405,29 @@
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/registration.html" />
         <option value="$PROJECT_DIR$/static_kudr/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/update/update_schedule_part.html" />
-        <option value="$PROJECT_DIR$/templates/new.html" />
         <option value="$PROJECT_DIR$/templates/update.html" />
-        <option value="$PROJECT_DIR$/kudr_app/forms.py" />
-        <option value="$PROJECT_DIR$/kudr_app/admin.py" />
         <option value="$PROJECT_DIR$/templates/delete/delete_announcement.html" />
-        <option value="$PROJECT_DIR$/Kudrinka/urls.py" />
-        <option value="$PROJECT_DIR$/kudr_app/models.py" />
-        <option value="$PROJECT_DIR$/templates/my_page_choreographer.html" />
-        <option value="$PROJECT_DIR$/kudr_app/views.py" />
         <option value="$PROJECT_DIR$/templates/new/new_announcement.html" />
         <option value="$PROJECT_DIR$/templates/update/update_announcement.html" />
+        <option value="$PROJECT_DIR$/kudr_app/forms.py" />
+        <option value="$PROJECT_DIR$/templates/update/update_schedule_part.html" />
+        <option value="$PROJECT_DIR$/templates/new/new_schedule.html" />
+        <option value="$PROJECT_DIR$/templates/show_schedule_chor.html" />
+        <option value="$PROJECT_DIR$/templates/show_schedule_part.html" />
+        <option value="$PROJECT_DIR$/templates/show_schedule.html" />
         <option value="$PROJECT_DIR$/templates/my_page_participant.html" />
+        <option value="$PROJECT_DIR$/templates/new.html" />
+        <option value="$PROJECT_DIR$/templates/delete.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/kudr_app/admin.py" />
+        <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/kudr_app/models.py" />
+        <option value="$PROJECT_DIR$/templates/404.html" />
+        <option value="$PROJECT_DIR$/Kudrinka/settings.py" />
+        <option value="$PROJECT_DIR$/templates/my_page_choreographer.html" />
+        <option value="$PROJECT_DIR$/Kudrinka/urls.py" />
+        <option value="$PROJECT_DIR$/templates/money_plot.html" />
+        <option value="$PROJECT_DIR$/kudr_app/views.py" />
       </list>
     </option>
   </component>
@@ -294,8 +437,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-4" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
     <option name="width" value="970" />
     <option name="height" value="1040" />
   </component>
@@ -501,10 +644,10 @@
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\delete" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\update" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\new" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\js" />
     </key>
   </component>
@@ -560,15 +703,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8283186" visible="true" weight="0.10536913" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8283186" visible="true" weight="0.14966443" />
       <window_info id="Structure" order="1" sideWeight="0.17168142" side_tool="true" weight="0.09261745" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32378224" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49731544" visible="true" weight="0.18413597" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.32294616" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49530202" visible="true" weight="0.18413597" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -576,7 +719,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026846" side_tool="true" visible="true" weight="0.18413597" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.504698" side_tool="true" weight="0.18413597" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -622,127 +765,92 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>763</line>
+          <line>829</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>844</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>439</line>
+          <line>562</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>448</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>487</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>966</line>
+          <line>945</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>495</line>
+          <line>618</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1234</line>
+          <line>1087</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>349</line>
+          <line>361</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>329</line>
+          <line>341</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>315</line>
+          <line>327</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>952</line>
+          <line>931</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1000</line>
+          <line>951</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1257</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Kudrinka/urls.py</url>
-          <line>164</line>
+          <line>131</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>561</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>784</line>
+          <line>850</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1041</line>
+          <line>971</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1068</line>
+          <line>998</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1189</line>
+          <line>1067</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>453</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>603</line>
+          <line>716</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>212</line>
+          <line>221</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>831</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>871</line>
+          <line>876</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -752,12 +860,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>381</line>
+          <line>393</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>543</line>
+          <line>555</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -767,131 +875,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>613</line>
+          <line>726</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>956</line>
+          <line>935</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>576</line>
+          <line>588</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>405</line>
+          <line>417</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>402</line>
-          <option name="timeStamp" value="55" />
+          <line>610</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
+          <line>571</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/show_participant_dance_concert.html</url>
+          <url>file://$PROJECT_DIR$/templates/old/show_participant_dance_concert.html</url>
           <line>30</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/my_page_choreographer.html</url>
-          <line>227</line>
-          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/show_schedule_chor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_dance_style.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_dance_style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_fond.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/unitegallery-master/dist/js/unitegallery.js" />
-    <entry file="file://$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/js/unitegallery.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/js/unitegallery.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_photo_galleries.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kudrinka/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_other_source.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_expence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/new/new_other_source.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -934,16 +954,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plot_time.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="e#650#696#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/plot_time.html" />
     <entry file="file://$PROJECT_DIR$/templates/plot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -954,21 +965,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/delete/delete_choreographer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="82" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
-          <folding>
-            <element signature="e#297#322#0#HTML" expanded="true" />
-            <element signature="e#554#592#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,24 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/successfully_registered.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-100">
           <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1034,113 +1020,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_schedule_part.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/new/new_payment.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kudr_app/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="324" column="78" lean-forward="true" selection-start-line="324" selection-start-column="18" selection-end-line="324" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kudr_app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="267" column="37" lean-forward="true" selection-start-line="267" selection-start-column="37" selection-end-line="267" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/delete/delete_announcement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kudrinka/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="155" column="40" lean-forward="true" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
-          <folding>
-            <element signature="e#633#700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="74" column="46" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="74" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kudr_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="684" column="43" selection-start-line="684" selection-start-column="43" selection-end-line="684" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1557591436977" expanded="true" signature="2680:2684" ph="..." />
-            <marker date="1557591436977" expanded="true" signature="23974:24016" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_page_choreographer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="86" column="112" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="86" selection-end-column="112" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kudr_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_announcement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1151,13 +1037,338 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/update/update_announcement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/new/new_class_schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/update/update_schedule_part.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_schedule_main.html" />
+    <entry file="file://$PROJECT_DIR$/templates/show_schedule_part.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="25" column="73" lean-forward="true" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/new/new_schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_schedule_chor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/my_page_participant.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+        <state relative-caret-position="200">
+          <caret line="109" column="82" selection-start-line="109" selection-start-column="82" selection-end-line="109" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kudr_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="674" column="73" selection-start-line="674" selection-start-column="73" selection-end-line="674" selection-end-column="73" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#5147#5186#0#DjangoTemplate" />
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1557838355036" expanded="true" signature="2680:2684" ph="..." />
+            <marker date="1557838355036" expanded="true" signature="24724:24766" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kudr_app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1740">
+          <caret line="89" column="27" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="47" column="46" selection-start-line="46" selection-start-column="45" selection-end-line="47" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kudr_app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2620">
+          <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/new/new_choreographer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-920">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_new.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_photo_galleries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/successfully_registered.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/old/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="97" selection-start-line="14" selection-start-column="97" selection-end-line="14" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kudrinka/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tap_dance.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kudrinka/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="e#633#700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_page_choreographer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="324" column="44" selection-start-line="324" selection-start-column="35" selection-end-line="324" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/money_plot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
+          <folding>
+            <element signature="e#650#696#0#HTML" expanded="true" />
+            <element signature="e#1149#1195#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kudr_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="438" column="70" selection-start-line="438" selection-start-column="70" selection-end-line="438" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#4649#4782#0" />
+            <element signature="e#5794#8040#0" />
+            <element signature="e#5888#8040#0" />
+            <element signature="e#9172#9863#0" />
+            <element signature="e#9203#9349#0" />
+            <element signature="e#9286#9349#0" />
+            <element signature="e#9394#9863#0" />
+            <element signature="e#9431#9863#0" />
+            <element signature="e#9493#9863#0" />
+            <element signature="e#9539#9863#0" />
+            <element signature="e#9730#9863#0" />
+            <element signature="e#9786#9863#0" />
+            <element signature="e#9996#10099#0" />
+            <element signature="e#10990#11604#0" />
+            <element signature="e#11073#11604#0" />
+            <element signature="e#11682#11728#0" />
+            <element signature="e#11786#12405#0" />
+            <element signature="e#11874#12405#0" />
+            <element signature="e#12452#12483#0" />
+            <element signature="e#12524#12556#0" />
+            <element signature="e#12601#12637#0" />
+            <element signature="e#12680#12714#0" />
+            <element signature="e#12758#12793#0" />
+            <element signature="e#12845#13630#0" />
+            <element signature="e#12933#13630#0" />
+            <element signature="e#13683#14014#0" />
+            <element signature="e#13829#13946#0" />
+            <element signature="e#13987#14014#0" />
+            <element signature="e#14047#14110#0" />
+            <element signature="e#14144#15105#0" />
+            <element signature="e#14181#14996#0" />
+            <element signature="e#14422#14499#0" />
+            <element signature="e#14562#14645#0" />
+            <element signature="e#14726#14806#0" />
+            <element signature="e#14838#14996#0" />
+            <element signature="e#15360#15786#0" />
+            <element signature="e#15479#15693#0" />
+            <element signature="e#15812#17092#0" />
+            <element signature="e#15934#16120#0" />
+            <element signature="e#16166#17092#0" />
+            <element signature="e#16208#16564#0" />
+            <element signature="e#16768#16986#0" />
+            <element signature="e#17118#17500#0" />
+            <element signature="e#17218#17335#0" />
+            <element signature="e#17380#17500#0" />
+            <element signature="e#17554#17635#0" />
+            <element signature="e#17665#18561#0" />
+            <element signature="e#17697#18561#0" />
+            <element signature="e#18427#18560#0" />
+            <element signature="e#18601#18844#0" />
+            <element signature="e#18695#18844#0" />
+            <element signature="e#18888#18998#0" />
+            <element signature="e#19042#19126#0" />
+            <element signature="e#19183#19282#0" />
+            <element signature="e#19330#19461#0" />
+            <element signature="e#19508#19610#0" />
+            <element signature="e#19664#19759#0" />
+            <element signature="e#19804#19929#0" />
+            <element signature="e#19974#20072#0" />
+            <element signature="e#20138#21038#0" />
+            <element signature="e#20280#20362#0" />
+            <element signature="e#20402#21038#0" />
+            <element signature="e#20485#20961#0" />
+            <element signature="e#20727#20961#0" />
+            <element signature="e#21085#21464#0" />
+            <element signature="e#21180#21464#0" />
+            <element signature="e#21509#21903#0" />
+            <element signature="e#21608#21903#0" />
+            <element signature="e#21955#22096#0" />
+            <element signature="e#22148#22250#0" />
+            <element signature="e#22311#22420#0" />
+            <element signature="e#22497#22603#0" />
+            <element signature="e#22653#22794#0" />
+            <element signature="e#22844#22953#0" />
+            <element signature="e#23014#23102#0" />
+            <element signature="e#23143#23661#0" />
+            <element signature="e#23231#23661#0" />
+            <element signature="e#23664#23703#0" />
+            <element signature="e#24407#24551#0" />
+            <element signature="e#24603#24717#0" />
+            <element signature="e#24782#24880#0" />
+            <element signature="e#24934#25083#0" />
+            <element signature="e#25136#25238#0" />
+            <element signature="e#25301#25408#0" />
+            <element signature="e#25460#25605#0" />
+            <element signature="e#25656#25766#0" />
+            <element signature="e#25819#25914#0" />
+            <element signature="e#25959#26084#0" />
+            <element signature="e#26129#26227#0" />
+            <element signature="e#26300#26415#0" />
+            <element signature="e#26469#26623#0" />
+            <element signature="e#26677#26795#0" />
+            <element signature="e#26883#27016#0" />
+            <element signature="e#27079#27260#0" />
+            <element signature="e#27323#27459#0" />
+            <element signature="e#27537#27659#0" />
+            <element signature="e#28218#28383#0" />
+            <element signature="e#28441#28566#0" />
+            <element signature="e#28617#28710#0" />
+            <element signature="e#29352#29474#0" />
+            <element signature="e#29518#29614#0" />
+            <element signature="e#29670#29769#0" />
+            <element signature="e#30626#30757#0" />
+            <element signature="e#30804#30906#0" />
+            <element signature="e#30962#31061#0" />
+            <element signature="e#31108#31239#0" />
+            <element signature="e#31286#31388#0" />
+            <element signature="e#31464#31586#0" />
+            <element signature="e#31644#31809#0" />
+            <element signature="e#31867#31992#0" />
+            <element signature="e#32049#32148#0" />
+            <element signature="e#32195#32326#0" />
+            <element signature="e#32373#32475#0" />
+            <element signature="e#32556#32673#0" />
+            <element signature="e#32733#32896#0" />
+            <element signature="e#32956#33077#0" />
+            <element signature="e#33143#33252#0" />
+            <element signature="e#33304#33450#0" />
+            <element signature="e#33502#33614#0" />
           </folding>
         </state>
       </provider>

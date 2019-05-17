@@ -109,8 +109,10 @@
                                                                 <div class="line">
                                                                     <h5 class="font-weight-bold">{{ g.group.name }}</h5>
                                                                     <p>{{ g.dance_style }}</p>
-                                                                    <p>{{ g.class_schedule.begin_time }}
-                                                                        - {{ g.class_schedule.end_time }}</p>
+{#                                                                    <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>#}
+
+                                                                    <p>{{ g.begin_time }}
+                                                                        - {{ g.end_time }}</p>
                                                                 </div>
                                                             {% endif %}
                                                         {% endfor %}
@@ -171,8 +173,8 @@
                                                                         <td scope="row" class="table_row">
                                                                             {% if pc1.costume == c %}
                                                                                 {% if pc1.costume and pc1.returned == False %}
-                                                                                    Не возвращен (
-                                                                                    {{ pc1.date_return_before }})
+                                                                                    Не возвращен {% if pc1.date_return_before %}(
+                                                                                    {{ pc1.date_return_before }}){% endif %}
                                                                                 {% else %}
                                                                                     <i class="butred fa fa-check"></i>
                                                                                 {% endif %}
@@ -214,28 +216,13 @@
                                 <div>
                                     <a href="#">Развернуть</a>
                                     <div class="scrolling-wrapper">
-
-
                                         <table class="table table-hover">
                                             <thead class="thead-dark">
-
                                             <tr>
                                                 <th></th>
                                                 {% for m in months %}
                                                     <th>{{ m }}</th>
                                                 {% endfor %}
-
-                                                {#                                                {% for c in costumes %}#}
-                                                {#                                                    <th scope="col" class="table_col">#}
-                                                {#                                                        {{ c.name }}-{{ c.dance.name }}#}
-                                                {#                                                        <a class="but" href="{% url 'update_costume' slug=c.slug %}"#}
-                                                {#                                                           target="_self"><i#}
-                                                {#                                                                class="fa fa-pencil"></i></a>#}
-                                                {#                                                        <a class="but" href="{% url 'delete_costume' slug=c.slug %}"#}
-                                                {#                                                           target="_self"><i#}
-                                                {#                                                                class="fa fa-trash"></i></a>#}
-                                                {#                                                    </th>#}
-                                                {#                                                {% endfor %}#}
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -254,51 +241,16 @@
                                                                     <a href="{% url 'delete_payment' slug=pay.slug %}"
                                                                        target="_self"><i
                                                                             class="butred fa fa-trash"></i></a>
-
                                                                 {% endif %}
                                                             {% endfor %}
                                                         </td>
-
                                                     {% endfor %}
                                                 </tr>
-
                                             {% endfor %}
-                                            {#                                            {% for pc in participant_costumes %}#}
-                                            {#                                                {% for p in participants %}#}
-                                            {#                                                    <tr>#}
-                                            {#                                                        {% if pc.participant == p %}#}
-                                            {#                                                            <th>{{ p.last_name }} {{ p.initials }}</th>#}
-                                            {#                                                            {% for pc1 in participant_costumes %}#}
-                                            {#                                                                {% if pc == pc1 and pc1.participant == p %}#}
-                                            {#                                                                    {% for c in costumes %}#}
-                                            {#                                                                        <td>#}
-                                            {#                                                                            {% if pc1.costume == c %}#}
-                                            {#                                                                                <a class="butred"#}
-                                            {#                                                                                   href="{% url 'update_participant_costume' slug=pc1.slug %}"#}
-                                            {#                                                                                   target="_self"><i#}
-                                            {#                                                                                        class="butred fa fa-pencil"></i></a>#}
-                                            {#                                                                                <a href="{% url 'delete_participant_costume' slug=pc1.slug %}"#}
-                                            {#                                                                                   target="_self"><i#}
-                                            {#                                                                                        class="butred fa fa-trash"></i></a>#}
-                                            {#                                                                                {% if pc1.costume and pc1.returned == False %}#}
-                                            {#                                                                                    {{ pc1.date_return_before }}#}
-                                            {##}
-                                            {#                                                                                {% endif %}#}
-                                            {#                                                                            {% endif %}#}
-                                            {#                                                                        </td>#}
-                                            {#                                                                    {% endfor %}#}
-                                            {#                                                                {% endif %}#}
-                                            {#                                                            {% endfor %}#}
-                                            {#                                                        {% endif %}#}
-                                            {#                                                    </tr>#}
-                                            {#                                                {% endfor %}#}
-                                            {#                                            {% endfor %}#}
-                                            <p></p>
                                             </tbody>
                                         </table>
                                         <p><a href="{% url 'new_payment' %}"
-                                              class="button colored">Добавить платеж</a>
-                                        </p>
+                                              class="button colored">Добавить платеж</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +264,7 @@
                                     <a href="#">Развернуть</a>
                                     <div class="scrolling-wrapper wrapper1">
                                         {% for fond in fonds %}
-                                            {% include "show_fond.html" with fond=fond %}
+                                            {% include "old/show_fond.html" with fond=fond %}
                                             <a class="but" href="{% url 'update_fond' slug=fond.slug %}"
                                                target="_self"><i
                                                     class="butred fa fa-pencil"></i></a>
@@ -321,10 +273,7 @@
                                                     class="butred fa fa-trash"></i></a>
                                         {% endfor %}
                                         <p><a href="{% url 'new_fond' %}"
-                                              class="button colored">Добавить оплату фонда</a>
-                                            {#                                            <a href="{% url 'new_participant_costume' %}"#}
-                                            {#                                               class="button colored">Добавить участник-элемент костюма</a>#}
-                                        </p>
+                                              class="button colored">Добавить оплату фонда</a></p>
                                         <h3>ИТОГО: {{ fond }} из {{ total }}</h3>
                                         <div class="diff-spacer spacer-1"
                                              style="background-color:#B35652;color:#B35652;"></div>
@@ -339,8 +288,7 @@
                                                     class="butred fa fa-trash"></i></a>
                                         {% endfor %}
                                         <p><a href="{% url 'new_other_source' %}"
-                                              class="button colored">Добавить источник финансов</a>
-                                        </p>
+                                              class="button colored">Добавить источник финансов</a></p>
                                         <h3>ИТОГО из других источников: {{ final_other_sources }}</h3>
                                         <h3>ИТОГО Фонд+другие источники: {{ fond_and_other }}</h3>
                                         <div class="diff-spacer spacer-1"
@@ -355,20 +303,21 @@
                                                 <p>{{ e.name }} - {{ e.num }} штук по {{ e.cost }}: <span
                                                         class="font-weight-bold">{{ e.final_cost }}</span></p>
                                             {% endif %}
-                                            <a class="but" href="{% url 'update_expence' slug=e.slug %}"
+                                            <p><a class="but" href="{% url 'update_expence' slug=e.slug %}"
                                                target="_self"><i
                                                     class="butred fa fa-pencil"></i></a>
                                             <a class="but" href="{% url 'delete_expence' slug=e.slug %}"
                                                target="_self"><i
-                                                    class="butred fa fa-trash"></i></a>
+                                                    class="butred fa fa-trash"></i></a></p>
                                         {% endfor %}
                                         <p><a href="{% url 'new_expence' %}"
                                               class="button colored">Добавить затраты</a>
                                         </p>
                                         <h3>С учетом потраченного: {{ fond_final }}</h3>
                                         <h3>Планируется потратить: {{ final_expences }}</h3>
+                                        <p><a href="{% url 'money_plot' %}"
+                                              class="button colored">Graph</a></p>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -401,11 +350,8 @@
                                                     <div>
                                                         <a href="#">Развернуть</a>
                                                         <div class="scrolling-wrapper">
-
-
                                                             <table class="table table-hover">
                                                                 <thead class="thead-dark">
-
                                                                 <tr>
                                                                     <th></th>
                                                                     {% for dc in d_c %}
@@ -428,14 +374,11 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-
                                                                 {% for p in participants %}
                                                                     {% for pc in p_c %}
                                                                         {% if pc.concert == c and pc.participant == p %}
                                                                             <tr>
-
                                                                                 <th>{{ p.last_name }} {{ p.initials }}</th>
-
                                                                                 {% for dc in d_c %}
                                                                                     {% for d in dances %}
                                                                                         {% if d == dc.dance and dc.concert == c %}
@@ -472,11 +415,9 @@
                                                                 <p></p>
                                                                 </tbody>
                                                             </table>
-                                                            <a href="{% url 'plot' slug=c.slug %}"
-                                                               class="button colored">Graph</a></p>
-
+                                                            <p><a href="{% url 'plot' slug=c.slug %}"
+                                                                  class="button colored">Graph</a></p>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             {% endif %}
@@ -492,11 +433,8 @@
                                                                 <div>
                                                                     <a href="#">Развернуть</a>
                                                                     <div class="scrolling-wrapper">
-
-
                                                                         <table class="table table-hover">
                                                                             <thead class="thead-dark">
-
                                                                             <tr>
                                                                                 <th></th>
                                                                                 {% for dc in d_c %}
@@ -520,14 +458,11 @@
                                                                             </tr>
                                                                             </thead>
                                                                             <tbody>
-
                                                                             {% for p in participants %}
                                                                                 {% for pc in p_c %}
                                                                                     {% if pc.concert == c and pc.participant == p %}
                                                                                         <tr>
-
                                                                                             <th>{{ p.last_name }} {{ p.initials }}</th>
-
                                                                                             {% for dc in d_c %}
                                                                                                 {% for d in dances %}
                                                                                                     {% if d == dc.dance and dc.concert == c %}
@@ -566,23 +501,16 @@
                                                                             <p></p>
                                                                             </tbody>
                                                                         </table>
-
                                                                         <p>
                                                                             <a href="{% url 'plot' slug=c.slug %}"
                                                                                class="button colored">Graph</a></p>
-
                                                                     </div>
-
                                                                 </div>
                                                             </div>
-
-
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
                                             </div>
-
-
                                             <p><a href="{% url 'new_participant_dance_concert' %}"
                                                   class="button colored">Добавить элемент участник-танец-концерт</a></p>
                                             <p><a href="{% url 'new_participant_concert' %}"
@@ -591,8 +519,6 @@
                                                   class="button colored">Добавить танец в концерт</a></p>
                                             <p><a href="{% url 'new_concert' %}"
                                                   class="button colored">Добавить концерт</a></p>
-
-
                                             {#                                            <h1>{{ pdc_count }}</h1>#}
                                             {#                                        {% for image_base64 in images_base64 %}#}
                                             {#                                            <img src="data:image/png;base64,{{ image_base64 }}"#}

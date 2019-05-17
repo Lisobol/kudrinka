@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load staticfiles %}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+                    <div class="row">
+                        <h1>Что-то пошло не так</h1>
+                        <p>Либо по данному адресу ничего не зарегистрировано,
+                            либо у Вас нет доступа для просмотра информации по данному адресу.</p>
+
+                    </div>
+                    </div>
+                <p></p>
+                </article>
+            </div>
+        </div>
+    </div><!-- end content -->
+{% endblock %}

@@ -92,11 +92,33 @@ class GroupForm(forms.ModelForm):
         }
 
 
-class ClassScheduleForm(forms.ModelForm):
+# class ClassScheduleForm(forms.ModelForm):
+#     class Meta(object):
+#         model = ClassSchedule
+#         fields = ['begin_time', 'end_time', 'address', 'description']
+#         widgets = {
+#             'begin_time': forms.TimeInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите время начала'}),
+#             'end_time': forms.TimeInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите время окончания'}),
+#             'address': forms.TextInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите адрес'}),
+#             'description': forms.TextInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите описание'})
+#         }
+
+
+
+class ScheduleForm(forms.ModelForm):
     class Meta(object):
-        model = ClassSchedule
-        fields = ['begin_time', 'end_time', 'address', 'description']
+        model = GroupChoreographerSchedule
+        fields = ['group', 'choreographer', 'dance_style', 'day_of_the_week', 'begin_time', 'end_time', 'address', 'description']
         widgets = {
+            'group': forms.RadioSelect(),
+            'choreographer': forms.RadioSelect(),
+            # 'class_schedule': forms.RadioSelect(),
+            'dance_style': forms.RadioSelect(),
+            'day_of_the_week': forms.RadioSelect(),
             'begin_time': forms.TimeInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите время начала'}),
             'end_time': forms.TimeInput(
@@ -105,21 +127,23 @@ class ClassScheduleForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'placeholder': 'Введите адрес'}),
             'description': forms.TextInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите описание'})
+
         }
 
-
-class ScheduleForm(forms.ModelForm):
-    class Meta(object):
-        model = GroupChoreographerSchedule
-        fields = ['group', 'choreographer', 'class_schedule', 'dance_style', 'day_of_the_week']
-        widgets = {
-            'group': forms.RadioSelect(),
-            'choreographer': forms.RadioSelect(),
-            'class_schedule': forms.RadioSelect(),
-            'dance_style': forms.RadioSelect(),
-            'day_of_the_week': forms.RadioSelect(),
-        }
-
+# class ClassScheduleForm(forms.ModelForm):
+#     class Meta(object):
+#         model = ClassSchedule
+#         fields = ['begin_time', 'end_time', 'address', 'description']
+#         widgets = {
+#             'begin_time': forms.TimeInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите время начала'}),
+#             'end_time': forms.TimeInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите время окончания'}),
+#             'address': forms.TextInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите адрес'}),
+#             'description': forms.TextInput(
+#                 attrs={'class': 'form-control', 'placeholder': 'Введите описание'})
+#         }
 
 class DanceInConcertForm(forms.ModelForm):
     class Meta(object):

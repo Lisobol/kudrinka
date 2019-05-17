@@ -3,7 +3,7 @@
 {#{% block name %}Группы и участники{% endblock %}#}
 {% block elements %}
     {% for g in groups %}
-        {% include "show_group.html" with group=g %}
+        {% include "old/show_group.html" with group=g %}
 
         <h5 class="ml-5">Участники:</h5>
         <div class="container ml-5">
@@ -12,7 +12,7 @@
             <div id="demo7" class="collapse">
                 {% for p in participants %}
                     {% if g.id == p.group.id %}
-                        {% include "show_participant.html" with participant=p %}
+                        {% include "old/show_participant.html" with participant=p %}
                     {% endif %}
                 {% endfor %}
             </div>

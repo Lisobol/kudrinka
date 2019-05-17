@@ -12,10 +12,10 @@
                         <figure class="effect-milo">
                             <img src="{% static "static/media/media/default/photo/НОМЕР16_5.jpg" %}" alt="img11"/>
                             <figcaption>
-                                <h2 class="up">Wine Packaging Inspired by <span>the Simpsons and Piet Mondrian</span> Goes Against
-                                    the Packaging Norms</h2>
-                                <p>Jodi started making these beautiful book sculptures when she got hooked from folding
-                                    one of the pages of a used book from a second-hand book shop.</p>
+{#                                <h2 class="up">Wine Packaging Inspired by <span>the Simpsons and Piet Mondrian</span> Goes Against#}
+{#                                    the Packaging Norms</h2>#}
+{#                                <p>Jodi started making these beautiful book sculptures when she got hooked from folding#}
+{#                                    one of the pages of a used book from a second-hand book shop.</p>#}
                             </figcaption>
                         </figure>
                     </div>
@@ -29,10 +29,10 @@
                                     <img src="{% static "static/media/media/default/photo/НОМЕР21.jpg" %}"
                                          alt="img11"/>
                                     <figcaption>
-                                        <h2>Make Stories Come Alive with <span>Jodi Harvey-Brown</span> Book Sculpture
-                                        </h2>
-                                        <p>Maybe it's wine or maybe not but one thing is for sure, combining Homer and
-                                            ...</p>
+{#                                        <h2>Make Stories Come Alive with <span>Jodi Harvey-Brown</span> Book Sculpture#}
+{#                                        </h2>#}
+{#                                        <p>Maybe it's wine or maybe not but one thing is for sure, combining Homer and#}
+{#                                            ...</p>#}
                                     </figcaption>
                                 </figure>
                             </div>
@@ -44,8 +44,8 @@
                                     <img src="{% static "static/media/media/default/photo/НОМЕР17_1.jpg" %}"
                                          alt="img11"/>
                                     <figcaption>
-                                        <h2>You! Be Inspired! - The Enchanting Art of Meg Hunt</h2>
-                                        <p>Milo went to the woods. He took a fun ride and never came back.</p>
+{#                                        <h2>You! Be Inspired! - The Enchanting Art of Meg Hunt</h2>#}
+{#                                        <p>Milo went to the woods. He took a fun ride and never came back.</p>#}
                                     </figcaption>
                                 </figure>
                             </div>
@@ -193,7 +193,14 @@
                                         <div class="line">
                                         <h6>{{ g.group.name }} ({{ g.group.ages }})</h6>
                                         <p>{{ g.dance_style }}</p>
-                                        <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>
+                                             <p>{{ g.begin_time }} - {{ g.end_time }}</p>
+                                            {% if g.address %}
+                                             <p>{{ g.address }}</p>{% endif %}
+                                            {% if g.description %}
+                                             <p>{{ g.description }}</p>{% endif %}
+
+
+{#                                        <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>#}
                                         </div>
                                     {% endif %}
                                 {% endfor %}

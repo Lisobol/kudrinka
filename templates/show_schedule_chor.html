@@ -19,7 +19,9 @@
                             <div class="line">
                             <h5>{{ g.group.name }}</h5>
                                 <p>{{ g.dance_style }}</p>
-                                <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>
+{#                              <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>#}
+
+                                <p>{{ g.begin_time }} - {{ g.end_time }}</p>
                             </div>
                         {% endif %}
                     {% endfor %}

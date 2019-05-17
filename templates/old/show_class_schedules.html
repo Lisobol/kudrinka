@@ -1,9 +1,9 @@
-{% extends "show.html" %}
+{% extends "old/show.html" %}
 {% block title %}Время и место занятий{% endblock %}
 {% block name %}Время и место занятий{% endblock %}
 {% block elements %}
     {% for c in class_schedules %}
-        {% include "show_class_schedule.html" with class_schedule=c %}
+        {% include "old/show_class_schedule.html" with class_schedule=c %}
         <a href="{{ c.get_absolute_url }}" class="btn btn-light">Read</a>
     {% endfor %}
 

@@ -1,14 +1,14 @@
-{% extends "show.html" %}
+{% extends "old/show.html" %}
 {% block title %}Концерты{% endblock %}
 {% block name %}Концерты и участники{% endblock %}
 {% block elements %}
     {% for c in concerts %}
-        {% include "show_concert.html" with concert=c %}
+        {% include "old/show_concert.html" with concert=c %}
         <h4>Участники:</h4>
         {% for pc in p_c %}
             {% for p in participants %}
                 {% if p.id == pc.participant.id and pc.concert.id == c.id %}
-                    {% include "show_participant.html" with participant=p %}
+                    {% include "old/show_participant.html" with participant=p %}
                 {% endif %}
             {% endfor %}
         {% endfor %}

@@ -1,9 +1,9 @@
-{% extends "show.html" %}
+{% extends "old/show.html" %}
 {% block title %}Хореографы{% endblock %}
 {% block name %}Хореографы{% endblock %}
 {% block elements %}
     {% for c in choreographer %}
-        {% include "show_choreographer.html" with choreographer=c %}
+        {% include "old/show_choreographer.html" with choreographer=c %}
         {#        <a href="{{ c.get_absolute_url }}" class="btn btn-light">Read</a>#}
     {% endfor %}
     {% if user.is_authenticated %}

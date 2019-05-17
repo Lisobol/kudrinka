@@ -4,7 +4,7 @@
 {% block elements %}
     {% for d in dances %}
         <div>
-        {% include "show_dance.html" with dance=d %}
+        {% include "old/show_dance.html" with dance=d %}
         </div>
     {% endfor %}
     <a href="{% url 'new_dance' %}"

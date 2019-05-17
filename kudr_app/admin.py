@@ -26,9 +26,9 @@ admin.site.register(User)
     #     return choreographers
 
 
-class ChoreographerDanceStyle(admin.TabularInline):
-    model = ChoreographerDanceStyle
-    extra = 1
+# class ChoreographerDanceStyle(admin.TabularInline):
+#     model = ChoreographerDanceStyle
+#     extra = 1
 
 
 @admin.register(Choreographer)
@@ -38,13 +38,13 @@ class ChoreographerAdmin(admin.ModelAdmin):
     list_filter = ('last_name','first_name')
     search_fields = ['last_name', 'first_name', 'email','user']
 
-    inlines = (ChoreographerDanceStyle,)
-
-    def dance_styles(self, request):
-        dance_styles = []
-        for dance_style in ChoreographerDanceStyle.objects.filter(Choreographer=request.name):
-            dance_styles.append(dance_style)
-        return dance_styles
+    # inlines = (ChoreographerDanceStyle,)
+    #
+    # def dance_styles(self, request):
+    #     dance_styles = []
+    #     for dance_style in ChoreographerDanceStyle.objects.filter(Choreographer=request.name):
+    #         dance_styles.append(dance_style)
+    #     return dance_styles
 
 
 @admin.register(DanceStyle)
@@ -77,9 +77,9 @@ class ParticipantConcert(admin.TabularInline):
 class ParticipantAdmin(admin.ModelAdmin):
     empty_value_display = 'null'
     list_display = (
-        'user', 'last_name', 'first_name', 'patronymic', 'phone', 'email', 'picture', 'birth_date',
+        'user', 'last_name', 'first_name', 'patronymic','group', 'phone', 'email', 'picture', 'birth_date',
         'description')
-    list_filter = ('last_name', 'first_name', 'patronymic')
+    list_filter = ('group','last_name', 'first_name', 'patronymic')
     search_fields = ['last_name', 'first_name', 'email','user']
 
 
@@ -125,58 +125,82 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ('date', 'title')
     search_fields = ['date', 'title', 'text']
 
-
-@admin.register(PhotoGallery)
-class PhotoGalleryAdmin(admin.ModelAdmin):
-    empty_value_display = 'null'
-    list_display = ('name', 'description')
-    list_filter = ('name',)
-    search_fields = ['name']
-
-
-@admin.register(PhotoInGallery)
-class PhotoInGalleryAdmin(admin.ModelAdmin):
-    empty_value_display = 'null'
-    list_display = ('name', 'picture', 'date', 'description')
-    list_filter = ('name', 'date')
-    search_fields = ['name', 'date']
-
-    def gallery(self, request):
-        gallery = PhotoGallery.objects.filter(PhotoGallery=request.name)
-        return gallery
+#
+# @admin.register(PhotoGallery)
+# class PhotoGalleryAdmin(admin.ModelAdmin):
+#     empty_value_display = 'null'
+#     list_display = ('name', 'description')
+#     list_filter = ('name',)
+#     search_fields = ['name']
+#
+#
+# @admin.register(PhotoInGallery)
+# class PhotoInGalleryAdmin(admin.ModelAdmin):
+#     empty_value_display = 'null'
+#     list_display = ('name', 'picture', 'date', 'description')
+#     list_filter = ('name', 'date')
+#     search_fields = ['name', 'date']
+#
+#     def gallery(self, request):
+#         gallery = PhotoGallery.objects.filter(PhotoGallery=request.name)
+#         return gallery
 
 
 class GroupChoreographerSchedule(admin.TabularInline):
     model = GroupChoreographerSchedule
     extra = 0
 
+#
+# @admin.register(ClassSchedule)
+# class ClassScheduleAdmin(admin.ModelAdmin):
+#     empty_value_display = 'null'
+#     list_display = ('begin_time', 'end_time', 'address', 'description')
+#     list_filter = ('begin_time', 'end_time')
+#     search_fields = ['begin_time', 'end_time']
+#
+#     inlines = (GroupChoreographerSchedule,)
+#
+#     def choreographer(self, request):
+#         choreographer = GroupChoreographerSchedule.objects.filter(Choreographer=request.name)
+#         return choreographer
+#
+#     def dance_style(self, request):
+#         dance_style = GroupChoreographerSchedule.objects.filter(DanceStyle=request.name)
+#         return dance_style
+#
+#     def group(self, request):
+#         group = GroupChoreographerSchedule.objects.filter(Group=request.name)
+#         return group
+#
+#     def weekday(self, request):
+#         weekday = GroupChoreographerSchedule.objects.filter(WeekDay=request.name)
+#         return weekday
 
-@admin.register(ClassSchedule)
-class ClassScheduleAdmin(admin.ModelAdmin):
-    empty_value_display = 'null'
-    list_display = ('begin_time', 'end_time', 'address', 'description')
-    list_filter = ('begin_time', 'end_time')
-    search_fields = ['begin_time', 'end_time']
+#
+# @admin.register(GroupChoreographerSchedule)
+# class GroupChoreographerScheduleAdmin(admin.ModelAdmin):
+#     empty_value_display = 'null'
+#     list_display = ('begin_time', 'end_time', 'address', 'description')
+#     list_filter = ('begin_time', 'end_time')
+#     search_fields = ['begin_time', 'end_time']
 
-    inlines = (GroupChoreographerSchedule,)
-
-    def choreographer(self, request):
-        choreographer = GroupChoreographerSchedule.objects.filter(Choreographer=request.name)
-        return choreographer
-
-    def dance_style(self, request):
-        dance_style = GroupChoreographerSchedule.objects.filter(DanceStyle=request.name)
-        return dance_style
-
-    def group(self, request):
-        group = GroupChoreographerSchedule.objects.filter(Group=request.name)
-        return group
-
-    def weekday(self, request):
-        weekday = GroupChoreographerSchedule.objects.filter(WeekDay=request.name)
-        return weekday
-
-
+    # inlines = (GroupChoreographerSchedule,)
+    #
+    # def choreographer(self, request):
+    #     choreographer = GroupChoreographerSchedule.objects.filter(Choreographer=request.name)
+    #     return choreographer
+    #
+    # def dance_style(self, request):
+    #     dance_style = GroupChoreographerSchedule.objects.filter(DanceStyle=request.name)
+    #     return dance_style
+    #
+    # def group(self, request):
+    #     group = GroupChoreographerSchedule.objects.filter(Group=request.name)
+    #     return group
+    #
+    # def weekday(self, request):
+    #     weekday = GroupChoreographerSchedule.objects.filter(WeekDay=request.name)
+    #     return weekday
 # @admin.register(GroupChoreographerSchedule)
 # class GroupChoreographerScheduleAdmin(admin.ModelAdmin):
 #     empty_value_display = 'null'

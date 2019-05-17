@@ -16,16 +16,16 @@
             <a href="{% url 'new_choreographer' %}"
                class="button colored">Добавить нового хореографа</a><p></p>
 {#        <a href="{% url 'choreographers' %}" class="btn btn-secondary btn-sm">Посмотреть/редактировать хореографов</a>#}
-
         </div>
-        <div class="col form-group">
-            <h5>Время</h5>
-            {{ form.class_schedule }}
-            <a href="{% url 'new_class_schedule' %}"
-               class="button colored">Добавить новое время занятия</a><p></p>
+{#        </div>#}
+{#        <div class="col form-group">#}
+{#            <h5>Время</h5>#}
+{#            {{ form.class_schedule }}#}
+{#            <a href="{% url 'new_class_schedule' %}"#}
+{#               class="button colored">Добавить новое время занятия</a><p></p>#}
 {#        <a href="{% url 'class_schedules' %}" class="btn btn-secondary btn-sm">Посмотреть/редактировать время занятий</a>#}
-
-        </div>
+{##}
+{#        </div>#}
     </div>
     <div class="row">
         <div class="col form-group">
@@ -40,5 +40,25 @@
             <h5>День недели</h5>
             {{ form.day_of_the_week }}
         </div>
+    </div>
+
+
+        <div class="form-row">
+        <div class="col">
+            <h5>Время начала</h5>
+            {{ form.begin_time }}
+        </div>
+        <div class="col">
+            <h5>Время окончания</h5>
+            {{ form.end_time }}
+        </div>
+    </div>
+    <div class="form-group">
+        <h5>Адрес</h5>
+        {{ form.address }}
+    </div>
+    <div class="form-group">
+        <h5>Описание</h5>
+        {{ form.description }}
     </div>
 {% endblock %}

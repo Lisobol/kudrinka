@@ -22,7 +22,9 @@
                         {% if day.day_of_the_week == g.day_of_the_week.day_of_the_week and g.group == participant.group %}
                             <p>{{ g.group.name }}</p>
                             {{ g.dance_style }}
-                            {{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}
+{#                            {{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}#}
+                             <p>{{ g.begin_time }} - {{ g.end_time }}</p>
+
                             <a href="{% url 'update_schedule_part' slug=g.slug %}"
                                class="btn btn-light">Upd</a>
                             <a href="{% url 'delete_schedule_part' slug=g.slug %}"

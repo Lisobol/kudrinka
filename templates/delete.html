@@ -13,9 +13,9 @@
                         <form {% block action %}{% endblock %} method="POST">
                             {% csrf_token %}
                             <div class="row">
-                                <h3> Вы уверены, что хотите удалить
+                                <h1> Вы уверены, что хотите удалить
                                     <b>"{% block areyousure %}{% endblock %}"</b>?
-                                </h3>
+                                </h1>
                             </div>
 
 

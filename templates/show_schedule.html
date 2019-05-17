@@ -24,8 +24,14 @@
                                             <div class="line">
                                                 <h6>{{ g.group.name }} ({{ g.group.ages }})</h6>
                                                 <p>{{ g.dance_style }}</p>
-                                                <p>{{ g.class_schedule.begin_time }}
-                                                    - {{ g.class_schedule.end_time }}</p>
+{#                                                <p>{{ g.class_schedule.begin_time }} - {{ g.class_schedule.end_time }}</p>#}
+
+                                                <p>{{ g.begin_time }}
+                                                    - {{ g.end_time }}</p>
+                                                {% if g.address %}
+                                             <p>{{ g.address }}</p>{% endif %}
+                                            {% if g.description %}
+                                             <p>{{ g.description }}</p>{% endif %}
                                                 <a class="but" href="{% url 'update_schedule_part' slug=g.slug %}"
                                                    target="_self"><i
                                                         class="fa fa-pencil"></i></a>
