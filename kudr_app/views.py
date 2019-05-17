@@ -108,9 +108,7 @@ class MyPageChoreographer(TemplateView):
             fond += f.sum
         context['fond'] = fond
 
-        total = 0
-        for f in fonds:
-            total += 7000
+        total = fonds.count()*7000
         context['total'] = total
 
         # Другие источники финансов
@@ -311,59 +309,37 @@ class MoneyPlots(TemplateView):
         context['logged_user'] = logged_user
         context['choreographer'] = choreographer
 
-        pdc_count = []
-        parts = []
-        zero = 0
-
         # Фонд
-        fonds = Fond.objects.all().order_by('sum', 'participant')
-        # context['fonds'] = fonds
+        fonds = Fond.objects.all()
         fond = 0
         for f in fonds:
             fond += f.sum
-        # context['fond'] = fond
-
-        total = 0
-        for f in fonds:
-            total += 7000
-        # context['total'] = total
+        total = fonds.count() * 7000
 
         # Другие источники финансов
         other_sources = OtherSourceOfFinances.objects.all()
-        # context['other_sources'] = other_sources
         final_other_sources = 0
         for o in other_sources:
             final_other_sources += o.sum
-        # context['final_other_sources'] = final_other_sources
         fond_and_other = fond + final_other_sources
-        # context['fond_and_other'] = fond_and_other
 
         # Затраты
         expences = Expence.objects.all()
-        # context['expences'] = expences
         final_expences = 0
-        fond_final = fond_and_other
-        for e in expences:
-            if e.bought == False:
-                final_expences += e.final_cost()
-            else:
-                fond_final -= e.final_cost()
-        # context['fond_final'] = fond_final
-        # context['final_expences'] = final_expences
-
         data_names = []
         data_values = []
-        dpi = 80
-
         for e in expences:
             data_names.append(e.name)
             data_values.append(e.final_cost())
+            if not e.bought:
+                final_expences += e.final_cost()
+        dpi = 80
+        colors = ['indianred', 'darkred', '#d98c8c', '#e7b1b1', 'salmon', '#ffb3b3']
         df = pd.DataFrame({'Names': data_names, 'Values': data_values})
         fig1 = plt.figure(dpi=dpi)
-
-        df.Values.groupby(df.Names).sum().plot(kind='pie', autopct='%1.1f%%' )
+        df.Values.groupby(df.Names).sum().plot(kind='pie', labels=data_names, autopct='%1.1f%%', colors=colors)
         plt.axis('equal')
-        # plt.show()
+        plt.ylabel('')
         fig1.savefig('bars1.png')
         buf = BytesIO()
         plt.savefig(buf, format='png', dpi=300)
@@ -374,58 +350,48 @@ class MoneyPlots(TemplateView):
         data_names_1 = []
         data_values_1 = []
         dpi = 200
-
-        f=total-fond
-        data_names_1.append("Собрано из фонда")
+        f = total - fond
+        data_names_1.append("Фонд(собрано)")
         data_values_1.append(fond)
-        data_names_1.append("Планируется еще собрать из фонда")
+        data_names_1.append("Фонд(не собрано)")
         data_values_1.append(f)
         for o in other_sources:
             data_names_1.append(o.name)
             data_values_1.append(o.sum)
         df_1 = pd.DataFrame({'Names': data_names_1, 'Values': data_values_1})
         fig_1 = plt.figure(dpi=dpi)
-
-
-
-        df_1.Values.groupby(df_1.Names).sum().plot(kind='pie', autopct='%1.1f%%', )
+        df_1.Values.groupby(df_1.Names).sum().plot(kind='pie', labels=data_names_1, autopct='%1.1f%%', colors=colors)
         plt.axis('equal')
-        # plt.show()
+        plt.ylabel('')
         fig_1.savefig('bars1.png')
-        buf = BytesIO()
-        plt.savefig(buf, format='png', dpi=900)
-        image_base64_1 = base64.b64encode(buf.getvalue()).decode('utf-8').replace('\n', '')
-        buf.close()
+        buf1 = BytesIO()
+        plt.savefig(buf1, format='png', dpi=900)
+        image_base64_1 = base64.b64encode(buf1.getvalue()).decode('utf-8').replace('\n', '')
+        buf1.close()
         context['image_base64_1'] = image_base64_1
 
         data_names_2 = []
         data_values_2 = []
         dpi = 200
-
-
-        data_names_2.append("Собрано из фонда и других источников")
+        data_names_2.append("Фонд+другие источники")
         data_values_2.append(fond_and_other)
-        data_names_2.append("Планируется еще собрать из фонда")
+        data_names_2.append("Фонд(не собрано)")
         data_values_2.append(f)
         data_names_2.append("Затраты")
         data_values_2.append(final_expences)
-        # for o in other_sources:
-        #     data_names_2.append(o.name)
-        #     data_values_2.append(o.sum)
         df_2 = pd.DataFrame({'Names': data_names_2, 'Values': data_values_2})
         fig_2 = plt.figure(dpi=dpi)
-
-        df_2.Values.groupby(df_2.Names).sum().plot(kind='pie', autopct='%1.1f%%' )
-        plt.axis('equal')
-        # plt.show()
+        df_2.Values.groupby(df_2.Names).sum().plot(kind='pie', autopct='%1.1f%%', colors=colors)
+        plt.ylabel('')
         fig_2.savefig('bars2.png')
-        buf = BytesIO()
-        plt.savefig(buf, format='png', dpi=900)
-        image_base64_2 = base64.b64encode(buf.getvalue()).decode('utf-8').replace('\n', '')
-        buf.close()
+        buf2 = BytesIO()
+        plt.savefig(buf2, format='png', dpi=1200)
+        image_base64_2 = base64.b64encode(buf2.getvalue()).decode('utf-8').replace('\n', '')
+        buf2.close()
         context['image_base64_2'] = image_base64_2
 
         return context
+
 
 # КОНТАКТЫ
 class ContactsView(TemplateView):
