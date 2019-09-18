@@ -66,9 +66,9 @@ class ChoreographerForm(forms.ModelForm):
 class DanceStyleForm(forms.ModelForm):
     class Meta(object):
         model = DanceStyle
-        fields = ['dance_style', 'picture', 'description']
+        fields = ['dance_style', 'description']
         widgets = {
-            'picture': forms.FileInput(),
+
             'dance_style': forms.TextInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите название стиля'}),
             'description': forms.TextInput(
@@ -92,31 +92,14 @@ class GroupForm(forms.ModelForm):
         }
 
 
-# class ClassScheduleForm(forms.ModelForm):
-#     class Meta(object):
-#         model = ClassSchedule
-#         fields = ['begin_time', 'end_time', 'address', 'description']
-#         widgets = {
-#             'begin_time': forms.TimeInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите время начала'}),
-#             'end_time': forms.TimeInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите время окончания'}),
-#             'address': forms.TextInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите адрес'}),
-#             'description': forms.TextInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите описание'})
-#         }
-
-
-
 class ScheduleForm(forms.ModelForm):
     class Meta(object):
         model = GroupChoreographerSchedule
-        fields = ['group', 'choreographer', 'dance_style', 'day_of_the_week', 'begin_time', 'end_time', 'address', 'description']
+        fields = ['group', 'choreographer', 'dance_style', 'day_of_the_week', 'begin_time', 'end_time', 'address',
+                  'description']
         widgets = {
             'group': forms.RadioSelect(),
             'choreographer': forms.RadioSelect(),
-            # 'class_schedule': forms.RadioSelect(),
             'dance_style': forms.RadioSelect(),
             'day_of_the_week': forms.RadioSelect(),
             'begin_time': forms.TimeInput(
@@ -130,20 +113,6 @@ class ScheduleForm(forms.ModelForm):
 
         }
 
-# class ClassScheduleForm(forms.ModelForm):
-#     class Meta(object):
-#         model = ClassSchedule
-#         fields = ['begin_time', 'end_time', 'address', 'description']
-#         widgets = {
-#             'begin_time': forms.TimeInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите время начала'}),
-#             'end_time': forms.TimeInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите время окончания'}),
-#             'address': forms.TextInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите адрес'}),
-#             'description': forms.TextInput(
-#                 attrs={'class': 'form-control', 'placeholder': 'Введите описание'})
-#         }
 
 class DanceInConcertForm(forms.ModelForm):
     class Meta(object):
@@ -205,14 +174,12 @@ class ConcertForm(forms.ModelForm):
 class DanceForm(forms.ModelForm):
     class Meta(object):
         model = Dance
-        fields = ['name', 'duration', 'picture', 'description']
+        fields = ['name', 'duration', 'description']
         widgets = {
             'name': forms.TextInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите название'}),
             'duration': forms.TimeInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите длительность'}),
-            'picture': forms.FileInput(
-                attrs={'multiple': True}),
             'description': forms.TextInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите описание'})
         }
@@ -266,9 +233,10 @@ class PhotoInGalleryForm(forms.ModelForm):
 class FondForm(forms.ModelForm):
     class Meta(object):
         model = Fond
-        fields = ['sum', 'participant']
+        fields = ['sum', 'participant','all_fonds_null']
         widgets = {
             'participant': forms.RadioSelect(),
+            'all_fonds_null':forms.CheckboxInput(),
             'sum': forms.NumberInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите сумму'}),
         }
@@ -329,8 +297,6 @@ class ExpenceForm(forms.ModelForm):
         }
 
 
-
-
 class OtherSourceOfFinanceForm(forms.ModelForm):
     class Meta(object):
         model = OtherSourceOfFinances
@@ -346,7 +312,7 @@ class OtherSourceOfFinanceForm(forms.ModelForm):
 class AnnouncementForm(forms.ModelForm):
     class Meta(object):
         model = Announcement
-        fields = ['title', 'text', 'participant', 'date', 'date_until','group']
+        fields = ['title', 'text', 'participant', 'date', 'date_until', 'group']
         widgets = {
             'title': forms.TextInput(
                 attrs={'class': 'form-control', 'placeholder': 'Введите заголовок'}),
@@ -358,4 +324,4 @@ class AnnouncementForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'placeholder': 'Введите дату, до которой объявление актуально'}),
             'participant': forms.RadioSelect(),
             'group': forms.RadioSelect(),
-            }
+        }

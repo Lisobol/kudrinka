@@ -11,14 +11,19 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
 import pandas as pd
+import requests
+import random
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 
 def e_handler404(request, exception):
     return render(request, '404.html', status=404)
-def e_handler500(request,exception):
+
+
+def e_handler500(request, exception):
     return render(request, '404.html', status=500)
+
 
 # ГЛАВНАЯ СТРАНИЦА
 class MainPageView(TemplateView):
@@ -41,10 +46,49 @@ class MainPageView(TemplateView):
         context['choreographer'] = choreographer
         context['participant'] = participant
 
+        # Новости VK
+
+        token = '1924a5991924a5991924a5992019483c25119241924a599444c8c0a7cb9f0b713c7ec7c'
+        count = 50
+        from_id = 460446423
+        version = 5.104
+        domain = 'kudrinkadance'
+        response = requests.get('https://api.vk.com/method/wall.get',
+                                params={'access_token': token,
+                                        'v': version,
+                                        'domain': domain,
+                                        'from_id': from_id,
+                                        'count': count}
+                                )
+        data = response.json()['response']['items']
+        texts = []
+        photo_vk = []
+        dates = []
+        n = -1
+        for d in data:
+            if d['from_id'] == from_id:
+                n += 1
+                texts.append(d['text'])
+                dates.append(datetime.utcfromtimestamp(d['date']).strftime('%Y-%m-%d %H:%M:%S'))
+                try:
+                    if d['attachments']:
+                        if d['attachments'][0]['type'] == 'photo':
+                            photo_vk.append(d['attachments'][0]['photo']['sizes'][-1]['url'])
+                        else:
+                            photo_vk.append('pass')
+                    else:
+                        photo_vk.append('pass')
+                except:
+                    photo_vk.append('pass')
+        news_vk = []
+        for n in range(n - 1):
+            if texts[n] is not "" and news_vk.__len__()<5:
+                news_vk.append([texts[n], dates[n], photo_vk[n]])
+        context['news_vk'] = news_vk
+
 
         # Новости
-        news = News.objects.all().order_by('-date')[:5]
-
+        news = News.objects.all().order_by('-date')[:1]
         context['news'] = news
 
         # Расписание
@@ -56,6 +100,7 @@ class MainPageView(TemplateView):
         context['group'] = group
         context['dance_style'] = dance_style
         context['weekdays'] = weekdays
+
         return context
 
 
@@ -70,12 +115,135 @@ class MyPageChoreographer(TemplateView):
         context['logged_user'] = logged_user
         context['choreographer'] = choreographer
 
+        # # Объявления
+        # announcements = Announcement.objects.all()
+        # context['announcements'] = announcements
+
+        # Расписание для хореографа
+        gr_ch_sh = GroupChoreographerSchedule.objects.filter(choreographer=choreographer)
+        group = Group.objects.all().order_by('num')
+        dance_style = DanceStyle.objects.all()
+        weekdays = WeekDay.objects.all()
+        context['gr_ch_sh'] = gr_ch_sh
+        context['group'] = group
+        context['dance_style'] = dance_style
+        context['weekdays'] = weekdays
+
+        # # Костюмы
+        # costumes = Costume.objects.all().order_by('dance')
+        # dances = Dance.objects.all().order_by('name')
+        # participant_costumes = ParticipantCostume.objects.all().order_by('participant')
+        # participants = Participant.objects.all().order_by('group', 'last_name')
+        # context['costumes'] = costumes
+        # context['dances'] = dances
+        # context['participants'] = participants
+        # context['participant_costumes'] = participant_costumes
+
+        # # Платежи
+        # payments = Payment.objects.all().order_by('participant')
+        # months = Month.objects.all()
+        # context['payments'] = payments
+        # context['months'] = months
+        #
+        # # Фонд
+        # fonds = Fond.objects.all().order_by('sum', 'participant')
+        # context['fonds'] = fonds
+
+
+
+
+        # # for f in fonds:
+        # #     nul = f.if_null_fonds()
+        # #
+        # #     if nul == 'NUL':
+        # #         for f1 in fonds:
+        # #
+        # #         break
+        #
+        # fond = 0
+        # for f in fonds:
+        #     fond += f.sum
+        # context['fond'] = fond
+        #
+        # total = fonds.count() * 7000
+        # context['total'] = total
+        #
+        # # Другие источники финансов
+        # other_sources = OtherSourceOfFinances.objects.all()
+        # context['other_sources'] = other_sources
+        # final_other_sources = 0
+        # for o in other_sources:
+        #     final_other_sources += o.sum
+        # context['final_other_sources'] = final_other_sources
+        # fond_and_other = fond + final_other_sources
+        # context['fond_and_other'] = fond_and_other
+        #
+        # # Затраты
+        # expences = Expence.objects.all()
+        # context['expences'] = expences
+        # final_expences = 0
+        # fond_final = fond_and_other
+        # for e in expences:
+        #     if e.bought == False:
+        #         final_expences += e.final_cost()
+        #     else:
+        #         fond_final -= e.final_cost()
+        # context['fond_final'] = fond_final
+        # context['final_expences'] = final_expences
+
+        # # Участник-танец-концерт
+        # d_c = DanceInConcert.objects.all().order_by('concert')
+        # p_d_c = ParticipantDanceConcert.objects.all()
+        # dances = Dance.objects.all().order_by('name')
+        # concerts = Concert.objects.all().order_by('-begin_date')
+        # p_c = ParticipantConcert.objects.all()
+        # today = date.today()
+        # context['today'] = today
+        # context['d_c'] = d_c
+        # context['dances'] = dances
+        # context['concerts'] = concerts
+        # context['p_c'] = p_c
+        # context['p_d_c'] = p_d_c
+        #
+        # groups = Group.objects.all()
+        # p_g = ParticipantGroup.objects.all()
+        # context['groups'] = groups
+        # context['participant_group'] = p_g
+        #
+        # # Направления
+        # dance_styles = DanceStyle.objects.all()
+        # context['dance_styles'] = dance_styles
+
+        return context
+
+
+# МОЯ СТРАНИЦА ADMIN
+class MyPageAdmin(TemplateView):
+    template_name = 'my_page_admin.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        logged_user = self.request.user
+
+        try:
+            choreographer = Choreographer.objects.get(user=logged_user)
+        except Exception:
+            choreographer = None
+        try:
+            participant = Participant.objects.get(user=logged_user)
+        except Exception:
+            participant = None
+
+        context['logged_user'] = logged_user
+        context['choreographer'] = choreographer
+        context['participant'] = participant
+
         # Объявления
         announcements = Announcement.objects.all()
         context['announcements'] = announcements
 
-        # Расписание для хореографа
-        gr_ch_sh = GroupChoreographerSchedule.objects.filter(choreographer=choreographer)
+        # Расписание
+        gr_ch_sh = GroupChoreographerSchedule.objects.all()
         group = Group.objects.all().order_by('num')
         dance_style = DanceStyle.objects.all()
         weekdays = WeekDay.objects.all()
@@ -104,12 +272,49 @@ class MyPageChoreographer(TemplateView):
         fonds = Fond.objects.all().order_by('sum', 'participant')
         context['fonds'] = fonds
         fond = 0
+        # for f in fonds:
+        #     f.sum = random.randint(0,7000)
+        #     f.save()
+
         for f in fonds:
             fond += f.sum
-        context['fond'] = fond
 
-        total = fonds.count()*7000
+        total = fonds.count() * 7000
         context['total'] = total
+        savefond = 0
+        set_nul = 'no'
+        for f in fonds:
+            if f.all_fonds_null == True:
+                set_nul = 'yes'
+        if set_nul == 'yes':
+            for f in fonds:
+                savefond = fond
+                fond = 0
+                f.new_year()
+            set_nul = 'no'
+            for f in fonds:
+                f.all_fonds_null = False
+                f.save()
+
+        # participant_not_full_fond_last_year = []
+        # today = datetime.today()
+        #
+        # if today.month == 9 and today.day == 17:
+        #     savefond = fond
+            # for f in fonds:
+            #     # if f.sum < 7000:
+            # #         participant_not_full_fond_last_year.append(str(f.participant.last_name + ' ' +
+            # #                                                  f.participant.first_name + ' ' + f.participant.patronymic +
+            # #                                                 ' недосдал(a) ' + str(7000 - f.sum))+' '+str(today))
+            # for f1 in fonds:
+            #
+            #     f1.sum = 0
+            #     # f.sum = 0
+            #     fond = 0
+            #     f1.save()
+        context['fond'] = fond
+        context['savefond'] = savefond
+        # context['participant_not_full_fond_last_year'] = participant_not_full_fond_last_year
 
         # Другие источники финансов
         other_sources = OtherSourceOfFinances.objects.all()
@@ -450,6 +655,10 @@ class ChoreographersView(TemplateView):
 class AboutUsView(ContactsView):
     template_name = "about_us.html"
 
+# ПРАВИЛА
+class RulesView(ContactsView):
+    template_name = "rules.html"
+
 
 # СТЕП
 class TapDanceView(ContactsView):
@@ -466,9 +675,25 @@ class WorldDanceView(ContactsView):
     template_name = "world_dance.html"
 
 
+class GypsyView(ContactsView):
+    template_name = "world_gypsy.html"
+
+
+class FlamencoView(ContactsView):
+    template_name = "world_flamenco.html"
+
+
+class KumbiaView(ContactsView):
+    template_name = "world_kumbia.html"
+
+
 # МОДЕРН
 class ModernDanceView(ContactsView):
     template_name = "modern_dance.html"
+
+# ДЕТСКИЕ
+class KidsDanceView(ContactsView):
+    template_name = "kids_dance.html"
 
 
 # КОНЦЕРТЫ
@@ -645,8 +870,58 @@ class NewsPage(View):
         except Exception:
             participant = None
 
+
+
+        # Новости VK
+
+        token = '1924a5991924a5991924a5992019483c25119241924a599444c8c0a7cb9f0b713c7ec7c'
+        count = 100
+        from_id = 460446423
+        version = 5.104
+        domain = 'kudrinkadance'
+        response = requests.get('https://api.vk.com/method/wall.get',
+                                params={'access_token': token,
+                                        'v': version,
+                                        'domain': domain,
+                                        'from_id': from_id,
+                                        'count': count}
+                                )
+        data = response.json()['response']['items']
+        texts = []
+        photo_vk = []
+        dates = []
+        n = -1
+        for d in data:
+            if d['from_id'] == from_id:
+                n += 1
+                texts.append(d['text'])
+                dates.append(datetime.utcfromtimestamp(d['date']).strftime('%Y-%m-%d %H:%M:%S'))
+                try:
+                    if d['attachments']:
+                        if d['attachments'][0]['type'] == 'photo':
+                            photo_vk.append(d['attachments'][0]['photo']['sizes'][-1]['url'])
+                        else:
+                            photo_vk.append('pass')
+                    else:
+                        photo_vk.append('pass')
+                except:
+                    photo_vk.append('pass')
+        news_vk = []
+        for n in range(n - 1):
+            if texts[n] is not "":
+                news_vk.append([texts[n], dates[n], photo_vk[n]])
+
+        paginator_vk = Paginator(news_vk, 5)
+        page_vk = request.GET.get('page')
+        try:
+            news_vk = paginator_vk.page(page_vk)
+        except PageNotAnInteger:
+            news_vk = paginator_vk.page(1)
+        except EmptyPage:
+            news_vk = paginator_vk.page(paginator_vk.num_pages)
+
         news = News.objects.all().order_by('-date')
-        paginator = Paginator(news, 10)
+        paginator = Paginator(news, 5)
         page = request.GET.get('page')
         try:
             news = paginator.page(page)
@@ -654,8 +929,10 @@ class NewsPage(View):
             news = paginator.page(1)
         except EmptyPage:
             news = paginator.page(paginator.num_pages)
+
+
         return render(request, 'show_news.html',
-                      context={'news': news, 'logged_user': logged_user, 'participant': participant,
+                      context={'news': news,'news_vk':news_vk, 'logged_user': logged_user, 'participant': participant,
                                'choreographer': choreographer})
 
 
@@ -686,130 +963,61 @@ class DeleteNews(DeleteMixin, View):
 class AddConcert(NewObjectMixin, View):
     form = ConcertForm
     template = 'new/new_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateConcert(UpdateMixin, View):
     model = Concert
     template = 'update/update_concert.html'
     model_form = ConcertForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteConcert(DeleteMixin, View):
     model = Concert
     template = 'delete/delete_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ГРУППА
 class AddGroup(NewObjectMixin, View):
     form = GroupForm
     template = 'new/new_group.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateGroup(UpdateMixin, View):
     model = Group
     template = 'update/update_group.html'
     model_form = GroupForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteGroup(DeleteMixin, View):
     model = Group
     template = 'delete/delete_group.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
-
-# ФОТОГАЛЕРЕЯ
-class AddPhotoGallery(View):
-    form = PhotoGalleryForm
-    template = 'new/new_photo_gallery.html'
-    redirect_url = 'photo_galleries'
-
-    def get(self, request):
-        form1 = self.form()
-        return render(request, self.template, {'form': form1})
-
-    def post(self, request):
-
-        bound_form = self.form(request.POST)
-        if bound_form.is_valid():
-            pg = PhotoInGallery.objects.create(name=bound_form.cleaned_data['name'],
-                                               description=bound_form.cleaned_data['description'])
-            for f in request.FILES.getlist('photos'):
-                data = f.read()  # Если файл целиком умещается в памяти
-                photo = PhotoInGallery(gallery=pg)
-                photo.picture.save(f.name, ContentFile(data))
-                photo.save()
-                return redirect('/')
-
-        return render(request, self.template, context={'form': bound_form})
-
-
-class PhotoGalleriesPage(TemplateView):
-    template_name = 'show_photo_galleries.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        photo_galleries = PhotoGallery.objects.all()
-        photo_in_gallery = PhotoInGallery.objects.all()
-        context['photo_galleries'] = photo_galleries
-        context['photo_in_gallery'] = photo_in_gallery
-        return context
-
-
-class PhotoGalleryPage(TemplateView):
-    template_name = 'show_photo_gallery.html'
-
-    def get_context_data(self, slug, **kwargs):
-        context = super().get_context_data(**kwargs)
-        photo_gallery = PhotoGallery.objects.get(slug__iexact=slug)
-        photo_in_gallery = PhotoInGallery.objects.all()
-        context['photo_gallery'] = photo_gallery
-        context['photo_in_gallery'] = photo_in_gallery
-        return context
-
-
-class UpdatePhotoGallery(UpdateMixin, View):
-    model = PhotoGallery
-    template = 'update/update_photo_gallery.html'
-    model_form = PhotoGalleryForm
-    redirect_url = 'photo_galleries'
-
-
-class DeletePhotoGallery(DeleteMixin, View):
-    model = PhotoGallery
-    template = 'delete/delete_photo_gallery'
-    redirect_url = 'photo_galleries'
-
-
-# ФОТО
-class AddPhotoInGallery(NewObjectMixin, View):
-    form = PhotoInGalleryForm
-    template = 'new/new_photo_in_gallery.html'
-    redirect_url = 'photo_galleries'
 
 
 # ТАНЦЕВАЛЬНЫЕ НАПРАВЛЕНИЯ
 class AddDanceStyle(NewObjectMixin, View):
     form = DanceStyleForm
     template = 'new/new_dance_style.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateDanceStyle(UpdateMixin, View):
     model = DanceStyle
     template = 'update/update_dance_style.html'
     model_form = DanceStyleForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteDanceStyle(DeleteMixin, View):
     model = DanceStyle
     template = 'delete/delete_dance_style.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # РАСПИСАНИЕ
@@ -833,25 +1041,6 @@ class SchedulePage(TemplateView):
         context['dance_style'] = dance_style
         context['weekdays'] = weekdays
         return context
-
-
-# class SchedulePartPage(TemplateView):
-#     template_name = 'show_schedule_part.html'
-#
-#     def get_context_data(self, slug, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         gr_ch_sh = GroupChoreographerSchedule.objects.all()
-#
-#         group = Group.objects.all()
-#         dance_style = DanceStyle.objects.all()
-#         weekdays = WeekDay.objects.all()
-#         participant = Participant.objects.get(slug__iexact=slug)
-#         context['participant'] = participant
-#         context['gr_ch_sh'] = gr_ch_sh
-#         context['group'] = group
-#         context['dance_style'] = dance_style
-#         context['weekdays'] = weekdays
-#         return context
 
 
 class UpdateSchedulePart(UpdateMixin, View):
@@ -891,7 +1080,7 @@ class DeleteChoreographer(DeleteMixin, View):
 class AddParticipant(NewObjectMixin, View):
     form = ParticipantForm
     template = 'new/new_participant.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateParticipant(UpdateMixin, View):
@@ -904,283 +1093,225 @@ class UpdateParticipant(UpdateMixin, View):
 class DeleteParticipant(DeleteMixin, View):
     model = Participant
     template = 'delete/delete_participant.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ТАНЕЦ
 class AddDance(NewObjectMixin, View):
     form = DanceForm
     template = 'new/new_dance.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateDance(UpdateMixin, View):
     model = Dance
     template = 'update/update_dance.html'
     model_form = DanceForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteDance(DeleteMixin, View):
     model = Dance
     template = 'delete/delete_dance.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ТАНЕЦ В КОНЦЕРТЕ
 class AddDanceInConcert(NewObjectMixin, View):
     form = DanceInConcertForm
     template = 'new/new_dance_in_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateDanceInConcert(UpdateMixin, View):
     model = DanceInConcert
     template = 'update/update_dance_in_concert.html'
     model_form = DanceInConcertForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteDanceInConcert(DeleteMixin, View):
     model = DanceInConcert
     template = 'delete/delete_dance_in_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ТАНЕЦ УЧАСТНИК КОНЦЕРТ
 class AddParticipantDanceConcert(NewObjectMixin, View):
     form = ParticipantDanceConcertForm
     template = 'new/new_participant_dance_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateParticipantDanceConcert(UpdateMixin, View):
     model = ParticipantDanceConcert
     template = 'update/update_participant_dance_concert.html'
     model_form = ParticipantDanceConcertForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteParticipantDanceConcert(DeleteMixin, View):
     model = ParticipantDanceConcert
     template = 'delete/delete_participant_dance_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # УЧАСТНИК КОНЦЕРТА
 class AddParticipantConcert(NewObjectMixin, View):
     form = ParticipantConcertForm
     template = 'new/new_participant_concert.html'
-    redirect_url = 'my_page_choreographer'
-
-
+    redirect_url = 'my_page_admin'
 
 
 class UpdateParticipantConcert(UpdateMixin, View):
     model = ParticipantConcert
     template = 'update/update_participant_concert.html'
     model_form = ParticipantConcertForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteParticipantConcert(DeleteMixin, View):
     model = ParticipantConcert
     template = 'delete/delete_participant_concert.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ФОНД
 class AddFond(NewObjectMixin, View):
     form = FondForm
     template = 'new/new_fond.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateFond(UpdateMixin, View):
+    fonds = Fond.objects.all().update()
     model = Fond
     template = 'update/update_fond.html'
     model_form = FondForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteFond(DeleteMixin, View):
     model = Fond
     template = 'delete/delete_fond.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ПЛАТЕЖ
 class AddPayment(NewObjectMixin, View):
     form = PaymentForm
     template = 'new/new_payment.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdatePayment(UpdateMixin, View):
     model = Payment
     template = 'update/update_payment.html'
     model_form = PaymentForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeletePayment(DeleteMixin, View):
     model = Payment
     template = 'delete/delete_payment.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # КОСТЮМ
 class AddCostume(NewObjectMixin, View):
     form = CostumeForm
     template = 'new/new_costume.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateCostume(UpdateMixin, View):
     model = Costume
     template = 'update/update_costume.html'
     model_form = CostumeForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteCostume(DeleteMixin, View):
     model = Costume
     template = 'delete/delete_costume.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # УЧАСТНИК КОСТЮМ
 class AddParticipantCostume(NewObjectMixin, View):
     form = ParticipantCostumeForm
     template = 'new/new_participant_costume.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateParticipantCostume(UpdateMixin, View):
     model = ParticipantCostume
     template = 'update/update_participant_costume.html'
     model_form = ParticipantCostumeForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteParticipantCostume(DeleteMixin, View):
     model = ParticipantCostume
     template = 'delete/delete_participant_costume.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ЗАТРАТЫ
 class AddExpence(NewObjectMixin, View):
     form = ExpenceForm
     template = 'new/new_expence.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateExpence(UpdateMixin, View):
     model = Expence
     template = 'update/update_expence.html'
     model_form = ExpenceForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteExpence(DeleteMixin, View):
     model = Expence
     template = 'delete/delete_expence.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ИСТОЧНИКИ ФИНАНСОВ
 class AddOtherSourceOfFinance(NewObjectMixin, View):
     form = OtherSourceOfFinanceForm
     template = 'new/new_other_source.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateOtherSourceOfFinance(UpdateMixin, View):
     model = OtherSourceOfFinances
     template = 'update/update_other_source.html'
     model_form = OtherSourceOfFinanceForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteOtherSourceOfFinance(DeleteMixin, View):
     model = OtherSourceOfFinances
     template = 'delete/delete_other_source.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 # ОБЪЯВЛЕНИЯ
 class AddAnnouncement(NewObjectMixin, View):
     form = AnnouncementForm
     template = 'new/new_announcement.html'
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class UpdateAnnouncement(UpdateMixin, View):
     model = Announcement
     template = 'update/update_announcement.html'
     model_form = AnnouncementForm
-    redirect_url = 'my_page_choreographer'
+    redirect_url = 'my_page_admin'
 
 
 class DeleteAnnouncement(DeleteMixin, View):
     model = Announcement
     template = 'delete/delete_announcement.html'
-    redirect_url = 'my_page_choreographer'
-
-
-#
-# class ParticipantsConcertsPage(TemplateView):
-#     template_name = 'old/show_participants_concerts.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         p_c = ParticipantConcert.objects.all()
-#         participants = Participant.objects.all()
-#         concerts = Concert.objects.all()
-#         context['p_c'] = p_c
-#         context['participants'] = participants
-#         context['concerts'] = concerts
-#         return context
-# class FondsPage(TemplateView):
-#     template_name = 'old/show_fonds.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         fonds = Fond.objects.all().order_by('participant')
-#         context['fonds'] = fonds
-#         return context
-#
-#
-# class FondPage(TemplateView):
-#     template_name = 'old/show_fond.html'
-#
-#     def get_context_data(self, slug, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         fond = Fond.objects.get(slug__iexact=slug)
-#         context['fond'] = fond
-#         return context
-
-# class PaymentsPage(TemplateView):
-#     template_name = 'old/show_payments.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         payments = Payment.objects.all().order_by('participant')
-#         months = Month.objects.all()
-#         participants = Participant.objects.all()
-#         context['payments'] = payments
-#         context['months'] = months
-#         context['participants'] = participants
-#         return context
-
-
-# class PaymentPage(TemplateView):
-#     template_name = 'old/show_payment.html'
-#
-#     def get_context_data(self, slug, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         payment = Payment.objects.get(slug__iexact=slug)
-#         context['payment'] = payment
-#
-#         return context
+    redirect_url = 'my_page_admin'

@@ -34,11 +34,16 @@ urlpatterns = [
     url(r'^login/$', LoginPageView.as_view(), name='login'),
     url(r'^contacts/$', ContactsView.as_view(), name='contacts'),
     url(r'^about_us/$', AboutUsView.as_view(), name='about_us'),
+    url(r'^rules/$', RulesView.as_view(), name='rules'),
     path('news/<str:slug>/', OneNewsPage.as_view(), name='new'),
     url(r'^tap_dance/$', TapDanceView.as_view(), name='tap_dance'),
     url(r'^russian_dance/$', RussianDanceView.as_view(), name='russian_dance'),
     url(r'^world_dance/$', WorldDanceView.as_view(), name='world_dance'),
     url(r'^modern_dance/$', ModernDanceView.as_view(), name='modern_dance'),
+    url(r'^kids_dance/$', KidsDanceView.as_view(), name='kids_dance'),
+    url(r'^gypsy/$', GypsyView.as_view(), name='gypsy'),
+    url(r'^flamenco/$', FlamencoView.as_view(), name='flamenco'),
+    url(r'^kumbia/$', KumbiaView.as_view(), name='kumbia'),
 
 
     url(r'^new_participant/$', AddParticipant.as_view(), name='new_participant'),
@@ -48,8 +53,6 @@ urlpatterns = [
     url(r'^new_dance/$', AddDance.as_view(), name='new_dance'),
     path('dances/<str:slug>/update', UpdateDance.as_view(), name='update_dance'),
     path('dances/<str:slug>/delete', DeleteDance.as_view(), name='delete_dance'),
-
-    url(r'^new_photo_in_gallery/$', AddPhotoInGallery.as_view(), name='new_photo_in_gallery'),
 
     url(r'^new_news/$', AddNews.as_view(), name='new_news'),
     url(r'^news/$', NewsPage.as_view(), name='news'),
@@ -75,12 +78,6 @@ urlpatterns = [
     url(r'^new_group/$', AddGroup.as_view(), name='new_group'),
     path('groups/<str:slug>/update', UpdateGroup.as_view(), name='update_group'),
     path('groups/<str:slug>/delete', DeleteGroup.as_view(), name='delete_group'),
-
-    url(r'^new_photo_gallery/$', AddPhotoGallery.as_view(), name='new_photo_gallery'),
-    url(r'^photo_gallery/$', PhotoGalleriesPage.as_view(), name='photo_galleries'),
-    path('photo_gallery/<str:slug>/', PhotoGalleriesPage.as_view(), name='photo_gallery'),
-    path('photo_gallery/<str:slug>/update', UpdatePhotoGallery.as_view(), name='update_photo_gallery'),
-    path('photo_gallery/<str:slug>/delete', DeletePhotoGallery.as_view(), name='delete_photo_gallery'),
 
     url(r'^new_dance_style/$', AddDanceStyle.as_view(), name='new_dance_style'),
     path('dance_styles/<str:slug>/update', UpdateDanceStyle.as_view(), name='update_dance_style'),
@@ -140,6 +137,7 @@ urlpatterns = [
 
     url(r'^my_page_choreographer/$', MyPageChoreographer.as_view(), name='my_page_choreographer'),
     url(r'^my_page_participant/$', MyPageParticipant.as_view(), name='my_page_participant'),
+    url(r'^my_page_admin/$', MyPageAdmin.as_view(), name='my_page_admin'),
 
 ]
 urlpatterns += staticfiles_urlpatterns()

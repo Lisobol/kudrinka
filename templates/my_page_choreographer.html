@@ -264,7 +264,7 @@
                                     <a href="#">Развернуть</a>
                                     <div class="scrolling-wrapper wrapper1">
                                         {% for fond in fonds %}
-                                            {% include "old/show_fond.html" with fond=fond %}
+                                            {% include "show_fond.html" with fond=fond %}
                                             <a class="but" href="{% url 'update_fond' slug=fond.slug %}"
                                                target="_self"><i
                                                     class="butred fa fa-pencil"></i></a>
@@ -357,8 +357,8 @@
                                                                     {% for dc in d_c %}
                                                                         {% for d in dances %}
                                                                             {% if d == dc.dance and dc.concert == c %}
-                                                                                <th scope="col" class="table_col">
-                                                                                    {{ dc.num }}.{{ d.name }}-{{ d.duration }}
+                                                                                <th scope="col" class="table_col ">
+                                                                                    <p class="vertical"> {{ dc.num }}.{{ d.name }}-{{ d.duration }}</p>
                                                                                     <a class="but"
                                                                                        href="{% url 'update_dance_in_concert' slug=dc.slug %}"
                                                                                        target="_self"><i
@@ -410,9 +410,7 @@
                                                                             </tr>
                                                                         {% endif %}
                                                                     {% endfor %}
-                                                                    <p></p>
                                                                 {% endfor %}
-                                                                <p></p>
                                                                 </tbody>
                                                             </table>
                                                             <p><a href="{% url 'plot' slug=c.slug %}"
@@ -441,7 +439,7 @@
                                                                                     {% for d in dances %}
                                                                                         {% if d == dc.dance and dc.concert == c %}
                                                                                             <th scope="col"
-                                                                                                class="table_col">
+                                                                                                class="table_col vertical" style="width: 30px!important;">
                                                                                                 {{ dc.num }}.{{ d.name }}-{{ d.dur }}
                                                                                                 <a class="but"
                                                                                                    href="{% url 'update_dance_in_concert' slug=dc.slug %}"
@@ -519,12 +517,7 @@
                                                   class="button colored">Добавить танец в концерт</a></p>
                                             <p><a href="{% url 'new_concert' %}"
                                                   class="button colored">Добавить концерт</a></p>
-                                            {#                                            <h1>{{ pdc_count }}</h1>#}
-                                            {#                                        {% for image_base64 in images_base64 %}#}
-                                            {#                                            <img src="data:image/png;base64,{{ image_base64 }}"#}
-                                            {#                             alt="some text to display to your users when the image does not show correctly"#}
-                                            {#                             width=500 height=auto/>#}
-                                            {#{% endfor %}#}
+
                                         </div>
                                     </div>
                                 </div>
@@ -624,7 +617,7 @@
                                                             class="font-weight-bold">Длительность: </span>{{ d.duration }}
                                                     </p>
                                                     <p><span
-                                                            class="font-weight-bold">Для заметок: </span>{{ participant.description }}
+                                                            class="font-weight-bold">Для заметок: </span>{{ d.description }}
                                                     </p>
                                                     <a class="but" href="{% url 'update_dance' slug=d.slug %}"
                                                        target="_self"><i
@@ -632,12 +625,7 @@
                                                     <a class="but" href="{% url 'delete_dance' slug=d.slug %}"
                                                        target="_self"><i
                                                             class="butred fa fa-trash"></i></a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    {% if d.picture %}
-                                                        <img src="{{ d.picture.url }}">
-                                                    {% endif %}
-                                                </div>
+                                                </div
                                             </div>
                                         {% endfor %}
                                         <a href="{% url 'new_dance' %}"
@@ -648,44 +636,44 @@
                         </div>
                         <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
                         {# Список направлений #}
-                        <div class="row">
-                            <h2>Список направлений</h2>
-                            <div class="accordion">
-                                <div>
-                                    <a href="#">Развернуть</a>
-                                    <div class="scrolling-wrapper wrapper1">
-                                        {% for ds in dance_styles %}
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <h3>{{ ds.dance_style }}</h3>
-                                                    {% if ds.description %}
-                                                        <p><span
-                                                                class="font-weight-bold">Для заметок: </span>{{ ds.description }}
-                                                        </p>
-                                                    {% endif %}
-                                                    <a class="but"
-                                                       href="{% url 'update_dance_style' slug=ds.slug %}"
-                                                       target="_self"><i
-                                                            class="butred fa fa-pencil"></i></a>
-                                                    <a class="but"
-                                                       href="{% url 'delete_dance_style' slug=ds.slug %}"
-                                                       target="_self"><i
-                                                            class="butred fa fa-trash"></i></a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    {% if ds.picture %}
-                                                        <img src="{{ ds.picture.url }}">
-                                                    {% endif %}
-                                                </div>
-                                            </div>
-                                        {% endfor %}
-                                        <a href="{% url 'new_dance_style' %}"
-                                           class="button colored">Добавить направление</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+{#                        <div class="row">#}
+{#                            <h2>Список направлений</h2>#}
+{#                            <div class="accordion">#}
+{#                                <div>#}
+{#                                    <a href="#">Развернуть</a>#}
+{#                                    <div class="scrolling-wrapper wrapper1">#}
+{#                                        {% for ds in dance_styles %}#}
+{#                                            <div class="row">#}
+{#                                                <div class="col-md-8">#}
+{#                                                    <h3>{{ ds.dance_style }}</h3>#}
+{#                                                    {% if ds.description %}#}
+{#                                                        <p><span#}
+{#                                                                class="font-weight-bold">Для заметок: </span>{{ ds.description }}#}
+{#                                                        </p>#}
+{#                                                    {% endif %}#}
+{#                                                    <a class="but"#}
+{#                                                       href="{% url 'update_dance_style' slug=ds.slug %}"#}
+{#                                                       target="_self"><i#}
+{#                                                            class="butred fa fa-pencil"></i></a>#}
+{#                                                    <a class="but"#}
+{#                                                       href="{% url 'delete_dance_style' slug=ds.slug %}"#}
+{#                                                       target="_self"><i#}
+{#                                                            class="butred fa fa-trash"></i></a>#}
+{#                                                </div>#}
+{#                                                <div class="col-md-4">#}
+{#                                                    {% if ds.picture %}#}
+{#                                                        <img src="{{ ds.picture.url }}">#}
+{#                                                    {% endif %}#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        {% endfor %}#}
+{#                                        <a href="{% url 'new_dance_style' %}"#}
+{#                                           class="button colored">Добавить направление</a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>#}
                     </div>
                 </article>
             </div>

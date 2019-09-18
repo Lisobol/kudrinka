@@ -238,7 +238,7 @@ textarea {
 .logo1 img{
     width: 170px;
     height: 170px;
-    margin-left: 30px;
+    margin-left: 60px;
     margin-top: -70px;
 }
 
@@ -632,7 +632,7 @@ and (max-width : 480px) {
 
 .list-post-container {
 	float:left;
-    width: 300px;
+    width: 400px;
 }
 
 @media only screen
@@ -730,7 +730,7 @@ and (max-width : 480px) {
     font-family: 'Georgia', sans-serif;
     font-size: 11px;
     font-weight: 500;
-    padding: 1px 0px 1px 0px;
+    padding: 1px 0 1px 0;
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -746,9 +746,10 @@ and (max-width : 480px) {
     padding-right: 20px;
 }
 
+
 .list-post p {
     font-family: 'Georgia', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: darkred;
@@ -1604,7 +1605,7 @@ p .mypage {
 .scrolling-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 .wrapper1 {
@@ -1644,7 +1645,7 @@ p .mypage {
 }
 
 .fa-check, .fa-question-circle{
-    font-size: 35px!important;
+    font-size: 25px!important;
 }
 
 .progress-bar {
@@ -1660,3 +1661,7 @@ p .mypage {
     width: 430px;
     height: 290px;
 }
+/*.vertical {*/
+    /*transform: rotate(-90deg);*/
+
+/*}*/

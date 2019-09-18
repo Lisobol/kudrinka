@@ -68,7 +68,7 @@
                         <span>
                         <a class="logo1" href="/">
                             <img id="logo"
-                                 src="{% static "static/media/media/default/logo_1.png" %}"
+                                 src="{% static "static/media/media/default/photo/лого.jpg" %}"
                                  alt="logo">
                         </a>
                         </span>
@@ -100,12 +100,20 @@
                                 <li><a href="/world_dance">Танцы народов мира</a></li>
                                 <li><a href="/modern_dance">Модерн</a></li>
                                 <li><a href="/tap_dance">Степ</a></li>
+                                <li><a href="/kids_dance">Детские танцы</a></li>
                             </ul>
                         </li>
                         <li><a href="/concerts/">Наши выступления</a></li>
                         <li><a href="/choreographers/">Хореографы</a></li>
-                        <li><a href="/about_us/">О нас</a></li>
-{#                        <li><a href="/photo_gallery/">Фотогалерея</a></li>#}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">О нас<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/about_us/">О нас</a></li>
+                                <li><a href="/rules/">Основные правила</a></li>
+                            </ul>
+                        </li>
+                        {#                        <li><a href="/photo_gallery/">Фотогалерея</a></li>#}
                         <li><a href="/contacts/">Контакты</a></li>
                         {% if participant.user == user %}
                             <li><a href="/my_page_participant/">Моя страница</a></li>
@@ -115,6 +123,8 @@
                         {% endif %}
                         {% if user.is_authenticated %}
                             {% if user.is_staff %}
+                                 <li><a href="/my_page_admin/">Моя страница (админ)</a></li>
+
                                 <li><a href="/admin/">Админка</a></li>
                             {% endif %}
                             <li><a class="disabled">Вы вошли как: {{ user.username }}​</a></li>

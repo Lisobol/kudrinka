@@ -44,7 +44,7 @@
 
                                             title();
                                         </script>
-                                        {% if user.is_superuser %}
+                                        {% if user.is_superuser or participant.moderator %}
                                             <p>
                                             <a class="but" href="{% url 'update_news' slug=n.slug %}"
                                                    target="_blank"><i
@@ -65,6 +65,7 @@
                                     <div class="list-post-body body2">
                                         <h2><a href="{% url 'one_news' slug=n.slug %}">{{ n.title }}</a></h2>
                                         <div class="post-meta">
+
                                             <span class="post-meta-publ-date">{{ n.date }}</span>
                                         </div>
                                         <p class="tit">{{ n.text|linebreaksbr }}</p>
@@ -89,7 +90,7 @@
 
                                             title();
                                         </script>
-                                        {% if user.is_superuser %}
+                                        {% if user.is_superuser or participant.moderator %}
                                             <p>
                                                 <a class="but" href="{% url 'update_news' slug=n.slug %}"
                                                    target="_blank"><i
@@ -131,6 +132,41 @@
 
                         </div>
                     {% endif %}
+
+                    {% for n in news_vk %}
+                        <div>
+                            <div class="list-post">
+                                <div class="list-post-container">
+                                    <img src="{{ n.pop }}"
+                                         class="size-full"
+                                         alt=""/>
+                                </div>
+                                <div class="list-post-body">
+                                    <div class="post-meta">
+                                        <span class="post-meta-publ-date">{{ n.pop }}</span>
+                                    </div>
+                                    <p class="news_vk">{{ n.pop }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if news_vk.has_previous %}
+                                <a class="but" href="?page={{ news_vk.previous_page_number }}"><i
+                                        class="butred fa fa-angle-double-left"></i> {{ news_vk.previous_page_number }}</a>
+                            {% endif %}</span>
+                        <span class="current">
+                            {{ news_vk.number }}
+                        </span>
+                        <span>
+                            {% if news_vk.has_next %}
+                                <a class="but"
+                                   href="?page={{ news_vk.next_page_number }}">{{ news_vk.next_page_number }} <i
+                                        class="butred fa fa-angle-double-right"></i></a>
+                            {% endif %}
+                        </span>
+                    </div>
                     <!-- end list post item -->
                 </section>
                 <!-- end List Post style -->
@@ -145,7 +181,7 @@
                         <div class="sidebar-content">
                             <h4 class="sidebar-heading"><span>О нас</span></h4>
                             <a href="/about_us/">
-                                <img src="{% static "static/media/media/default/photo/НОМЕР24_1.jpg" %}"
+                                <img src="{% static "static/media/media/default/photo/Казачий1.jpg" %}"
                                      alt=""></a>
                             <p><span class="font-weight-bold">Лауреат и обладатель Гран-При</span> Всероссийских и
                                 Международных фестивалей и конкурсов <span class="font-weight-bold">Ансамбль танца "Кудринка"</span>

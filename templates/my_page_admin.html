@@ -1,0 +1,635 @@
+{% extends "index.html" %}
+{% load static %}
+{% load staticfiles %}
+{#{% block title %}Мой профиль{% endblock %}#}
+{#{% block name %}Мой профиль{% endblock %}#}
+{% block content %}
+    <script src="{% static "static/js/scripts.js" %}"></script>
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- post -->
+                <article class="blog-post">
+                    <div class="post-entry">
+                        <h1>Моя страница</h1>
+
+                        {# Объявления #}
+                        <div class="row">
+                            <div>
+                                <h2>Объявления</h2>
+                                <div class="accordion">
+                                    <div>
+                                        <a href="#">Развернуть</a>
+                                        <div class="scrolling-wrapper">
+                                            {% for announcement in announcements %}
+                                                <div class="post-meta">
+                                        <span class="post-meta-publ-date">{{ announcement.date }} -
+                                            {% if announcement.date_until %}
+                                                {{ announcement.date_until }}{% endif %}</span>
+                                                </div>
+                                                <h3>{{ announcement.title }}</h3>
+                                                <p>{{ announcement.text }}</p>
+                                                <p>{% if announcement.participant %}
+                                                    {{ announcement.participant }}{% endif %}</p>
+                                                <p>{% if announcement.group %}{{ announcement.group }}{% endif %}</p>
+
+                                                <p>
+                                                    <a class="but"
+                                                       href="{% url 'update_announcement' slug=announcement.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-pencil"></i></a>
+                                                    <a class="but"
+                                                       href="{% url 'delete_announcement' slug=announcement.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-trash"></i></a>
+                                                </p>
+                                                <div class="diff-spacer spacer-1"
+                                                     style="background-color:#B35652;color:#B35652;"></div>
+                                                <div class="diff-spacer spacer-1"
+                                                     style="background-color:#B35652;color:#B35652;"></div>
+                                            {% endfor %}
+                                            <p><a href="{% url 'new_announcement' %}"
+                                                  class="button colored">Добавить объявление</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Расписание #}
+                        <div class="row">
+                            <h2>Моё расписание</h2>
+                            <p><a href="{% url 'schedule' %}"
+                                  class="button colored">Посмотреть/редактировать полное
+                                расписание</a></p>
+
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Костюмы #}
+                        <div class="row">
+                            <h2>Костюмы</h2>
+                            <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper">
+                                        <table class="table table-hover">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th></th>
+                                                {% for c in costumes %}
+                                                    <th scope="col" class="table_col">
+                                                        {{ c.name }}-{{ c.dance.name }}
+                                                        <a class="but" href="{% url 'update_costume' slug=c.slug %}"
+                                                           target="_self"><i
+                                                                class="fa fa-pencil"></i></a>
+                                                        <a class="but" href="{% url 'delete_costume' slug=c.slug %}"
+                                                           target="_self"><i
+                                                                class="fa fa-trash"></i></a>
+                                                    </th>
+                                                {% endfor %}
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for pc in participant_costumes %}
+                                                {% for p in participants %}
+                                                    <tr>
+                                                        {% if pc.participant == p %}
+                                                            <th>{{ p.group }} {{ p.last_name }} {{ p.initials }}
+                                                                <a class="but"
+                                                                   href="{% url 'update_participant' slug=p.slug %}"
+                                                                   target="_self"><i
+                                                                        class="fa fa-pencil"></i></a>
+                                                                <a class="but"
+                                                                   href="{% url 'delete_participant' slug=p.slug %}"
+                                                                   target="_self"><i
+                                                                        class="fa fa-trash"></i></a></th>
+                                                            {% for pc1 in participant_costumes %}
+                                                                {% if pc == pc1 and pc1.participant == p %}
+                                                                    {% for c in costumes %}
+                                                                        <td scope="row" class="table_row">
+                                                                            {% if pc1.costume == c %}
+                                                                                {% if pc1.costume and pc1.returned == False %}
+                                                                                    Не возвращен {% if pc1.date_return_before %}(
+                                                                                    {{ pc1.date_return_before }}){% endif %}
+                                                                                {% else %}
+                                                                                    <i class="butred fa fa-check"></i>
+                                                                                {% endif %}
+                                                                                <a class="butred"
+                                                                                   href="{% url 'update_participant_costume' slug=pc1.slug %}"
+                                                                                   target="_self"><i
+                                                                                        class="butred fa fa-pencil"></i></a>
+                                                                                <a href="{% url 'delete_participant_costume' slug=pc1.slug %}"
+                                                                                   target="_self"><i
+                                                                                        class="butred fa fa-trash"></i></a>
+
+                                                                            {% endif %}
+                                                                        </td>
+                                                                    {% endfor %}
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        {% endif %}
+                                                    </tr>
+                                                {% endfor %}
+                                            {% endfor %}
+                                            <p></p>
+                                            </tbody>
+                                        </table>
+                                        <p><a href="{% url 'new_costume' %}"
+                                              class="button colored">Добавить элемент костюма</a>
+                                            <a href="{% url 'new_participant_costume' %}"
+                                               class="button colored">Добавить участник-элемент костюма</a>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Платежи #}
+                        <div class="row">
+                            <h2>Платежи</h2>
+                            <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper">
+                                        <table class="table table-hover">
+                                            <thead class="thead-dark">
+                                            <tr>
+                                                <th></th>
+                                                {% for m in months %}
+                                                    <th>{{ m }}</th>
+                                                {% endfor %}
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for p in participants %}
+                                                <tr>
+                                                    <th>{{ p.last_name }} {{ p.initials }}</th>
+                                                    {% for m in months %}
+                                                        <td>
+                                                            {% for pay in payments %}
+                                                                {% if pay.month == m and pay.participant == p %}
+                                                                    <i class="butred fa fa-check"></i>
+                                                                    <a class="butred"
+                                                                       href="{% url 'update_payment' slug=pay.slug %}"
+                                                                       target="_self"><i
+                                                                            class="butred fa fa-pencil"></i></a>
+                                                                    <a href="{% url 'delete_payment' slug=pay.slug %}"
+                                                                       target="_self"><i
+                                                                            class="butred fa fa-trash"></i></a>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                        </td>
+                                                    {% endfor %}
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        <p><a href="{% url 'new_payment' %}"
+                                              class="button colored">Добавить платеж</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Фонд #}
+                        <div class="row">
+                            <h2>Фонд</h2>
+                            <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper wrapper1">
+                                        {% for fond in fonds %}
+                                            {% include "show_fond.html" with fond=fond %}
+                                            <a class="but" href="{% url 'update_fond' slug=fond.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-pencil"></i></a>
+                                            <a class="but" href="{% url 'delete_fond' slug=fond.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-trash"></i></a>
+                                        {% endfor %}
+                                        <p><a href="{% url 'new_fond' %}"
+                                              class="button colored">Добавить оплату фонда</a></p>
+                                        <h3>ИТОГО: {{ fond }} из {{ total }}</h3>
+                                        <h3>В прошлом году собрано {{ savefond }} (сохранить сумму в другие
+                                            источники)</h3>
+                                        <p>Недосдали:</p>
+                                     <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper">
+
+                                            {% for f in fonds %}
+                                                <p>{{ f.participant.last_name }} {{ f.participant.first_name }} - {{ f.last_year_debt }}</p>
+                                            {% endfor %}
+
+                                    </div>
+                                </div>
+                                     </div>
+
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <h2>Другие источники финансов</h2>
+                                        {% for o in other_sources %}
+                                            <p>{{ o.name }} - <span class="font-weight-bold">{{ o.sum }}</span></p>
+                                            <a class="but" href="{% url 'update_other_source' slug=o.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-pencil"></i></a>
+                                            <a class="but" href="{% url 'delete_other_source' slug=o.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-trash"></i></a>
+                                        {% endfor %}
+                                        <p><a href="{% url 'new_other_source' %}"
+                                              class="button colored">Добавить источник финансов</a></p>
+                                        <h3>ИТОГО из других источников: {{ final_other_sources }}</h3>
+                                        <h3>ИТОГО Фонд+другие источники: {{ fond_and_other }}</h3>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <div class="diff-spacer spacer-1"
+                                             style="background-color:#B35652;color:#B35652;"></div>
+                                        <h2>Затраты</h2>
+                                        {% for e in expences %}
+                                            {% if e.bought %}<s>{{ e.name }} - {{ e.num }} штук по {{ e.cost }}: <span
+                                                    class="font-weight-bold">{{ e.final_cost }}</span></s>
+                                            {% else %}
+                                                <p>{{ e.name }} - {{ e.num }} штук по {{ e.cost }}: <span
+                                                        class="font-weight-bold">{{ e.final_cost }}</span></p>
+                                            {% endif %}
+                                            <p><a class="but" href="{% url 'update_expence' slug=e.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-pencil"></i></a>
+                                            <a class="but" href="{% url 'delete_expence' slug=e.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-trash"></i></a></p>
+                                        {% endfor %}
+                                        <p><a href="{% url 'new_expence' %}"
+                                              class="button colored">Добавить затраты</a>
+                                        </p>
+                                        <h3>С учетом потраченного: {{ fond_final }}</h3>
+                                        <h3>Планируется потратить: {{ final_expences }}</h3>
+                                        <p><a href="{% url 'money_plot' %}"
+                                              class="button colored">Graph</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Таблицы концертов и участников #}
+                        <div class="row">
+                            <h2>Таблицы концертов и участников</h2>
+                            <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper">
+                                        {% for c in concerts %}
+                                            {% if c.begin_date >= today %}
+                                                <h3>{{ c.name }}</h3>
+                                                <p>{{ c.begin_date }} {% if  c.end_date %}- {{ c.end_date }}{% endif %}
+                                                    {{ c.begin_time }} {% if  c.end_time %}- {{ c.end_time }}
+                                                    {% endif %}
+                                                    {% if  c.place %}{{ c.place }}{% endif %}{% if  c.address %}
+                                                        {{ c.address }}{% endif %}
+                                                    {% if  c.description %}{{ c.description }}{% endif %}
+                                                    <a class="but"
+                                                       href="{% url 'update_concert' slug=c.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-pencil"></i></a>
+                                                    <a class="but"
+                                                       href="{% url 'delete_concert' slug=c.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-trash"></i></a></p>
+                                                <div class="accordion">
+                                                    <div>
+                                                        <a href="#">Развернуть</a>
+                                                        <div class="scrolling-wrapper">
+                                                            <table class="table table-hover">
+                                                                <thead class="thead-dark">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    {% for dc in d_c %}
+                                                                        {% for d in dances %}
+                                                                            {% if d == dc.dance and dc.concert == c %}
+                                                                                <th scope="col" class="table_col ">
+                                                                                    <p class="vertical"> {{ dc.num }}.{{ d.name }}-{{ d.duration }}</p>
+                                                                                    <a class="but"
+                                                                                       href="{% url 'update_dance_in_concert' slug=dc.slug %}"
+                                                                                       target="_self"><i
+                                                                                            class="fa fa-pencil"></i></a>
+                                                                                    <a class="but"
+                                                                                       href="{% url 'delete_dance_in_concert' slug=dc.slug %}"
+                                                                                       target="_self"><i
+                                                                                            class="fa fa-trash"></i></a>
+                                                                                </th>
+                                                                            {% endif %}
+                                                                        {% endfor %}
+                                                                    {% endfor %}
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                {% for p in participants %}
+                                                                    {% for pc in p_c %}
+                                                                        {% if pc.concert == c and pc.participant == p %}
+                                                                            <tr>
+                                                                                <th>{{ p.last_name }} {{ p.initials }}</th>
+                                                                                {% for dc in d_c %}
+                                                                                    {% for d in dances %}
+                                                                                        {% if d == dc.dance and dc.concert == c %}
+                                                                                            <td>{% for pdc in p_d_c %}
+                                                                                                {% if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False %}
+                                                                                                    <i class="butred fa fa-check"></i>
+                                                                                                    <a class="butred"
+                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                {% elif pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == True %}
+                                                                                                    <i class="butred fa fa-question-circle"></i>
+                                                                                                    <a class="butred"
+                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                       target="_self"><i
+                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                {% else %}
+                                                                                                {% endif %}
+                                                                                            {% endfor %}</td>
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+                                                                                {% endfor %}
+                                                                            </tr>
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                {% endfor %}
+                                                                </tbody>
+                                                            </table>
+                                                            <p><a href="{% url 'plot' slug=c.slug %}"
+                                                                  class="button colored">Graph</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                        <div class="accordion">
+                                            <div>
+                                                <a href="#"><h3>Прошедшие</h3></a>
+                                                <div class="scrolling-wrapper">
+                                                    {% for c in concerts %}
+                                                        {% if c.begin_date < today %}
+                                                            <h3>{{ c.name }}</h3>
+                                                            <div class="accordion">
+                                                                <div>
+                                                                    <a href="#">Развернуть</a>
+                                                                    <div class="scrolling-wrapper">
+                                                                        <table class="table table-hover">
+                                                                            <thead class="thead-dark">
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                {% for dc in d_c %}
+                                                                                    {% for d in dances %}
+                                                                                        {% if d == dc.dance and dc.concert == c %}
+                                                                                            <th scope="col"
+                                                                                                class="table_col vertical" style="width: 30px!important;">
+                                                                                                {{ dc.num }}.{{ d.name }}-{{ d.dur }}
+                                                                                                <a class="but"
+                                                                                                   href="{% url 'update_dance_in_concert' slug=dc.slug %}"
+                                                                                                   target="_self"><i
+                                                                                                        class="fa fa-pencil"></i></a>
+                                                                                                <a class="but"
+                                                                                                   href="{% url 'delete_dance_in_concert' slug=dc.slug %}"
+                                                                                                   target="_self"><i
+                                                                                                        class="fa fa-trash"></i></a>
+                                                                                            </th>
+                                                                                        {% endif %}
+                                                                                    {% endfor %}
+                                                                                {% endfor %}
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            {% for p in participants %}
+                                                                                {% for pc in p_c %}
+                                                                                    {% if pc.concert == c and pc.participant == p %}
+                                                                                        <tr>
+                                                                                            <th>{{ p.last_name }} {{ p.initials }}</th>
+                                                                                            {% for dc in d_c %}
+                                                                                                {% for d in dances %}
+                                                                                                    {% if d == dc.dance and dc.concert == c %}
+                                                                                                        <td>
+                                                                                                            {% for pdc in p_d_c %}
+                                                                                                                {% if pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == False %}
+                                                                                                                    <i class="butred fa fa-check"></i>
+                                                                                                                    <a class="butred"
+                                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                                {% elif pdc.participant_concert.participant == p and pdc.dance.dance == d and pdc.participant_concert.concert == pdc.dance.concert and pdc.under_question == True %}
+                                                                                                                    <i class="butred fa fa-question-circle"></i>
+                                                                                                                    <a class="butred"
+                                                                                                                       href="{% url 'update_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-pencil"></i></a>
+                                                                                                                    <a href="{% url 'delete_participant_dance_concert' slug=pdc.slug %}"
+                                                                                                                       target="_self"><i
+                                                                                                                            class="butred fa fa-trash"></i></a>
+                                                                                                                {% else %}
+                                                                                                                {% endif %}
+                                                                                                            {% endfor %}
+                                                                                                        </td>
+                                                                                                    {% endif %}
+                                                                                                {% endfor %}
+                                                                                            {% endfor %}
+                                                                                        </tr>
+                                                                                    {% endif %}
+                                                                                {% endfor %}
+                                                                                <p></p>
+                                                                            {% endfor %}
+                                                                            <p></p>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <p>
+                                                                            <a href="{% url 'plot' slug=c.slug %}"
+                                                                               class="button colored">Graph</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <p><a href="{% url 'new_participant_dance_concert' %}"
+                                                  class="button colored">Добавить элемент участник-танец-концерт</a></p>
+                                            <p><a href="{% url 'new_participant_concert' %}"
+                                                  class="button colored">Добавить участника в концерт</a></p>
+                                            <p><a href="{% url 'new_dance_in_concert' %}"
+                                                  class="button colored">Добавить танец в концерт</a></p>
+                                            <p><a href="{% url 'new_concert' %}"
+                                                  class="button colored">Добавить концерт</a></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {#Группы и участники#}
+                        <div class="row">
+                            <h2>Группы и участники</h2>
+                            <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper wrapper1">
+                                        {% for g in groups %}
+                                            <h3>{{ g.name }}</h3>
+                                            <p><span
+                                                    class="font-weight-bold">Возрасная категория: </span>{{ g.ages }}
+                                            </p>
+                                            <p><span
+                                                    class="font-weight-bold">Для заметок: </span>{{ participant.description }}
+                                            </p>
+                                            <a class="but" href="{% url 'update_group' slug=g.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-pencil"></i></a>
+                                            <a class="but" href="{% url 'delete_group' slug=g.slug %}"
+                                               target="_self"><i
+                                                    class="butred fa fa-trash"></i></a>
+                                            <div class="accordion">
+                                                <div>
+                                                    <a href="#">Участники:</a>
+                                                    <div class="scrolling-wrapper wrapper1">
+                                                        {% for participant in participants %}
+                                                            {% if g.id == participant.group.id %}
+                                                                <div class="row">
+                                                                    <div class="col-md-8">
+                                                                        <h4>{{ participant.last_name }} {{ participant.first_name }} {{ participant.patronymic }}</h4>
+                                                                        <p><span
+                                                                                class="mypage fa fa-phone"></span><span
+                                                                                class="font-weight-bold"> Телефон: </span> {{ participant.phone }}
+                                                                        </p>
+                                                                        <p><span
+                                                                                class="font-weight-bold">Email: </span>{{ participant.email }}
+                                                                        </p>
+                                                                        <p><span
+                                                                                class="font-weight-bold">Дата рождения: </span>{{ participant.birth_date }}
+                                                                        </p>
+                                                                        <p><span
+                                                                                class="font-weight-bold">Для заметок: </span>{{ participant.description }}
+                                                                        </p>
+                                                                        <a class="but"
+                                                                           href="{% url 'update_participant' slug=participant.slug %}"
+                                                                           target="_self"><i
+                                                                                class="butred fa fa-pencil"></i></a>
+                                                                        <a class="but"
+                                                                           href="{% url 'delete_participant' slug=participant.slug %}"
+                                                                           target="_self"><i
+                                                                                class="butred fa fa-trash"></i></a>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        {% if participant.picture %}
+                                                                            <img src="{{ participant.picture.url }}"
+                                                                            >
+                                                                        {% endif %}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="diff-spacer spacer-1"
+                                                                     style="background-color:#B35652;color:#B35652;">
+                                                                    <i class="fa"></i></div>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p></p>
+                                        {% endfor %}
+                                        <a href="{% url 'new_group' %}"
+                                           class="button colored">Добавить группу</a>
+                                        <a href="{% url 'new_participant' %}"
+                                           class="button colored">Добавить участника</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {#Список танцев#}
+                        <div class="row">
+                            <h2>Список танцев</h2>
+                            <div class="accordion">
+                                <div>
+                                    <a href="#">Развернуть</a>
+                                    <div class="scrolling-wrapper wrapper1">
+                                        {% for d in dances %}
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <h3>{{ d.name }}</h3>
+                                                    <p><span
+                                                            class="font-weight-bold">Длительность: </span>{{ d.duration }}
+                                                    </p>
+                                                    <p><span
+                                                            class="font-weight-bold">Для заметок: </span>{{ d.description }}
+                                                    </p>
+                                                    <a class="but" href="{% url 'update_dance' slug=d.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-pencil"></i></a>
+                                                    <a class="but" href="{% url 'delete_dance' slug=d.slug %}"
+                                                       target="_self"><i
+                                                            class="butred fa fa-trash"></i></a>
+                                                </div
+                                            </div>
+                                        {% endfor %}
+                                        <a href="{% url 'new_dance' %}"
+                                           class="button colored">Добавить танец</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>
+                        {# Список направлений #}
+{#                        <div class="row">#}
+{#                            <h2>Список направлений</h2>#}
+{#                            <div class="accordion">#}
+{#                                <div>#}
+{#                                    <a href="#">Развернуть</a>#}
+{#                                    <div class="scrolling-wrapper wrapper1">#}
+{#                                        {% for ds in dance_styles %}#}
+{#                                            <div class="row">#}
+{#                                                <div class="col-md-8">#}
+{#                                                    <h3>{{ ds.dance_style }}</h3>#}
+{#                                                    {% if ds.description %}#}
+{#                                                        <p><span#}
+{#                                                                class="font-weight-bold">Для заметок: </span>{{ ds.description }}#}
+{#                                                        </p>#}
+{#                                                    {% endif %}#}
+{#                                                    <a class="but"#}
+{#                                                       href="{% url 'update_dance_style' slug=ds.slug %}"#}
+{#                                                       target="_self"><i#}
+{#                                                            class="butred fa fa-pencil"></i></a>#}
+{#                                                    <a class="but"#}
+{#                                                       href="{% url 'delete_dance_style' slug=ds.slug %}"#}
+{#                                                       target="_self"><i#}
+{#                                                            class="butred fa fa-trash"></i></a>#}
+{#                                                </div>#}
+{#                                                <div class="col-md-4">#}
+{#                                                    {% if ds.picture %}#}
+{#                                                        <img src="{{ ds.picture.url }}">#}
+{#                                                    {% endif %}#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        {% endfor %}#}
+{#                                        <a href="{% url 'new_dance_style' %}"#}
+{#                                           class="button colored">Добавить направление</a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="diff-spacer spacer-2" style="background-color:#B35652;color:#B35652;"></div>#}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div><!-- end content -->
+{% endblock %}

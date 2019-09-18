@@ -2,17 +2,654 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a62523a-8e0a-440e-a15f-eec012e5a891" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/DOD_2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/дождик1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/жук1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/игрушки1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/игрушки2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/игрушки3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/литва1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/матрешки1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/матрешки2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/модницы1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/пингвин1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kids/роща1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/step/чуча.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/step/чуча1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Испания1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Кумбия1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Кумбия2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Цыганский1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Цыганский2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/венгрия_дев.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/русс_заплет1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/сны.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/ухажер.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/kids_dance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/my_page_admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rules.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/world_flamenco.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/world_gypsy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/world_kumbia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bars1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bars2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kudrinka/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kudrinka/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bars2.png" beforeDir="false" afterPath="$PROJECT_DIR$/bars2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kudr_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kudr_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kudr_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudr_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudr_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/css/unite-gallery.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/button-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/cover-grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/icon-link32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/icon-play32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/icon-zoom32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/lightbox-arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/lightbox-arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/lightbox-icon-close-compact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/lightbox-icon-close-compact2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/lightbox-icon-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-black7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader-white7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader_bright.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/loader_skype_trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/not_loaded.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/play-button-round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/play-button-square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/images/transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/js/jquery-11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/js/unitegallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/js/unitegallery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/release_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/alexis.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/button_zoom_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/button_zoom_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/button_zoom_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_arrow_left_hortype.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_arrow_right_hortype.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_handle_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_handle_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_handle_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/grid_handle_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/slider_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/slider_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/alexis/images/slider_bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/arrow_grid_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/arrow_grid_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/arrows_strip_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/arrows_strip_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/grid_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/grid_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/grid_handle_black_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/grid_handle_black_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/grid_handle_black_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/grid_handle_black_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/icon_zoom_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/icon_zoom_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/icon_zoom_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/slider_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/slider_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/slider_bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_bullets_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_bullets_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_bullets_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_bullets_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_bullets_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_button_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_button_play_pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/skins/default/tile_button_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/carousel/ug-theme-carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/compact/ug-theme-compact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/arrow_down_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/button_fullscreen_single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/images/button_playpause_single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/ug-theme-default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/default/ug-theme-default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/grid/ug-theme-grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/slider/ug-theme-slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/tiles/ug-theme-tiles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/tilesgrid/ug-theme-tilesgrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/images/arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/images/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/skin-bottom-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/skin-right-no-thumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/skin-right-thumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/skin-right-title-only.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/dist/themes/video/ug-theme-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/alter_images.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/carousel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/carousel_video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/compact_bottom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/compact_left.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/compact_right.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/compact_top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/default_no_panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/default_options.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/grid_bottom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/grid_horizontal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/grid_left.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/grid_right.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/grid_top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/sound_cloud.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/tile9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/big/wistia_video.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/html5_video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/sound_cloud.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/thumb1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/thumb2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/thumb3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/thumb4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/tile9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/video9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/images/thumbs/wistia_video.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/skin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/slider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_columns.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_columns_links.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_columns_video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_justified.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_justified_links.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_nested.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tiles_nested_size.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tilesgrid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tilesgrid_arrows.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/tilesgrid_video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/css/unite-gallery.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/button-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/cover-grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/icon-link32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/icon-play32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/icon-zoom32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/lightbox-arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/lightbox-arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/lightbox-icon-close-compact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/lightbox-icon-close-compact2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/lightbox-icon-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-black7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader-white7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader_bright.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/loader_skype_trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/not_loaded.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/play-button-round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/play-button-square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/images/transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/js/jquery-11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/js/unitegallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/js/unitegallery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/release_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/alexis.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/button_zoom_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/button_zoom_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/button_zoom_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_arrow_left_hortype.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_arrow_right_hortype.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_handle_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_handle_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_handle_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/grid_handle_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/slider_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/slider_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/alexis/images/slider_bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/arrow_grid_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/arrow_grid_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/arrows_strip_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/arrows_strip_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/grid_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/grid_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/grid_handle_black_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/grid_handle_black_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/grid_handle_black_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/grid_handle_black_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/icon_zoom_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/icon_zoom_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/icon_zoom_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/slider_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/slider_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/slider_bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_bullets_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_bullets_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_bullets_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_bullets_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_bullets_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_button_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_button_play_pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/skins/default/tile_button_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/carousel/ug-theme-carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/compact/ug-theme-compact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/arrow_down_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/button_fullscreen_single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/images/button_playpause_single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/ug-theme-default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/default/ug-theme-default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/grid/ug-theme-grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/slider/ug-theme-slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/tiles/ug-theme-tiles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/images/arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/images/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/skin-bottom-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/skin-right-no-thumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/skin-right-thumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/skin-right-title-only.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/unitegallery/themes/video/ug-theme-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/video_both.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/video_bottom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/video_icon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/package/video_title.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/big/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/big/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/big/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/big/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/big/sound_cloud.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/big/wistia_video.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/html5_video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/sound_cloud.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/thumb1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/thumb2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/thumb3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/thumb4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/images/thumbs/wistia_video.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/css/unite-gallery.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/button-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/cover-grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/icon-link32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/icon-play32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/icon-zoom32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/lightbox-arrow-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/lightbox-arrow-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/lightbox-icon-close-compact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/lightbox-icon-close-compact2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/lightbox-icon-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-black7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader-white7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader_bright.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/loader_skype_trans.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/not_loaded.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/play-button-round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/play-button-square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/images/transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/jquery-11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-avia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-common-libraries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-functions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-gallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-gridpanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-loadmore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-panelsbase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-sliderassets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-strippanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-tabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-thumbsgeneral.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-thumbsgrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-thumbsstrip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-tiledesign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-tiles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-touchslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-touchthumbs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/js/ug-zoomslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/release_log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/alexis.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/button_zoom_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/button_zoom_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/button_zoom_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_arrow_left_hortype.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_arrow_right_hortype.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_handle_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_handle_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_handle_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/grid_handle_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/slider_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/slider_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/alexis/images/slider_bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/arrow_grid_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/arrow_grid_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/arrows_strip_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/arrows_strip_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/grid_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/grid_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/grid_handle_black_bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/grid_handle_black_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/grid_handle_black_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/grid_handle_black_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/icon_zoom_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/icon_zoom_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/icon_zoom_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/slider_arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/slider_arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/slider_bullets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_bullets_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_bullets_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_bullets_gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_bullets_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_bullets_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_button_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_button_play_pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/skins/default/tile_button_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/carousel/ug-theme-carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/compact/ug-theme-compact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/arrow_down_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/arrows_strip_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/arrows_strip_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/button_fullscreen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/button_fullscreen_single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/button_playpause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/images/button_playpause_single.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/ug-theme-default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/default/ug-theme-default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/grid/ug-theme-grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/slider/ug-theme-slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/tiles/ug-theme-tiles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/images/arrow_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/images/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/skin-bottom-text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/skin-right-no-thumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/skin-right-thumb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/skin-right-title-only.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/js/unitegallery-master/source/unitegallery/themes/video/ug-theme-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/13LG8gCCdVg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/13LG8gCCdVg_qZr9HoP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/8uUZBT2m0Kc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/france-houses-winter-franche.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/france-houses-winter-franche_IyPoyMJ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/gory-dolina-sneg-spusk-lyzhi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/choreographers/j3Eh5qTyam8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/dance/IU5-81_spisok_tablitsa-1-001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/dance/IU5-81_spisok_tablitsa-1-001_jenteJM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/about-me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-firenze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-photo-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-photo-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-photo-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-photo-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-photo-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-symphony.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/background-triangular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/banner-300x250.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/del.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/inst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/logokudrinka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/n-u3P-L2zcQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Без названия (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Без названия (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Без названия (3).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/ИМ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/ИМ.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/ИМ_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/МИ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/МИ.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/МИ_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Венгрия_дев1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР16_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР16_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР16_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР16_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/Кумбия2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР17_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Зеркало1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Проходки1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР22.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР23.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/кум7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР24_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Казачий1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Авалюлька1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР9_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Табакеряска1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/flamenco/флам10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Хорпляс1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Тилиго_лиго1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Зеркало2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР1_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Смуглянка1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Казачий_дев1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Казачий_дев2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/gypsy/цыг18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НУМЕР9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Четверка1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Номер1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/Кумбия1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Номер2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/upd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/vk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/media/default/youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/photos/avstriya-tirol-arlberg-gory.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_kudr/static/media/photos/gory_zima_sneg_118389_1920x1080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about_us.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about_us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/choreogaphers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/choreogaphers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/concerts_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/concerts_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/my_page_choreographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page_choreographer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/new/new_fond.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new/new_fond.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/advertisement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/contacts1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index-blog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index-grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/index4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/main1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/main3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/main_comments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/post-video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/shortcodes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_choreographer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_choreographers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_class_schedule.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_class_schedules.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_concert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_concerts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_costume.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_costumes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_costumes_part.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_dance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_dance_style.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_dance_style_main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_dance_styles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_dances.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_fond.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_fond.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_fonds.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_participant.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_participant_dance_concert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_participant_dance_concert1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_participant_dance_concert_part.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_participants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_participants_concerts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_payment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_payments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/old/show_payments_part.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/one_news_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/one_news_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/russian_dance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/russian_dance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/show_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/show_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tap_dance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tap_dance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/update/update_fond.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/update/update_fond.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/world_dance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/world_dance.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Kudrinka$views.coverage" NAME="views Coverage Results" MODIFIED="1567247227071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kudr_app" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -35,78 +672,85 @@
     <session id="1555889562">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
+          <entry key="project.closed" value="38" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.165" value="1" />
           <entry key="project.open.time.2" value="5" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.25" value="2" />
-          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.25" value="3" />
+          <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.30" value="4" />
+          <entry key="project.open.time.29" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.30" value="5" />
           <entry key="project.open.time.31" value="2" />
-          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="2" />
           <entry key="project.open.time.35" value="3" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.60" value="1" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="3161" />
+          <entry key="css" value="3268" />
           <entry key="dummy" value="18" />
-          <entry key="html" value="37381" />
+          <entry key="html" value="40116" />
           <entry key="js" value="28" />
-          <entry key="py" value="60999" />
+          <entry key="py" value="63894" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="3161" />
-          <entry key="HTML" value="37381" />
+          <entry key="CSS" value="3268" />
+          <entry key="HTML" value="40116" />
           <entry key="JavaScript" value="28" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="60999" />
+          <entry key="Python" value="63894" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="71" />
-          <entry key="html" value="917" />
+          <entry key="css" value="77" />
+          <entry key="gif" value="5" />
+          <entry key="html" value="967" />
           <entry key="iml" value="1" />
           <entry key="ini" value="1" />
-          <entry key="jpg" value="27" />
-          <entry key="js" value="36" />
+          <entry key="jpg" value="72" />
+          <entry key="js" value="38" />
           <entry key="k" value="1" />
           <entry key="map" value="3" />
           <entry key="php" value="1" />
-          <entry key="png" value="4" />
+          <entry key="png" value="16" />
           <entry key="pstat" value="1" />
-          <entry key="py" value="358" />
+          <entry key="py" value="386" />
+          <entry key="rnc" value="1" />
           <entry key="show_fond" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="71" />
-          <entry key="HTML" value="917" />
+          <entry key="CSS" value="77" />
+          <entry key="HTML" value="967" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="Image" value="31" />
+          <entry key="Image" value="93" />
           <entry key="Ini" value="1" />
-          <entry key="JavaScript" value="36" />
+          <entry key="JavaScript" value="38" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Profiler Session" value="1" />
-          <entry key="Python" value="358" />
+          <entry key="Python" value="386" />
+          <entry key="RNG Compact" value="1" />
           <entry key="SourceMap" value="3" />
         </counts>
       </usages-collector>
@@ -114,199 +758,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/successfully_registered.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kudr_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4040">
-              <caret line="255" column="16" lean-forward="true" selection-start-line="255" selection-start-column="16" selection-end-line="255" selection-end-column="16" />
+            <state relative-caret-position="200">
+              <caret line="286" column="27" selection-start-line="286" selection-start-column="27" selection-end-line="286" selection-end-column="27" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
-                <element signature="e#4649#4782#0" />
-                <element signature="e#5794#8040#0" />
-                <element signature="e#5888#8040#0" />
-                <element signature="e#9203#9349#0" />
-                <element signature="e#9286#9349#0" />
-                <element signature="e#9394#9863#0" />
-                <element signature="e#9431#9863#0" />
-                <element signature="e#9493#9863#0" />
-                <element signature="e#9539#9863#0" />
-                <element signature="e#9730#9863#0" />
-                <element signature="e#9786#9863#0" />
-                <element signature="e#9996#10099#0" />
-                <element signature="e#11073#11604#0" />
-                <element signature="e#11682#11728#0" />
-                <element signature="e#11786#12405#0" />
-                <element signature="e#11874#12405#0" />
-                <element signature="e#12452#12483#0" />
-                <element signature="e#12524#12556#0" />
-                <element signature="e#12601#12637#0" />
-                <element signature="e#12680#12714#0" />
-                <element signature="e#12758#12793#0" />
-                <element signature="e#12845#13630#0" />
-                <element signature="e#12933#13630#0" />
-                <element signature="e#13683#14014#0" />
-                <element signature="e#13829#13946#0" />
-                <element signature="e#13987#14014#0" />
-                <element signature="e#14047#14110#0" />
-                <element signature="e#14144#15105#0" />
-                <element signature="e#14181#14996#0" />
-                <element signature="e#14422#14499#0" />
-                <element signature="e#14562#14645#0" />
-                <element signature="e#14726#14806#0" />
-                <element signature="e#14838#14996#0" />
-                <element signature="e#15360#15786#0" />
-                <element signature="e#15479#15693#0" />
-                <element signature="e#15812#17092#0" />
-                <element signature="e#15934#16120#0" />
-                <element signature="e#16166#17092#0" />
-                <element signature="e#16208#16564#0" />
-                <element signature="e#16768#16986#0" />
-                <element signature="e#17118#17500#0" />
-                <element signature="e#17218#17335#0" />
-                <element signature="e#17380#17500#0" />
-                <element signature="e#17554#17635#0" />
-                <element signature="e#17665#18561#0" />
-                <element signature="e#17697#18561#0" />
-                <element signature="e#18427#18560#0" />
-                <element signature="e#18601#18844#0" />
-                <element signature="e#18695#18844#0" />
-                <element signature="e#18888#18998#0" />
-                <element signature="e#19042#19126#0" />
-                <element signature="e#19183#19282#0" />
-                <element signature="e#19330#19461#0" />
-                <element signature="e#19508#19610#0" />
-                <element signature="e#19664#19759#0" />
-                <element signature="e#19804#19929#0" />
-                <element signature="e#19974#20072#0" />
-                <element signature="e#20138#21038#0" />
-                <element signature="e#20280#20362#0" />
-                <element signature="e#20402#21038#0" />
-                <element signature="e#20485#20961#0" />
-                <element signature="e#20727#20961#0" />
-                <element signature="e#21085#21464#0" />
-                <element signature="e#21180#21464#0" />
-                <element signature="e#21509#21903#0" />
-                <element signature="e#21608#21903#0" />
-                <element signature="e#21955#22096#0" />
-                <element signature="e#22148#22250#0" />
-                <element signature="e#22311#22420#0" />
-                <element signature="e#22497#22603#0" />
-                <element signature="e#22653#22794#0" />
-                <element signature="e#22844#22953#0" />
-                <element signature="e#23014#23102#0" />
-                <element signature="e#23143#23661#0" />
-                <element signature="e#23231#23661#0" />
-                <element signature="e#23664#23703#0" />
-                <element signature="e#24407#24551#0" />
-                <element signature="e#24603#24717#0" />
-                <element signature="e#24782#24880#0" />
-                <element signature="e#24934#25083#0" />
-                <element signature="e#25136#25238#0" />
-                <element signature="e#25301#25408#0" />
-                <element signature="e#25460#25605#0" />
-                <element signature="e#25656#25766#0" />
-                <element signature="e#25819#25914#0" />
-                <element signature="e#25959#26084#0" />
-                <element signature="e#26129#26227#0" />
-                <element signature="e#26300#26415#0" />
-                <element signature="e#26469#26623#0" />
-                <element signature="e#26677#26795#0" />
-                <element signature="e#26883#27016#0" />
-                <element signature="e#27079#27260#0" />
-                <element signature="e#27323#27459#0" />
-                <element signature="e#27537#27659#0" />
-                <element signature="e#28218#28383#0" />
-                <element signature="e#28441#28566#0" />
-                <element signature="e#28617#28710#0" />
-                <element signature="e#29352#29474#0" />
-                <element signature="e#29518#29614#0" />
-                <element signature="e#29670#29769#0" />
-                <element signature="e#30626#30757#0" />
-                <element signature="e#30804#30906#0" />
-                <element signature="e#30962#31061#0" />
-                <element signature="e#31108#31239#0" />
-                <element signature="e#31286#31388#0" />
-                <element signature="e#31464#31586#0" />
-                <element signature="e#31644#31809#0" />
-                <element signature="e#31867#31992#0" />
-                <element signature="e#32049#32148#0" />
-                <element signature="e#32195#32326#0" />
-                <element signature="e#32373#32475#0" />
-                <element signature="e#32556#32673#0" />
-                <element signature="e#32733#32896#0" />
-                <element signature="e#32956#33077#0" />
-                <element signature="e#33143#33252#0" />
-                <element signature="e#33304#33450#0" />
-                <element signature="e#33502#33614#0" />
+                <marker date="1568738106206" expanded="true" signature="479:498" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/my_page_choreographer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="317" column="71" selection-start-line="317" selection-start-column="71" selection-end-line="317" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/money_plot.html">
+        <entry file="file://$PROJECT_DIR$/templates/my_page_admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
+            <state relative-caret-position="237">
+              <caret line="222" column="27" lean-forward="true" selection-start-line="222" selection-start-column="27" selection-end-line="222" selection-end-column="27" />
               <folding>
-                <element signature="e#650#696#0#HTML" expanded="true" />
-                <element signature="e#1149#1195#0#HTML" expanded="true" />
+                <element signature="n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/registration.html">
+        <entry file="file://$PROJECT_DIR$/kudr_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kudrinka/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+            <state relative-caret-position="335">
+              <caret line="478" lean-forward="true" selection-start-line="478" selection-end-line="478" />
               <folding>
-                <element signature="e#633#700#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1568737486980" expanded="true" signature="2682:2686" ph="..." />
+                <marker date="1568737486980" expanded="true" signature="19653:19662" ph="..." />
+                <marker date="1568737486980" expanded="true" signature="19653:19705" ph="..." />
+                <marker date="1568737486980" expanded="true" signature="19699:19705" ph="..." />
+                <marker date="1568737486980" expanded="true" signature="24702:24744" ph="..." />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Kudrinka/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/tap_dance.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -315,8 +808,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -332,22 +825,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/delete/delete_dance.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_dance_in_concert.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_dance_style.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_fond.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_group.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_participant.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_participant_concert.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_participant_costume.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_payment.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_participant_dance_concert.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_schedule_part.html" />
-        <option value="$PROJECT_DIR$/templates/show_news.html" />
-        <option value="$PROJECT_DIR$/templates/show_photo_galleries.html" />
-        <option value="$PROJECT_DIR$/templates/new/new_expence.html" />
-        <option value="$PROJECT_DIR$/templates/update/update_expence.html" />
-        <option value="$PROJECT_DIR$/templates/delete/delete_expence.html" />
         <option value="$PROJECT_DIR$/templates/new/new_other_source.html" />
         <option value="$PROJECT_DIR$/templates/update/update_other_source.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_other_source.html" />
@@ -359,12 +836,10 @@
         <option value="$PROJECT_DIR$/templates/successfully_registered.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/registration.html" />
-        <option value="$PROJECT_DIR$/static_kudr/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/update.html" />
         <option value="$PROJECT_DIR$/templates/delete/delete_announcement.html" />
         <option value="$PROJECT_DIR$/templates/new/new_announcement.html" />
         <option value="$PROJECT_DIR$/templates/update/update_announcement.html" />
-        <option value="$PROJECT_DIR$/kudr_app/forms.py" />
         <option value="$PROJECT_DIR$/templates/update/update_schedule_part.html" />
         <option value="$PROJECT_DIR$/templates/new/new_schedule.html" />
         <option value="$PROJECT_DIR$/templates/show_schedule_chor.html" />
@@ -373,16 +848,34 @@
         <option value="$PROJECT_DIR$/templates/my_page_participant.html" />
         <option value="$PROJECT_DIR$/templates/new.html" />
         <option value="$PROJECT_DIR$/templates/delete.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/kudr_app/admin.py" />
-        <option value="$PROJECT_DIR$/templates/main.html" />
-        <option value="$PROJECT_DIR$/kudr_app/models.py" />
         <option value="$PROJECT_DIR$/templates/404.html" />
-        <option value="$PROJECT_DIR$/Kudrinka/settings.py" />
-        <option value="$PROJECT_DIR$/Kudrinka/urls.py" />
         <option value="$PROJECT_DIR$/templates/money_plot.html" />
-        <option value="$PROJECT_DIR$/kudr_app/views.py" />
+        <option value="$PROJECT_DIR$/Kudrinka/settings.py" />
+        <option value="$PROJECT_DIR$/templates/contacts.html" />
+        <option value="$PROJECT_DIR$/templates/concerts_main.html" />
+        <option value="$PROJECT_DIR$/templates/one_news_main.html" />
+        <option value="$PROJECT_DIR$/templates/choreogaphers.html" />
+        <option value="$PROJECT_DIR$/templates/tap_dance.html" />
+        <option value="$PROJECT_DIR$/templates/kids_dance.html" />
+        <option value="$PROJECT_DIR$/templates/old/show_fond.html" />
         <option value="$PROJECT_DIR$/templates/my_page_choreographer.html" />
+        <option value="$PROJECT_DIR$/templates/rules.html" />
+        <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/static_kudr/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/show_news.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/world_gypsy.html" />
+        <option value="$PROJECT_DIR$/templates/world_dance.html" />
+        <option value="$PROJECT_DIR$/templates/world_kumbia.html" />
+        <option value="$PROJECT_DIR$/templates/world_flamenco.html" />
+        <option value="$PROJECT_DIR$/templates/new/new_fond.html" />
+        <option value="$PROJECT_DIR$/templates/update/update_fond.html" />
+        <option value="$PROJECT_DIR$/kudr_app/forms.py" />
+        <option value="$PROJECT_DIR$/kudr_app/admin.py" />
+        <option value="$PROJECT_DIR$/Kudrinka/urls.py" />
+        <option value="$PROJECT_DIR$/kudr_app/models.py" />
+        <option value="$PROJECT_DIR$/templates/my_page_admin.html" />
+        <option value="$PROJECT_DIR$/kudr_app/views.py" />
       </list>
     </option>
   </component>
@@ -394,7 +887,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
-    <option name="width" value="970" />
+    <option name="width" value="1195" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -437,113 +930,6 @@
             <path>
               <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="unitegallery-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="unitegallery-master" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="unitegallery-master" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="unitegallery-master" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="unitegallery-master" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="unitegallery.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="static_kudr" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-              <item name="photo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -557,12 +943,6 @@
               <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="new" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kudrinka" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="old" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kudrinka" type="b2602c69:ProjectViewProjectNode" />
@@ -585,25 +965,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null&#10;colored&#9;null&#9;null&#10;pointer&#9;null&#9;null&#10;gender&#9;null&#9;null&#10;date&#9;null&#9;null&#10;dance_concert&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Загрузки/no_avatar.png" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vkapi" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default\photo" />
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates" />
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default\photo\step" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\old" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\new" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\update" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\delete" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default\photo\kumbia" />
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default\photo\gypsy" />
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default\photo\flamenco" />
       <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\delete" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\update" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\templates\new" />
-      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\js" />
+      <recent name="C:\Users\lisob\PycharmProjects\Kudrinka\static_kudr\static\media\media\default\photo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -618,7 +998,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.Kudrinka">
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Kudrinka" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/kudr_app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kudr_app/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Kudrinka" type="Python.DjangoServer" factoryName="Django server">
       <module name="Kudrinka" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -643,6 +1045,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.Kudrinka" />
+      <item itemvalue="Python.views" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -657,20 +1068,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="776" height="832" extended-state="0" />
+    <frame x="-4" y="0" width="956" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8283186" weight="0.37011173" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8283186" visible="true" weight="0.29017857" />
       <window_info id="Structure" order="1" sideWeight="0.17168142" side_tool="true" weight="0.09261745" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.32142857" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49530202" visible="true" weight="0.27142859" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3186969" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49530202" visible="true" weight="0.27285713" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
@@ -685,26 +1105,26 @@
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8283186" visible="true" weight="0.28791946" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8283186" visible="true" weight="0.21275167" />
       <window_info id="Structure" order="1" sideWeight="0.17168142" side_tool="true" weight="0.09261745" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32378224" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49775282" visible="true" weight="0.18413597" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" visible="true" weight="0.3186969" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49530202" weight="0.2719547" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022472" side_tool="true" weight="0.19285715" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.504698" side_tool="true" weight="0.18413597" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32885906" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32885906" />
       <window_info anchor="right" id="Database" order="4" weight="0.32897604" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout-to-restore>
@@ -720,614 +1140,323 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>774</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>507</line>
+          <line>732</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>890</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>563</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1032</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>361</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>341</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>327</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>876</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>896</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Kudrinka/urls.py</url>
-          <line>131</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>795</line>
+          <line>1003</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>916</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>943</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1012</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>661</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>221</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>821</line>
+          <line>1029</line>
           <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>393</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>555</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>671</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>880</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>588</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/models.py</url>
-          <line>417</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>555</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>516</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/kudr_app/views.py</url>
-          <line>1112</line>
-          <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/old/show_participant_dance_concert.html</url>
           <line>30</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/my_page_choreographer.html</url>
+          <line>474</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/rules.html</url>
+          <line>3</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/new/new_other_source.html">
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Кумбия2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Зеркало1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Проходки1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Испания1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Казачий_дев1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Казачий_дев2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Четверка1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Хорпляс1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Тилиго_лиго1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Зеркало2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/НОМЕР4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Цыганский2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Смуглянка1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/Казачий1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/modern_dance.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="-3345" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="345" column="16" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_expence.html">
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="-929" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/kids_dance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="122" column="51" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_other_source.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/лого.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/django/forms/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1442">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/concerts_main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="51" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about_us.html">
+    <entry file="file://$PROJECT_DIR$/templates/show_fond.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="18" column="78" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="78" />
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/plot_time.html" />
-    <entry file="file://$PROJECT_DIR$/templates/plot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="e#537#583#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_choreographer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="82" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_class_schedule.html">
+    <entry file="file://$PROJECT_DIR$/kudr_app/migrations/0115_auto_20190819_1735.py" />
+    <entry file="file://$PROJECT_DIR$/kudr_app/migrations/0114_auto_20190608_1902.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_concert.html">
+    <entry file="file://$PROJECT_DIR$/templates/tap_dance.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="2420">
+          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="123" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_costume.html">
+    <entry file="file://$PROJECT_DIR$/templates/my_page_choreographer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="5320">
+          <caret line="266" column="56" selection-start-line="266" selection-start-column="56" selection-end-line="266" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_dance_in_concert.html">
+    <entry file="file://$PROJECT_DIR$/templates/my_page_participant.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_expence.html">
+    <entry file="file://$PROJECT_DIR$/templates/rules.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="54" lean-forward="true" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        <state relative-caret-position="260">
+          <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_news.html">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/django/conf/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="82" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        <state relative-caret-position="132">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static_kudr/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="196" column="21" lean-forward="true" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+        <state relative-caret-position="284">
+          <caret line="745" column="24" lean-forward="true" selection-start-line="745" selection-start-column="24" selection-end-line="745" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_payment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete/delete_announcement.html">
+    <entry file="file://$PROJECT_DIR$/templates/update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_announcement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_announcement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_class_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update/update_schedule_part.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_schedule_main.html" />
-    <entry file="file://$PROJECT_DIR$/templates/show_schedule_part.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="25" column="73" lean-forward="true" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_schedule_chor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_page_participant.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="109" column="82" selection-start-line="109" selection-start-column="82" selection-end-line="109" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kudr_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="674" column="73" selection-start-line="674" selection-start-column="73" selection-end-line="674" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1557838355036" expanded="true" signature="2680:2684" ph="..." />
-            <marker date="1557838355036" expanded="true" signature="24724:24766" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kudr_app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="89" column="27" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+        <state relative-caret-position="264">
+          <caret line="39" column="55" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="47" column="46" selection-start-line="46" selection-start-column="45" selection-end-line="47" selection-end-column="46" />
+        <state relative-caret-position="1121">
+          <caret line="167" column="64" selection-start-line="167" selection-start-column="64" selection-end-line="167" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="108" column="25" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+        <state relative-caret-position="127">
+          <caret line="99" column="86" selection-start-line="99" selection-start-column="86" selection-end-line="99" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="57" column="100" selection-start-line="56" selection-start-column="39" selection-end-line="57" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/Кумбия2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static_kudr/static/media/media/default/photo/kumbia/Кумбия1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/world_gypsy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/world_dance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="84" column="82" selection-start-line="84" selection-start-column="81" selection-end-line="84" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/new/new_fond.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/update/update_fond.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kudrinka/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kudr_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2620">
-          <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
+        <state relative-caret-position="4720">
+          <caret line="238" column="48" selection-start-line="238" selection-start-column="48" selection-end-line="238" selection-end-column="48" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new/new_choreographer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-920">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_new.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_photo_galleries.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/successfully_registered.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/old/404.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="97" selection-start-line="14" selection-start-column="97" selection-end-line="14" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kudrinka/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tap_dance.html">
+    <entry file="file://$PROJECT_DIR$/Kudrinka/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Kudrinka/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+        <state relative-caret-position="980">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#633#700#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration.html">
+    <entry file="file://$PROJECT_DIR$/kudr_app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kudr_app/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="2400">
+          <caret line="122" column="64" selection-start-line="122" selection-start-column="64" selection-end-line="122" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/money_plot.html">
+    <entry file="file://$PROJECT_DIR$/kudr_app/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/world_flamenco.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="102" selection-start-line="29" selection-start-column="102" selection-end-line="29" selection-end-column="102" />
+        <state relative-caret-position="780">
+          <caret line="39" column="123" selection-start-line="39" selection-start-column="123" selection-end-line="39" selection-end-column="123" />
           <folding>
-            <element signature="e#650#696#0#HTML" expanded="true" />
-            <element signature="e#1149#1195#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/world_kumbia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2580">
+          <caret line="129" column="50" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kudrinka/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kudr_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="478" lean-forward="true" selection-start-line="478" selection-end-line="478" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1568737486980" expanded="true" signature="2682:2686" ph="..." />
+            <marker date="1568737486980" expanded="true" signature="19653:19662" ph="..." />
+            <marker date="1568737486980" expanded="true" signature="19653:19705" ph="..." />
+            <marker date="1568737486980" expanded="true" signature="19699:19705" ph="..." />
+            <marker date="1568737486980" expanded="true" signature="24702:24744" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_page_admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="222" column="27" lean-forward="true" selection-start-line="222" selection-start-column="27" selection-end-line="222" selection-end-column="27" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kudr_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4040">
-          <caret line="255" column="16" lean-forward="true" selection-start-line="255" selection-start-column="16" selection-end-line="255" selection-end-column="16" />
+        <state relative-caret-position="200">
+          <caret line="286" column="27" selection-start-line="286" selection-start-column="27" selection-end-line="286" selection-end-column="27" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
-            <element signature="e#4649#4782#0" />
-            <element signature="e#5794#8040#0" />
-            <element signature="e#5888#8040#0" />
-            <element signature="e#9203#9349#0" />
-            <element signature="e#9286#9349#0" />
-            <element signature="e#9394#9863#0" />
-            <element signature="e#9431#9863#0" />
-            <element signature="e#9493#9863#0" />
-            <element signature="e#9539#9863#0" />
-            <element signature="e#9730#9863#0" />
-            <element signature="e#9786#9863#0" />
-            <element signature="e#9996#10099#0" />
-            <element signature="e#11073#11604#0" />
-            <element signature="e#11682#11728#0" />
-            <element signature="e#11786#12405#0" />
-            <element signature="e#11874#12405#0" />
-            <element signature="e#12452#12483#0" />
-            <element signature="e#12524#12556#0" />
-            <element signature="e#12601#12637#0" />
-            <element signature="e#12680#12714#0" />
-            <element signature="e#12758#12793#0" />
-            <element signature="e#12845#13630#0" />
-            <element signature="e#12933#13630#0" />
-            <element signature="e#13683#14014#0" />
-            <element signature="e#13829#13946#0" />
-            <element signature="e#13987#14014#0" />
-            <element signature="e#14047#14110#0" />
-            <element signature="e#14144#15105#0" />
-            <element signature="e#14181#14996#0" />
-            <element signature="e#14422#14499#0" />
-            <element signature="e#14562#14645#0" />
-            <element signature="e#14726#14806#0" />
-            <element signature="e#14838#14996#0" />
-            <element signature="e#15360#15786#0" />
-            <element signature="e#15479#15693#0" />
-            <element signature="e#15812#17092#0" />
-            <element signature="e#15934#16120#0" />
-            <element signature="e#16166#17092#0" />
-            <element signature="e#16208#16564#0" />
-            <element signature="e#16768#16986#0" />
-            <element signature="e#17118#17500#0" />
-            <element signature="e#17218#17335#0" />
-            <element signature="e#17380#17500#0" />
-            <element signature="e#17554#17635#0" />
-            <element signature="e#17665#18561#0" />
-            <element signature="e#17697#18561#0" />
-            <element signature="e#18427#18560#0" />
-            <element signature="e#18601#18844#0" />
-            <element signature="e#18695#18844#0" />
-            <element signature="e#18888#18998#0" />
-            <element signature="e#19042#19126#0" />
-            <element signature="e#19183#19282#0" />
-            <element signature="e#19330#19461#0" />
-            <element signature="e#19508#19610#0" />
-            <element signature="e#19664#19759#0" />
-            <element signature="e#19804#19929#0" />
-            <element signature="e#19974#20072#0" />
-            <element signature="e#20138#21038#0" />
-            <element signature="e#20280#20362#0" />
-            <element signature="e#20402#21038#0" />
-            <element signature="e#20485#20961#0" />
-            <element signature="e#20727#20961#0" />
-            <element signature="e#21085#21464#0" />
-            <element signature="e#21180#21464#0" />
-            <element signature="e#21509#21903#0" />
-            <element signature="e#21608#21903#0" />
-            <element signature="e#21955#22096#0" />
-            <element signature="e#22148#22250#0" />
-            <element signature="e#22311#22420#0" />
-            <element signature="e#22497#22603#0" />
-            <element signature="e#22653#22794#0" />
-            <element signature="e#22844#22953#0" />
-            <element signature="e#23014#23102#0" />
-            <element signature="e#23143#23661#0" />
-            <element signature="e#23231#23661#0" />
-            <element signature="e#23664#23703#0" />
-            <element signature="e#24407#24551#0" />
-            <element signature="e#24603#24717#0" />
-            <element signature="e#24782#24880#0" />
-            <element signature="e#24934#25083#0" />
-            <element signature="e#25136#25238#0" />
-            <element signature="e#25301#25408#0" />
-            <element signature="e#25460#25605#0" />
-            <element signature="e#25656#25766#0" />
-            <element signature="e#25819#25914#0" />
-            <element signature="e#25959#26084#0" />
-            <element signature="e#26129#26227#0" />
-            <element signature="e#26300#26415#0" />
-            <element signature="e#26469#26623#0" />
-            <element signature="e#26677#26795#0" />
-            <element signature="e#26883#27016#0" />
-            <element signature="e#27079#27260#0" />
-            <element signature="e#27323#27459#0" />
-            <element signature="e#27537#27659#0" />
-            <element signature="e#28218#28383#0" />
-            <element signature="e#28441#28566#0" />
-            <element signature="e#28617#28710#0" />
-            <element signature="e#29352#29474#0" />
-            <element signature="e#29518#29614#0" />
-            <element signature="e#29670#29769#0" />
-            <element signature="e#30626#30757#0" />
-            <element signature="e#30804#30906#0" />
-            <element signature="e#30962#31061#0" />
-            <element signature="e#31108#31239#0" />
-            <element signature="e#31286#31388#0" />
-            <element signature="e#31464#31586#0" />
-            <element signature="e#31644#31809#0" />
-            <element signature="e#31867#31992#0" />
-            <element signature="e#32049#32148#0" />
-            <element signature="e#32195#32326#0" />
-            <element signature="e#32373#32475#0" />
-            <element signature="e#32556#32673#0" />
-            <element signature="e#32733#32896#0" />
-            <element signature="e#32956#33077#0" />
-            <element signature="e#33143#33252#0" />
-            <element signature="e#33304#33450#0" />
-            <element signature="e#33502#33614#0" />
+            <marker date="1568738106206" expanded="true" signature="479:498" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_page_choreographer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="317" column="71" selection-start-line="317" selection-start-column="71" selection-end-line="317" selection-end-column="71" />
         </state>
       </provider>
     </entry>

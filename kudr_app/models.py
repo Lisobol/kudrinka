@@ -52,7 +52,7 @@ class DanceStyle(models.Model):
     dance_style = models.TextField(verbose_name="Танцевальное направление", max_length=50)
 
     slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
-    picture = models.ImageField(upload_to='media/dance_style', null=True, blank=True)
+    # picture = models.ImageField(upload_to='media/dance_style', null=True, blank=True)
     description = models.TextField(verbose_name="Описание", blank=True, max_length=10000)
 
     class Meta:
@@ -74,11 +74,6 @@ class DanceStyle(models.Model):
         else:
             self.slug = slugify(self.dance_style)
         super(DanceStyle, self).save(*args, **kwargs)
-
-#
-# class ChoreographerDanceStyle(models.Model):
-#     dance_style = models.ForeignKey(DanceStyle, on_delete=models.CASCADE)
-#     choreographer = models.ForeignKey(Choreographer, on_delete=models.CASCADE)
 
 
 class Group(models.Model):
@@ -126,19 +121,15 @@ class Participant(models.Model):
     picture = models.ImageField(upload_to='media/participants', null=True, blank=True)
     birth_date = models.DateField(blank=True, null=True)
     user = models.OneToOneField(User, blank=True, null=True, on_delete=models.DO_NOTHING)
-    # gender = models.TextField(verbose_name="Пол", blank=True, max_length=50)
-
     group = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True)
     description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
+    moderator = models.BooleanField(verbose_name='Модератор',default=False)
 
     def __str__(self):
         return '{} {} {}'.format(self.last_name, self.first_name, self.patronymic)
 
     def initials(self):
         return '{}. {}.'.format(self.first_name[0:1].upper(), self.patronymic[0:1].upper())
-
-    # def get_absolute_url(self):
-    #     return reverse('participant', kwargs={'slug': self.slug})
 
     def get_update_url(self):
         return reverse('update_participant', kwargs={'slug': self.slug})
@@ -205,13 +196,10 @@ class ClassSchedule(models.Model):
 class GroupChoreographerSchedule(models.Model):
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
     choreographer = models.ForeignKey(Choreographer, on_delete=models.CASCADE)
-    # class_schedule = models.ForeignKey(ClassSchedule, on_delete=models.CASCADE)
-
     begin_time = models.TimeField(verbose_name="Время начала", null=True, max_length=50)
     end_time = models.TimeField(verbose_name="Время окончания", null=True, max_length=50)
     address = models.TextField(verbose_name="Адрес", blank=True, max_length=350)
     description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
-
     dance_style = models.ForeignKey(DanceStyle, on_delete=models.CASCADE)
     day_of_the_week = models.ForeignKey(WeekDay, on_delete=models.CASCADE)
     slug = models.SlugField(verbose_name="URL", max_length=100, unique=True)
@@ -231,8 +219,6 @@ class GroupChoreographerSchedule(models.Model):
         ordering = ['group', 'day_of_the_week']
 
     def save(self, *args, **kwargs):
-        # a = '{} {} {} {} {}'.format(str(self.group), str(self.class_schedule), str(self.day_of_the_week),
-        #                             str(self.dance_style), str(self.choreographer))
         a = '{} {} {} {} {} {}'.format(str(self.group), str(self.begin_time),str(self.end_time), str(self.day_of_the_week),
                                     str(self.dance_style), str(self.choreographer))
 
@@ -283,7 +269,7 @@ class Dance(models.Model):
     slug = models.SlugField(verbose_name="URL", max_length=150, unique=True)
 
     duration = models.TimeField(verbose_name="Длительность", blank=True)
-    picture = models.ImageField(upload_to='media/dance', null=True, blank=True)
+    # picture = models.ImageField(upload_to='media/dance', null=True, blank=True)
     description = models.TextField(verbose_name="Описание", blank=True, max_length=50)
 
     def __str__(self):
@@ -393,7 +379,7 @@ class ParticipantDanceConcert(models.Model):
 
 class News(models.Model):
     title = models.TextField(verbose_name="Заголовок", max_length=50)
-    slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
+    slug = models.SlugField(verbose_name="URL", max_length=70, unique=True)
 
     text = models.TextField(verbose_name="Текст", blank=True, max_length=10000)
     picture = models.ImageField(upload_to='media/news', null=True, blank=True)
@@ -482,12 +468,33 @@ class Fond(models.Model):
     sum = models.PositiveIntegerField(verbose_name="Оплачено")
     slug = models.SlugField(verbose_name="URL", max_length=50, unique=True)
     participant = models.OneToOneField(Participant, on_delete=models.CASCADE)
+    all_fonds_null = models.BooleanField(default=False)
+    last_year_debt = models.PositiveIntegerField(verbose_name="Недосдал в прошлом году", default=0)
 
     def percent(self):
         return int(self.sum * 100 / 7000)
 
     def strpercent(self):
         return str(int(self.sum * 100 / 7000))
+
+    def if_null_fonds(self):
+        if self.all_fonds_null:
+            return "NUL"
+        else:
+            return "NOT NUL"
+
+    def new_year(self):
+        # if datetime.today().day==1 and datetime.today().month == 9:
+        self.last_year_debt = 7000 - self.sum
+        self.sum = 0
+        self.save()
+        return self
+
+
+    def set_null_fonds(self):
+        self.sum = 0
+        return self.sum
+
 
     def __str__(self):
         return '{} {}'.format(self.participant, self.sum)
