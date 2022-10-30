@@ -2,7 +2,7 @@ from django.views.generic import TemplateView, View
 from django.contrib.auth.views import LoginView, logout_then_login
 from django.shortcuts import render, redirect
 from kudr_app.forms import *
-from django.core.files.base import ContentFile
+# from django.core.files.base import ContentFile
 from datetime import date
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -12,16 +12,16 @@ from io import BytesIO
 import base64
 import pandas as pd
 import requests
-import random
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+# import random
+# from django.shortcuts import render_to_response
+# from django.template import RequestContext
 
 
-def e_handler404(request, exception):
+def e_handler404(request, exception=None):
     return render(request, '404.html', status=404)
 
 
-def e_handler500(request, exception):
+def e_handler500(request, exception=None):
     return render(request, '404.html', status=500)
 
 
@@ -82,7 +82,7 @@ class MainPageView(TemplateView):
                     photo_vk.append('pass')
         news_vk = []
         for n in range(n - 1):
-            if texts[n] is not "" and news_vk.__len__()<5:
+            if texts[n] != "" and news_vk.__len__()<5:
                 news_vk.append([texts[n], dates[n], photo_vk[n]])
         context['news_vk'] = news_vk
 
@@ -908,7 +908,7 @@ class NewsPage(View):
                     photo_vk.append('pass')
         news_vk = []
         for n in range(n - 1):
-            if texts[n] is not "":
+            if texts[n] != "":
                 news_vk.append([texts[n], dates[n], photo_vk[n]])
 
         paginator_vk = Paginator(news_vk, 5)

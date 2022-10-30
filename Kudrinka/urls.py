@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
-from django.conf.urls import url, handler400,handler500
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from Kudrinka import settings

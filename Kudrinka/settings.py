@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +28,7 @@ SECRET_KEY = '0r4a7^9s#5@ae9z10_vc82f(7p_iq*bo2e^0xw8ugg2&c6f1p5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0']
 
 
 # Application definition
@@ -82,10 +85,10 @@ WSGI_APPLICATION = 'Kudrinka.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'data1',
-        'USER': 'dbuser',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
+        'NAME': 'kudrinka',
+        'USER': 'mysql',
+        'PASSWORD': 'password',
+        'HOST': 'mysql_db',
         'PORT': 3306,
         'OPTIONS': {'charset': 'utf8'},
         'TEST_CHARSET': 'utf8',
