@@ -5,7 +5,7 @@ charset-normalizer==2.1.1
 contourpy==1.0.5
 cryptography==38.0.1
 cycler==0.11.0
-Django==3.2.2
+Django==3.2.16
 django-mysql==3.8.1
 django-static-jquery==2.1.4
 fonttools==4.38.0
